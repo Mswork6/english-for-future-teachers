@@ -1,0 +1,60 @@
+/* Module selection and section selection: visual language of the home screen. */
+.catalog-page {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 4px 0 38px;
+}
+
+.catalog-page .home-heading {
+    margin: 26px 0 45px;
+}
+
+.catalog-page .home-card {
+    min-height: 310px;
+}
+
+.page-back {
+    display: inline-flex;
+    align-items: center;
+    color: #4168a3;
+    font-size: 14px;
+    font-weight: 650;
+    padding: 9px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.page-back:hover {
+    background: #eaf0ff;
+    transform: translateX(-3px);
+    box-shadow: 0 5px 15px rgba(35, 57, 98, .07);
+}
+
+.page-back:focus-visible,
+.catalog-card:focus-visible {
+    outline: 3px solid #506dff;
+    outline-offset: 3px;
+}
+
+/* Entry motion is applied to new page content, not the persistent header/footer. */
+#app > * {
+    animation: page-enter .28s ease-out both;
+}
+
+@keyframes page-enter {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 800px) {
+    .catalog-page .home-heading { margin: 24px 0 34px; }
+    .catalog-page .home-card { min-height: 240px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #app > * { animation: none; }
+    .page-back, .catalog-card { transition: none; }
+}
