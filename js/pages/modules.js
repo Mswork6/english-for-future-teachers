@@ -7,41 +7,36 @@ const ICONS = [
     { name: 'graduation-cap', color: 'purple' }
 ];
 
-function makeIcon(name, color) {
-    const wrapper = el('div', null, `home-icon ${color}`);
-    const icon = el('i');
-    icon.setAttribute('data-lucide', name);
-    wrapper.append(icon);
-    return wrapper;
-}
-
 export function modulesPage(modules) {
     const page = el('section', null, 'catalog-page');
-    append(page, link('← Back to main screen', '/', 'page-back'));
+    page.append(link('← Back to main screen', '/', 'page-back'));
 
-    const heading = el('div', null, 'home-heading');
+    const heading = el('div', null, 'catalog-heading');
     append(heading,
-        el('span', 'CHOOSE YOUR PATH', 'home-badge'),
+        el('span', 'LEARNING MODULES', 'eyebrow'),
         el('h1', 'Learning Modules'),
-        el('p', 'Choose a module to start learning.')
+        el('p', 'Choose a module to start learning.', 'lead')
     );
     page.append(heading);
 
-    const cards = el('div', null, 'home-cards');
+    const grid = el('div', null, 'catalog-grid');
     modules.forEach((module, index) => {
         const style = ICONS[index % ICONS.length];
-        const card = link('', `/module/${module.id}`, 'home-card catalog-card');
-        card.setAttribute('aria-label', `Open ${module.title} module`);
+        const card = link('', `/module/${module.id}`, 'catalog-card');
+        const iconBox = el('div', null, `home-icon ${style.color}`);
+        const icon = el('i');
+        icon.setAttribute('data-lucide', style.name);
+        iconBox.append(icon);
         append(card,
-            makeIcon(style.name, style.color),
+            iconBox,
             el('h2', module.title),
             el('p', module.description),
             el('span', 'Open module →', `home-link ${style.color}-text`)
         );
-        cards.append(card);
+        grid.append(card);
     });
 
-    page.append(cards);
+    page.append(grid);
     app.append(page);
     window.lucide?.createIcons();
 }

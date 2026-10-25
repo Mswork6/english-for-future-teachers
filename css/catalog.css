@@ -1,59 +1,63 @@
-/* Module selection and section selection: visual language of the home screen. */
-.catalog-page {
-    width: 100%;
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 4px 0 38px;
+/* Module and section selection: keep the existing wide rectangular cards. */
+.catalog-page { width: 100%; margin: 0 auto; }
+.catalog-heading { margin: 25px 0 28px; }
+.catalog-heading h1 { margin: 10px 0 16px; }
+.catalog-heading .lead { margin: 0; }
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
 }
 
-.catalog-page .home-heading {
-    margin: 26px 0 45px;
+/* Uses the same icon tiles, colors and bottom links as the home screen. */
+.catalog-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    min-height: 255px;
+    padding: 26px 22px;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: var(--color-surface);
+    text-align: center;
+    color: var(--color-text);
+    text-decoration: none;
+    box-shadow: 0 4px 20px #162c4910;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
-
-.catalog-page .home-card {
-    min-height: 310px;
-}
+.catalog-card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(35,57,98,.09); }
+.catalog-card .home-icon { width: 58px; height: 58px; margin-bottom: 18px; }
+.catalog-card .home-icon svg { width: 28px; height: 28px; }
+.catalog-card h2 { margin: 0 0 10px; font-size: 19px; font-weight: 650; line-height: 1.3; }
+.catalog-card p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--color-text-muted); }
+.catalog-card .home-link { padding-top: 20px; margin-top: auto; }
 
 .page-back {
     display: inline-flex;
     align-items: center;
-    color: #4168a3;
-    font-size: 14px;
-    font-weight: 650;
     padding: 9px 14px;
     border: 1px solid var(--color-border);
     border-radius: 999px;
     background: var(--color-surface);
-    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    color: #4168a3;
+    font-size: 14px;
+    font-weight: 650;
+    transition: background-color .2s ease, transform .2s ease;
 }
+.page-back:hover { background: #eaf0ff; transform: translateX(-3px); }
+.page-back:focus-visible, .catalog-card:focus-visible { outline: 3px solid #506dff; outline-offset: 3px; }
 
-.page-back:hover {
-    background: #eaf0ff;
-    transform: translateX(-3px);
-    box-shadow: 0 5px 15px rgba(35, 57, 98, .07);
-}
-
-.page-back:focus-visible,
-.catalog-card:focus-visible {
-    outline: 3px solid #506dff;
-    outline-offset: 3px;
-}
-
-/* Entry motion is applied to new page content, not the persistent header/footer. */
-#app > * {
-    animation: page-enter .28s ease-out both;
-}
-
+/* Animate incoming content while the header and footer stay still. */
+#app > * { animation: page-enter .28s ease-out both; }
 @keyframes page-enter {
     from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 800px) {
-    .catalog-page .home-heading { margin: 24px 0 34px; }
-    .catalog-page .home-card { min-height: 240px; }
-}
-
+@media (max-width: 900px) { .catalog-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 600px) { .catalog-grid { grid-template-columns: 1fr; } .catalog-card { min-height: 225px; } }
 @media (prefers-reduced-motion: reduce) {
     #app > * { animation: none; }
     .page-back, .catalog-card { transition: none; }
