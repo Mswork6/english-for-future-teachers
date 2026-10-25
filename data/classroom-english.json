@@ -1,24 +1,328 @@
 {
-  "id":"classroom-english","title":"Classroom English","demo":true,
-  "theory":[
-    {"category":"Starting the Lesson","en":"Good morning, everyone!","ru":"Доброе утро, всем!","example":"Good morning, everyone! Let's begin our lesson."},
-    {"category":"Giving Instructions","en":"Open your books to page ten.","ru":"Откройте учебники на десятой странице.","example":"Please open your books to page ten and look at the picture."},
-    {"category":"Checking Understanding","en":"Is everything clear?","ru":"Всё понятно?","example":"Is everything clear, or should I explain it again?"}
+  "id": "classroom-english",
+  "title": "The Beginning of the Lesson",
+  "demo": true,
+  "theoryTitle": "The Beginning of the Lesson",
+  "theory": [
+    {
+      "category": "Greetings",
+      "en": "Hello, everyone.",
+      "ru": "Всем привет! / Здравствуйте, все!",
+      "example": "The teacher enters the classroom and says, “Hello, everyone. Please take your seats.”"
+    },
+    {
+      "category": "Greetings",
+      "en": "Good morning, everybody.",
+      "ru": "Доброе утро всем!",
+      "example": "At the start of the first lesson, the teacher says, “Good morning, everybody. Are you ready?”"
+    },
+    {
+      "category": "Greetings",
+      "en": "Good afternoon, class.",
+      "ru": "Добрый день, класс!",
+      "example": "After lunch, the teacher greets the pupils: “Good afternoon, class. Let’s get started.”"
+    },
+    {
+      "category": "Greetings",
+      "en": "How are you getting on?",
+      "ru": "Как у вас дела?",
+      "example": "The teacher asks the group, “How are you getting on with your project?”"
+    },
+    {
+      "category": "Greetings",
+      "en": "What a lovely day!",
+      "ru": "Какой прекрасный день!",
+      "example": "Looking out of the classroom window, the teacher says, “What a lovely day! The sun is shining.”"
+    },
+    {
+      "category": "Greetings",
+      "en": "How are things with you?",
+      "ru": "Как у вас дела?",
+      "example": "The teacher smiles at a pupil and asks, “How are things with you, Alex?”"
+    },
+    {
+      "category": "Greetings",
+      "en": "Are you feeling better today, David?",
+      "ru": "Ты сегодня чувствуешь себя лучше, Дэвид?",
+      "example": "David was ill yesterday, so the teacher asks, “Are you feeling better today, David?”"
+    },
+    {
+      "category": "Greetings",
+      "en": "What a rainy day!",
+      "ru": "Какой дождливый день!",
+      "example": "As the class comes in with wet umbrellas, the teacher says, “What a rainy day!”"
+    },
+    {
+      "category": "Greetings",
+      "en": "Today is very cold, isn't it?",
+      "ru": "Сегодня очень холодно, не правда ли?",
+      "example": "Before the lesson, the teacher remarks, “Today is very cold, isn't it? Keep warm!”"
+    },
+    {
+      "category": "Introductions",
+      "en": "My name is Mr/Mrs/Ms Smith. I'll be teaching you English this year.",
+      "ru": "Меня зовут мистер/миссис/мисс Смит. В этом году я буду преподавать вам английский язык.",
+      "example": "On the first day, the teacher introduces themself: “My name is Ms Smith. I'll be teaching you English this year.”"
+    },
+    {
+      "category": "Introductions",
+      "en": "I'm your new English teacher.",
+      "ru": "Я ваш новый учитель английского языка.",
+      "example": "Meeting the class for the first time, the teacher says, “I'm your new English teacher.”"
+    },
+    {
+      "category": "Introductions",
+      "en": "I've got five lessons with you each week.",
+      "ru": "У нас с вами будет пять уроков в неделю.",
+      "example": "Explaining the timetable, the teacher says, “I've got five lessons with you each week.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "Let's begin today's lesson.",
+      "ru": "Давайте начнём сегодняшний урок.",
+      "example": "When the bell rings, the teacher says, “Let's begin today's lesson. Open your notebooks.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "Let's begin our lesson now.",
+      "ru": "Давайте теперь начнём наш урок.",
+      "example": "After greeting the class, the teacher says, “Let's begin our lesson now.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "I think we can start now.",
+      "ru": "Думаю, теперь мы можем начать.",
+      "example": "Once everyone is seated, the teacher says, “I think we can start now.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "Is everybody ready to start?",
+      "ru": "Все готовы начать?",
+      "example": "Before explaining the task, the teacher asks, “Is everybody ready to start?”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "Now we can get down to work.",
+      "ru": "Теперь мы можем приступить к работе.",
+      "example": "After a short warm-up, the teacher says, “Now we can get down to work.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "It's time to begin, please stop talking.",
+      "ru": "Пора начинать, пожалуйста, прекратите разговаривать.",
+      "example": "As the class settles, the teacher says, “It's time to begin, please stop talking.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "I'm waiting for you to be quiet.",
+      "ru": "Я жду, когда вы успокоитесь и перестанете разговаривать.",
+      "example": "When several pupils are still chatting, the teacher says, “I'm waiting for you to be quiet.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "Settle down now so we can start.",
+      "ru": "Успокойтесь, чтобы мы могли начать.",
+      "example": "The teacher asks the class, “Settle down now so we can start.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "We won't start until everyone is quiet.",
+      "ru": "Мы не начнём, пока все не успокоятся.",
+      "example": "The teacher reminds the group, “We won't start until everyone is quiet.”"
+    },
+    {
+      "category": "Time to Begin",
+      "en": "Stop talking and be quiet.",
+      "ru": "Прекратите разговаривать и соблюдайте тишину.",
+      "example": "As the lesson starts, the teacher says, “Stop talking and be quiet, please.”"
+    },
+    {
+      "category": "Register",
+      "en": "Who isn't here today?",
+      "ru": "Кого сегодня нет?",
+      "example": "Looking around the classroom, the teacher asks, “Who isn't here today?”"
+    },
+    {
+      "category": "Register",
+      "en": "Who is absent today?",
+      "ru": "Кто сегодня отсутствует?",
+      "example": "While taking the register, the teacher asks, “Who is absent today?”"
+    },
+    {
+      "category": "Register",
+      "en": "Why were you absent last Friday, Tom?",
+      "ru": "Почему тебя не было в прошлую пятницу, Том?",
+      "example": "When Tom returns to class, the teacher asks, “Why were you absent last Friday, Tom?”"
+    },
+    {
+      "category": "Register",
+      "en": "What's the matter with Anna today?",
+      "ru": "Что сегодня случилось с Анной?",
+      "example": "Noticing that Anna looks upset, the teacher quietly asks, “What's the matter with Anna today?”"
+    },
+    {
+      "category": "Register",
+      "en": "What's wrong with Anna today?",
+      "ru": "Что сегодня не так с Анной?",
+      "example": "When Anna seems unwell, the teacher asks a colleague, “What's wrong with Anna today?”"
+    },
+    {
+      "category": "Late",
+      "en": "We started ten minutes ago. What have you been doing?",
+      "ru": "Мы начали десять минут назад. Чем ты занимался всё это время?",
+      "example": "A pupil arrives late, and the teacher says, “We started ten minutes ago. What have you been doing?”"
+    },
+    {
+      "category": "Late",
+      "en": "Did you oversleep?",
+      "ru": "Ты проспал?",
+      "example": "When a pupil arrives late in the morning, the teacher asks, “Did you oversleep?”"
+    },
+    {
+      "category": "Late",
+      "en": "Did you miss your bus?",
+      "ru": "Ты опоздал на автобус?",
+      "example": "Seeing that a pupil is late, the teacher asks, “Did you miss your bus?”"
+    },
+    {
+      "category": "Late",
+      "en": "Where have you been?",
+      "ru": "Где ты был?",
+      "example": "A pupil comes in after the bell, and the teacher asks, “Where have you been?”"
+    },
+    {
+      "category": "Late",
+      "en": "Don't let it happen again.",
+      "ru": "Не допускай, чтобы это повторилось.",
+      "example": "After listening to the explanation for being late, the teacher says, “Don't let it happen again.”"
+    }
   ],
-  "practice":[
-    {"id":"m1","type":"matching","prompt":"Match each phrase with its translation.","pairs":[["Good morning, everyone!","Доброе утро, всем!"],["Is everything clear?","Всё понятно?"]]},
-    {"id":"c1","type":"choice","prompt":"Which instruction asks learners to open a book?","options":["Open your books to page ten.","Goodbye, everyone.","Is everything clear?"],"answer":0},
-    {"id":"f1","type":"fill","prompt":"Complete: Open your ___ to page ten.","answers":["books"]},
-    {"id":"e1","type":"error","prompt":"Find and correct the wrong word: 'Open you books to page ten.'","sentence":"Open you books to page ten.","errorIndex":1,"correctWord":"your"},
-    {"id":"s1","type":"sentence","prompt":"Arrange the words to make a classroom instruction.","words":["your","Open","books","please"],"answer":["Open","your","books","please"]}
+  "practice": [
+    {
+      "id": "m1",
+      "type": "matching",
+      "prompt": "Match each phrase with its translation.",
+      "pairs": [
+        [
+          "Good morning, everyone!",
+          "Доброе утро, всем!"
+        ],
+        [
+          "Is everything clear?",
+          "Всё понятно?"
+        ]
+      ]
+    },
+    {
+      "id": "c1",
+      "type": "choice",
+      "prompt": "Which instruction asks learners to open a book?",
+      "options": [
+        "Open your books to page ten.",
+        "Goodbye, everyone.",
+        "Is everything clear?"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "f1",
+      "type": "fill",
+      "prompt": "Complete: Open your ___ to page ten.",
+      "answers": [
+        "books"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "error",
+      "prompt": "Find and correct the wrong word: 'Open you books to page ten.'",
+      "sentence": "Open you books to page ten.",
+      "errorIndex": 1,
+      "correctWord": "your"
+    },
+    {
+      "id": "s1",
+      "type": "sentence",
+      "prompt": "Arrange the words to make a classroom instruction.",
+      "words": [
+        "your",
+        "Open",
+        "books",
+        "please"
+      ],
+      "answer": [
+        "Open",
+        "your",
+        "books",
+        "please"
+      ]
+    }
   ],
-  "cases":[
-    {"id":"case1","title":"A student needs help","start":"start","nodes":{
-      "start":{"speaker":"Student","text":"Sorry, I don't understand the task.","choices":[{"text":"Of course. Let me explain it again.","next":"support","points":1},{"text":"You should already know this.","next":"dismiss","points":0}]},
-      "support":{"speaker":"Student","text":"Thank you. Could you give me an example?","choices":[{"text":"Certainly. Let's do the first one together.","next":"good","points":1},{"text":"Just read the instructions.","next":"weak","points":0}]},
-      "dismiss":{"speaker":"Student","text":"I still don't understand.","choices":[{"text":"Let's try an example together.","next":"good","points":1},{"text":"Move on to the next exercise.","next":"weak","points":0}]},
-      "good":{"end":true,"speaker":"Student","text":"Now I understand. Thank you!"},
-      "weak":{"end":true,"speaker":"Student","text":"I'm still confused."}
-    }}
+  "cases": [
+    {
+      "id": "case1",
+      "title": "A student needs help",
+      "start": "start",
+      "nodes": {
+        "start": {
+          "speaker": "Student",
+          "text": "Sorry, I don't understand the task.",
+          "choices": [
+            {
+              "text": "Of course. Let me explain it again.",
+              "next": "support",
+              "points": 1
+            },
+            {
+              "text": "You should already know this.",
+              "next": "dismiss",
+              "points": 0
+            }
+          ]
+        },
+        "support": {
+          "speaker": "Student",
+          "text": "Thank you. Could you give me an example?",
+          "choices": [
+            {
+              "text": "Certainly. Let's do the first one together.",
+              "next": "good",
+              "points": 1
+            },
+            {
+              "text": "Just read the instructions.",
+              "next": "weak",
+              "points": 0
+            }
+          ]
+        },
+        "dismiss": {
+          "speaker": "Student",
+          "text": "I still don't understand.",
+          "choices": [
+            {
+              "text": "Let's try an example together.",
+              "next": "good",
+              "points": 1
+            },
+            {
+              "text": "Move on to the next exercise.",
+              "next": "weak",
+              "points": 0
+            }
+          ]
+        },
+        "good": {
+          "end": true,
+          "speaker": "Student",
+          "text": "Now I understand. Thank you!"
+        },
+        "weak": {
+          "end": true,
+          "speaker": "Student",
+          "text": "I'm still confused."
+        }
+      }
+    }
   ]
 }

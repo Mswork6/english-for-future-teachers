@@ -1,31 +1,55 @@
-/* Theory: classroom expressions and expandable examples */
-.phrase {
-    background: #fff;
-    border: 1px solid #e0e6ee;
-    border-radius: 14px;
-    padding: 18px 22px;
+/* Theory — The Beginning of the Lesson */
+.theory-page { max-width: 1250px; margin: 0 auto; animation: theory-appear .28s ease-out both; }
+.theory-back { display: inline-flex; align-items: center; padding: 10px 17px; border: 1px solid var(--color-border); border-radius: 999px; background: #fff; color: #315c9d; font-weight: 650; margin-bottom: 28px; transition: background .2s, transform .2s; }
+.theory-back:hover { background: #edf2ff; transform: translateX(-2px); }
+.theory-intro { margin-bottom: 38px; }
+.theory-intro h1 { margin: 14px 0 15px; }
+.theory-intro .lead { font-size: 1.04rem; line-height: 1.65; max-width: 850px; }
+.theory-count { color: var(--color-text-muted); font-size: .92rem; margin-top: 18px; }
+.theory-category { margin: 30px 0 40px; }
+.theory-category-heading { display: flex; align-items: center; gap: 14px; margin-bottom: 17px; }
+.theory-category-heading h2 { color: var(--color-text); font-size: clamp(1.25rem, 2.5vw, 1.55rem); margin: 0; }
+.theory-category-number { font-size: .8rem; color: #506dff; font-weight: 750; background: #eaf0ff; padding: 7px 10px; border-radius: 10px; }
+.theory-phrase { background: #fff; border: 1px solid var(--color-border); border-radius: 17px; margin: 11px 0; box-shadow: 0 4px 18px rgba(35,57,98,.035); overflow: hidden; transition: box-shadow .2s, border-color .2s; }
+.theory-phrase:hover, .theory-phrase.expanded { border-color: #cbd8f3; box-shadow: 0 8px 23px rgba(35,57,98,.075); }
+.theory-phrase-row { display: flex; align-items: center; gap: 18px; padding: 20px 22px; }
+.theory-phrase-number { align-self: flex-start; color: #8795ae; font-size: .83rem; min-width: 24px; padding-top: 4px; font-weight: 700; }
+.theory-phrase-words { min-width: 0; flex: 1; }
+.theory-phrase-words h3 { margin: 0; font-size: 1.1rem; line-height: 1.4; color: var(--color-text); font-weight: 700; }
+.theory-phrase-words p { margin: 6px 0 0; color: var(--color-text-muted); font-size: .97rem; }
+.theory-phrase-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.theory-listen, .theory-toggle { font: inherit; cursor: pointer; border-radius: 10px; border: 1px solid #dfe7f4; background: #f4f7fe; color: #315fac; min-height: 39px; transition: background .2s, border-color .2s; }
+.theory-listen { width: 42px; font-size: 18px; }
+.theory-toggle { padding: 8px 13px; font-size: .88rem; font-weight: 650; }
+.theory-listen:hover, .theory-toggle:hover { background: #eaf0ff; border-color: #cbd8f3; }
+.theory-listen:focus-visible, .theory-toggle:focus-visible, .theory-back:focus-visible { outline: 3px solid #506dff; outline-offset: 2px; }
+/* Animated example: a 0fr/1fr grid allows both opening and closing to flow naturally. */
+.theory-example {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  margin: 0 22px 0 64px;
+  transition: grid-template-rows 300ms ease, opacity 250ms ease, margin-bottom 300ms ease;
 }
-
-.phrase-head {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    justify-content: space-between;
+.theory-phrase.expanded .theory-example {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-bottom: 20px;
 }
-
-.phrase h3 { margin: 0; font-size: 1.1rem; }
-.phrase p { margin: 5px 0; color: #596b83; }
-
-.phrase .actions {
-    display: flex;
-    gap: 8px;
-    align-items: center;
+.theory-example-inner { min-height: 0; overflow: hidden; }
+.theory-example-content {
+  padding: 15px 18px;
+  border-radius: 12px;
+  background: #f6f8fe;
+  border-left: 3px solid #506dff;
 }
-
-.example {
-    margin-top: 13px;
-    padding-top: 13px;
-    border-top: 1px solid #e8edf3;
+.theory-example strong { display: block; color: #42629b; font-size: .8rem; letter-spacing: .03em; margin-bottom: 7px; }
+.theory-example p { margin: 0; color: #384b6a; line-height: 1.6; }
+@keyframes theory-appear { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 700px) {
+  .theory-phrase-row { flex-wrap: wrap; padding: 17px; gap: 12px; }
+  .theory-phrase-words { flex-basis: calc(100% - 45px); }
+  .theory-phrase-actions { margin-left: 36px; }
+  .theory-example { margin-left: 17px; margin-right: 17px; }
 }
-
-.section-name { margin-top: 32px; color: #2b4f8e; }
+@media (prefers-reduced-motion: reduce) { .theory-page { animation: none; } .theory-example { transition: none; } }
