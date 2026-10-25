@@ -1,5 +1,6 @@
-import { app } from '../state.js';
-import { crumbs, header, demo, el, append } from '../utils/dom.js';
+import {app} from "../state.js";
+import {crumbs, header, demo, el, append} from "../utils/dom.js";
+import {gradePractice} from "../practice/grading.js";
 
 export function practice(mod) {
     crumbs(app, mod, 'Practice');
@@ -110,21 +111,13 @@ export function practice(mod) {
     form.append(submit, result);
     form.onsubmit = e => {
         e.preventDefault();
-        let total = 0;
-        for (let i = 0; i < mod.practice.length; i++) {
-            const q = mod.practice[i], a = saved[q.id];
-            let points = 0;
-            if (q.type === 'matching') points = q.pairs.reduce((s, p, n) => s + (a?.[n] === p[1] ? 1 / q.pairs.length : 0), 0);
-            if (q.type === 'choice') points = a === q.answer ? 1 : 0;
-            if (q.type === 'fill') points = q.answers.reduce((s, v, n) => s + (a?.[n]?.trim().toLowerCase() === v.toLowerCase() ? 1 / q.answers.length : 0), 0);
-            if (q.type === 'error') points = (a?.word === q.errorIndex ? .5 : 0) + (a?.correction?.trim().toLowerCase() === q.correctWord.toLowerCase() ? .5 : 0);
-            if (q.type === 'sentence') points = a?.map(n => q.words[n]).join('|') === q.answer.join('|') ? 1 : 0;
-            total += points;
+        const grading = gradePractice(mod.practice, saved);
+        for (let i = 0; i < grading.results.length; i++) {
             areas[i].querySelectorAll('.feedback').forEach(x => x.remove());
-            const f = el('div', `Score: ${Number(points.toFixed(2))} / 1`, 'feedback');
-            areas[i].append(f)
+            const f = el('div', `Score: ${Number(grading.results[i].points.toFixed(2))} / 1`, 'feedback');
+            areas[i].append(f);
         }
-        result.replaceChildren(el('div', `${Number(total.toFixed(2))} / ${mod.practice.length} points (${Math.round(total / mod.practice.length * 100)}%)`, 'score'), el('p', 'All answers have been checked. You can edit and submit again.', 'muted'));
+        result.replaceChildren(el('div', `${Number(grading.total.toFixed(2))} / ${grading.maximum} points (${grading.percentage}%)`, 'score'), el('p', 'All answers have been checked. You can edit and submit again.', 'muted'));
         result.scrollIntoView({behavior: 'smooth', block: 'nearest'})
     };
     app.append(form)
