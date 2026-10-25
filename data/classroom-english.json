@@ -1,0 +1,24 @@
+{
+  "id":"classroom-english","title":"Classroom English","demo":true,
+  "theory":[
+    {"category":"Starting the Lesson","en":"Good morning, everyone!","ru":"Доброе утро, всем!","example":"Good morning, everyone! Let's begin our lesson."},
+    {"category":"Giving Instructions","en":"Open your books to page ten.","ru":"Откройте учебники на десятой странице.","example":"Please open your books to page ten and look at the picture."},
+    {"category":"Checking Understanding","en":"Is everything clear?","ru":"Всё понятно?","example":"Is everything clear, or should I explain it again?"}
+  ],
+  "practice":[
+    {"id":"m1","type":"matching","prompt":"Match each phrase with its translation.","pairs":[["Good morning, everyone!","Доброе утро, всем!"],["Is everything clear?","Всё понятно?"]]},
+    {"id":"c1","type":"choice","prompt":"Which instruction asks learners to open a book?","options":["Open your books to page ten.","Goodbye, everyone.","Is everything clear?"],"answer":0},
+    {"id":"f1","type":"fill","prompt":"Complete: Open your ___ to page ten.","answers":["books"]},
+    {"id":"e1","type":"error","prompt":"Find and correct the wrong word: 'Open you books to page ten.'","sentence":"Open you books to page ten.","errorIndex":1,"correctWord":"your"},
+    {"id":"s1","type":"sentence","prompt":"Arrange the words to make a classroom instruction.","words":["your","Open","books","please"],"answer":["Open","your","books","please"]}
+  ],
+  "cases":[
+    {"id":"case1","title":"A student needs help","start":"start","nodes":{
+      "start":{"speaker":"Student","text":"Sorry, I don't understand the task.","choices":[{"text":"Of course. Let me explain it again.","next":"support","points":1},{"text":"You should already know this.","next":"dismiss","points":0}]},
+      "support":{"speaker":"Student","text":"Thank you. Could you give me an example?","choices":[{"text":"Certainly. Let's do the first one together.","next":"good","points":1},{"text":"Just read the instructions.","next":"weak","points":0}]},
+      "dismiss":{"speaker":"Student","text":"I still don't understand.","choices":[{"text":"Let's try an example together.","next":"good","points":1},{"text":"Move on to the next exercise.","next":"weak","points":0}]},
+      "good":{"end":true,"speaker":"Student","text":"Now I understand. Thank you!"},
+      "weak":{"end":true,"speaker":"Student","text":"I'm still confused."}
+    }}
+  ]
+}

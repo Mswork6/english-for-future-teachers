@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>English for Future Teachers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/app.js"></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#/">
+      <div class="brand-icon">
+          <i data-lucide="graduation-cap"></i>
+      </div>
+
+    <div class="brand-info">
+      <strong>English for Future Teachers</strong>
+      <span>Interactive English Learning</span>
+    </div>
+  </a>
+</header>
+
+<main id="app" class="container" tabindex="-1"></main>
+
+<footer class="footer">
+  <span>English for Future Teachers</span>
+  <span>Educational Learning Resource · 2026</span>
+</footer>
+<script>
+    window.addEventListener('load', () => {
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    });
+</script>
+</body>
+</html>
