@@ -1,154 +1,42 @@
 [
   {
-    "id": "m01-matching-01",
+    "id": "m01-matching-grouped-01",
     "type": "matching",
     "prompt": "Match the English expressions with their Russian translations.",
-    "title": "Matching Pairs — Task 1",
+    "title": "Greetings — Part 1",
     "pairs": [
       [
-        "Hello, everyone!",
-        "Всем привет! / Здравствуйте, все!"
+        "Hello, everyone.",
+        "Здравствуйте, все!"
       ],
       [
-        "My name is Mr/Mrs/Ms Smith. I'll be teaching you English this year.",
-        "Меня зовут мистер/миссис/мисс Смит. В этом году я буду преподавать вам английский язык."
-      ],
-      [
-        "Let's begin today's lesson.",
-        "Давайте начнём сегодняшний урок."
-      ],
-      [
-        "Who isn't here today?",
-        "Кого сегодня нет?"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-02",
-    "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "title": "Matching Pairs — Task 2",
-    "pairs": [
-      [
-        "Good morning, everybody!",
+        "Good morning, everybody.",
         "Доброе утро всем!"
       ],
       [
-        "I'm your new English teacher.",
-        "Я ваш новый учитель английского языка."
-      ],
-      [
-        "Let's begin our lesson now.",
-        "Давайте теперь начнём наш урок."
-      ],
-      [
-        "Who is absent today?",
-        "Кто сегодня отсутствует?"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-03",
-    "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "title": "Matching Pairs — Task 3",
-    "pairs": [
-      [
         "Good afternoon, class.",
-        "Добрый день, класс."
+        "Добрый день, класс!"
       ],
-      [
-        "I've got five lessons with you each week.",
-        "У нас с вами будет пять уроков в неделю."
-      ],
-      [
-        "I think we can start now.",
-        "Думаю, теперь мы можем начать."
-      ],
-      [
-        "Why were you absent last Friday, Tom?",
-        "Почему тебя не было в прошлую пятницу, Том?"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-04",
-    "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "title": "Matching Pairs — Task 4",
-    "pairs": [
       [
         "How are you getting on?",
         "Как у вас дела?"
       ],
       [
-        "Is everybody ready to start?",
-        "Все готовы начать?"
-      ],
-      [
-        "Now we can get down to work.",
-        "Теперь мы можем приступить к работе."
-      ],
-      [
-        "What's the matter with Anna today?",
-        "Что сегодня случилось с Анной?"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-05",
-    "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "title": "Matching Pairs — Task 5",
-    "pairs": [
-      [
         "What a lovely day!",
         "Какой прекрасный день!"
-      ],
-      [
-        "It's time to begin, please stop talking.",
-        "Пора начинать, пожалуйста, прекратите разговаривать."
-      ],
-      [
-        "I'm waiting for you to be quiet.",
-        "Я жду, когда вы успокоитесь."
-      ],
-      [
-        "What's wrong with Anna today?",
-        "Что сегодня не так с Анной?"
       ]
     ]
   },
   {
-    "id": "m01-matching-06",
+    "id": "m01-matching-grouped-02",
     "type": "matching",
     "prompt": "Match the English expressions with their Russian translations.",
-    "title": "Matching Pairs — Task 6",
+    "title": "Greetings — Part 2",
     "pairs": [
       [
         "How are things with you?",
         "Как у вас дела?"
       ],
-      [
-        "Settle down now so we can start.",
-        "Успокойтесь, чтобы мы могли начать."
-      ],
-      [
-        "We won't start until everyone is quiet.",
-        "Мы не начнём, пока все не успокоятся."
-      ],
-      [
-        "We started ten minutes ago. What have you been doing?",
-        "Мы начали десять минут назад. Чем ты занимался всё это время?"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-07",
-    "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "title": "Matching Pairs — Task 7",
-    "pairs": [
       [
         "Are you feeling better today, David?",
         "Ты сегодня чувствуешь себя лучше, Дэвид?"
@@ -160,10 +48,122 @@
       [
         "Today is very cold, isn't it?",
         "Сегодня очень холодно, не правда ли?"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-grouped-03",
+    "type": "matching",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "title": "Introductions",
+    "pairs": [
+      [
+        "My name is Mr/Mrs/Ms Smith. I'll be teaching you English this year.",
+        "Меня зовут мистер/миссис/мисс Смит. В этом году я буду преподавать вам английский язык."
+      ],
+      [
+        "I'm your new English teacher.",
+        "Я ваш новый учитель английского языка."
+      ],
+      [
+        "I've got five lessons with you each week.",
+        "У нас с вами будет пять уроков в неделю."
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-grouped-04",
+    "type": "matching",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "title": "Time to Begin — Part 1",
+    "pairs": [
+      [
+        "Let's begin today's lesson.",
+        "Давайте начнём сегодняшний урок."
+      ],
+      [
+        "Let's begin our lesson now.",
+        "Давайте теперь начнём наш урок."
+      ],
+      [
+        "I think we can start now.",
+        "Думаю, теперь мы можем начать."
+      ],
+      [
+        "Is everybody ready to start?",
+        "Все готовы начать?"
+      ],
+      [
+        "Now we can get down to work.",
+        "Теперь мы можем приступить к работе."
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-grouped-05",
+    "type": "matching",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "title": "Time to Begin — Part 2",
+    "pairs": [
+      [
+        "It's time to begin, please stop talking.",
+        "Пора начинать, пожалуйста, прекратите разговаривать."
+      ],
+      [
+        "I'm waiting for you to be quiet.",
+        "Я жду, когда вы успокоитесь."
+      ],
+      [
+        "Settle down now so we can start.",
+        "Успокойтесь, чтобы мы могли начать."
+      ],
+      [
+        "We won't start until everyone is quiet.",
+        "Мы не начнём, пока все не успокоятся."
       ],
       [
         "Stop talking and be quiet.",
         "Прекратите разговаривать и соблюдайте тишину."
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-grouped-06",
+    "type": "matching",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "title": "Register",
+    "pairs": [
+      [
+        "Who isn't here today?",
+        "Кого сегодня нет?"
+      ],
+      [
+        "Who is absent today?",
+        "Кто сегодня отсутствует?"
+      ],
+      [
+        "Why were you absent last Friday, Tom?",
+        "Почему тебя не было в прошлую пятницу, Том?"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-grouped-07",
+    "type": "matching",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "title": "Late",
+    "pairs": [
+      [
+        "We started ten minutes ago. What have you been doing?",
+        "Мы начали десять минут назад. Чем ты занимался всё это время?"
+      ],
+      [
+        "Did you oversleep?",
+        "Ты проспал?"
+      ],
+      [
+        "Did you miss your bus?",
+        "Ты опоздал на автобус?"
       ]
     ]
   },
