@@ -25,6 +25,7 @@ export function practice(mod) {
     let index = Math.min(Math.max(Number(previous?.index)||0,0),questions.length-1);
     let drawerOpen=false;
     let confirmOpen=false;
+    let selectListeners=new AbortController();
     const frame=el('div',null,'practice-shell');
     const main=el('div',null,'practice-main');
     const toolbar=el('div',null,'practice-toolbar');
@@ -82,6 +83,7 @@ export function practice(mod) {
     }
     function go(n){if(n<0||n>=questions.length)return;index=n;save();render();window.scrollTo({top:0,behavior:'smooth'});}
     function render(){
+        selectListeners.abort();selectListeners=new AbortController();
         const q=questions[index];card.replaceChildren();
         count.textContent=`Question ${index+1} of ${questions.length}`;
         bar.style.width=`${(index+1)/questions.length*100}%`;
@@ -91,11 +93,63 @@ export function practice(mod) {
         if(q.type==='matching'){
             const options=q.pairs.map(p=>p[1]).reverse();
             q.pairs.forEach(([source],n)=>{
-                const wrap=el('label',null,'practice-match-row');wrap.append(el('span',source));
-                const sel=el('select',null,'text-answer');sel.append(new Option('Select translation',''));
-                options.forEach(opt=>sel.append(new Option(opt,opt)));
-                sel.value=saved[q.id]?.[n]||'';
-                sel.onchange=()=>{saved[q.id][n]=sel.value;update();};wrap.append(sel);area.append(wrap);
+                const wrap=el('div',null,'practice-match-row');
+                wrap.append(el('span',source));
+                const picker=el('div',null,'practice-select');
+                const trigger=button('', 'practice-select-trigger',()=>toggle());
+                trigger.setAttribute('aria-haspopup','listbox');
+                trigger.setAttribute('aria-expanded','false');
+                trigger.setAttribute('aria-label',`Select translation for ${source}`);
+                const label=el('span',saved[q.id]?.[n]||'Select translation');
+                const arrow=el('span',null,'practice-select-chevron');
+                arrow.setAttribute('aria-hidden','true');
+                trigger.append(label,arrow);
+                const list=el('div',null,'practice-select-menu');
+                list.setAttribute('role','listbox');
+                list.setAttribute('aria-label',`Translations for ${source}`);
+                const entries=[];
+                const close=()=>{picker.classList.remove('is-open');trigger.setAttribute('aria-expanded','false');};
+                const choose=value=>{
+                    saved[q.id][n]=value;
+                    label.textContent=value||'Select translation';
+                    update();close();trigger.focus();
+                };
+                const allOptions=['',...options];
+                allOptions.forEach((value,i)=>{
+                    const opt=button(value||'Select translation','practice-select-option',()=>choose(value));
+                    opt.setAttribute('role','option');
+                    opt.setAttribute('aria-selected',String((saved[q.id]?.[n]||'')===value));
+                    opt.dataset.optionIndex=String(i);
+                    entries.push(opt);list.append(opt);
+                });
+                function toggle(){
+                    const opening=!picker.classList.contains('is-open');
+                    document.querySelectorAll('.practice-select.is-open').forEach(x=>{
+                        x.classList.remove('is-open');
+                        x.querySelector('.practice-select-trigger')?.setAttribute('aria-expanded','false');
+                    });
+                    if(opening){picker.classList.add('is-open');trigger.setAttribute('aria-expanded','true');}
+                }
+                trigger.addEventListener('keydown',e=>{
+                    if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+                        e.preventDefault();if(!picker.classList.contains('is-open'))toggle();
+                        const selected=allOptions.indexOf(saved[q.id]?.[n]||'');
+                        entries[Math.max(0,Math.min(entries.length-1,selected+(e.key==='ArrowDown'?1:-1)))].focus();
+                    }
+                });
+                list.addEventListener('keydown',e=>{
+                    const pos=entries.indexOf(document.activeElement);
+                    if(e.key==='Escape'){e.preventDefault();e.stopPropagation();close();trigger.focus();}
+                    else if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+                        e.preventDefault();entries[(pos+(e.key==='ArrowDown'?1:-1)+entries.length)%entries.length].focus();
+                    }else if(e.key==='Home'||e.key==='End'){
+                        e.preventDefault();entries[e.key==='Home'?0:entries.length-1].focus();
+                    }else if(e.key==='Tab')close();
+                });
+                document.addEventListener('pointerdown',e=>{
+                    if(!picker.contains(e.target))close();
+                },{signal:selectListeners.signal});
+                picker.append(trigger,list);wrap.append(picker);area.append(wrap);
             });
         }else if(q.type==='choice'){
             q.options.forEach((opt,n)=>{
