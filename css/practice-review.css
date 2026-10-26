@@ -1,0 +1,17 @@
+/* Read-only review after submitting Practice */
+.practice-review-links{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 22px}
+.practice-review-count{color:var(--color-text-muted);font-weight:650;margin:16px 0}
+.practice-review-list{display:grid;gap:18px;max-width:960px}
+.practice-review-card{padding:24px}
+.practice-review-card h2{font-size:1.2rem;margin:9px 0 10px}
+.practice-review-prompt{color:#465875;margin:0 0 18px}
+.practice-review-context{font-weight:650;color:var(--color-text);margin-bottom:8px}
+.practice-review-part{border-top:1px solid var(--color-border);padding:12px 0}
+.practice-review-field{margin:8px 0;border-left:3px solid var(--color-border);border-radius:8px;padding:8px 12px;background:#f6f8fd}
+.practice-review-field.is-correct{border-color:#3ba66b;background:#eaf8ef}
+.practice-review-field.is-incorrect{border-color:#df7b76;background:#fff1f1}
+.practice-review-label{display:block;font-size:.83rem;font-weight:700;color:#566780;margin-bottom:3px}
+.practice-review-value{overflow-wrap:anywhere;white-space:pre-wrap}
+.practice-review-explanation{margin-top:15px;padding:15px;border-radius:12px;background:#eef2ff}
+.practice-review-explanation p{margin:6px 0 0}
+@media(max-width:600px){.practice-review-card{padding:16px}}

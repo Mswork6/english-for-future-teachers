@@ -5,7 +5,7 @@ import { home } from './pages/home.js';
 import { modulesPage } from './pages/modules.js';
 import { modulePage } from './pages/module.js';
 import { theory } from './pages/theory.js';
-import { practice, practiceResults } from './pages/practice.js';
+import { practice, practiceResults, practiceReview } from './pages/practice.js';
 import { cases } from './pages/cases.js';
 
 let navigationId = 0;
@@ -61,6 +61,7 @@ export async function route() {
         if (!parts[2]) return modulePage(mod);
         if (parts[2] === 'theory') return theory(mod);
         if (parts[2] === 'practice' && parts[3] === 'results' && parts.length === 4) return practiceResults(mod);
+        if (parts[2] === 'practice' && parts[3] === 'review' && parts.length === 4) return practiceReview(mod);
         if (parts[2] === 'practice' && parts.length === 3) return practice(mod);
         if (parts[2] === 'cases') return cases(mod);
         throw new Error('Unknown section');

@@ -216,6 +216,82 @@ export function practiceResults(mod){
     const groups=[];(mod.practice||[]).forEach((q,n)=>{let item=groups.find(x=>x.type===q.type);if(!item){item={type:q.type,score:0,count:0};groups.push(item);}item.score+=grading.results[n]?.points||0;item.count++;});
     groups.forEach(item=>{const row=el('div',null,'practice-result-row');append(row,el('span',TYPES[item.type]||item.type),el('strong',`${Number(item.score.toFixed(2))} / ${item.count}`));byType.append(row);});
     panel.append(byType);const actions=el('div',null,'practice-result-actions');actions.append(link('Return to Module',`/module/${mod.id}`,'btn'));
+    actions.append(link('Review Mistakes',`/module/${mod.id}/practice/review`,'btn secondary'));
     actions.append(button('Try Again','btn secondary',()=>{try{localStorage.removeItem(storageKey(mod));localStorage.removeItem(resultKey(mod));}catch{}navigate(`/module/${mod.id}/practice`);}));
     panel.append(actions);app.append(panel);
+}
+
+
+// Read-only review of the submitted attempt. All keys come from the approved module data.
+export function practiceReview(mod) {
+    const questions=mod.practice||[];
+    const data=safeRead(resultKey(mod));
+    crumbs(app,mod,'Review Mistakes');
+    header(app,'Practice','Review Mistakes','Compare your submitted answers with the correct answers.');
+    const actions=el('div',null,'practice-review-links');
+    append(actions,link('← Back to Results',`/module/${mod.id}/practice/results`,'btn secondary'),link('Return to Module',`/module/${mod.id}`,'btn secondary'));
+    app.append(actions);
+    if(!data?.grading?.results || JSON.stringify(data.questionIds)!==JSON.stringify(questions.map(q=>q.id))){
+        app.append(el('p','No completed attempt is available for review.','note'));
+        return;
+    }
+    const missed=questions.map((q,index)=>({q,index,points:data.grading.results[index]?.points??0,answer:data.answers?.[q.id]}))
+        .filter(item=>item.points<1-1e-9);
+    const count=el('p',missed.length?`${missed.length} of ${questions.length} tasks need review.`:'All tasks were answered correctly. Great work!','practice-review-count');
+    app.append(count);
+    const list=el('div',null,'practice-review-list');app.append(list);
+    const normalize=v=>String(v??'').trim().toLowerCase();
+    const field=(parent,label,value,kind='')=>{
+        const item=el('div',null,`practice-review-field ${kind}`);
+        append(item,el('span',label,'practice-review-label'),el('div',value||'Not answered','practice-review-value'));
+        parent.append(item);
+    };
+    for(const {q,index,points,answer} of missed){
+        const card=el('article',null,'panel practice-review-card');
+        append(card,el('div',`Question ${index+1} · ${TYPES[q.type]||q.type} · ${Number(points.toFixed(2))} / 1 point`,'label'),el('h2',q.title||`Task ${index+1}`),el('p',q.prompt,'practice-review-prompt'));
+        if(q.type==='matching'){
+            for(const [i,[english,russian]] of q.pairs.entries()){
+                const part=el('div',null,'practice-review-part');
+                part.append(el('div',english,'practice-review-context'));
+                field(part,'Your answer',answer?.[i]||'',normalize(answer?.[i])===normalize(russian)?'is-correct':'is-incorrect');
+                if(normalize(answer?.[i])!==normalize(russian))field(part,'Correct answer',russian,'is-correct');
+                card.append(part);
+            }
+        }else if(q.type==='choice'){
+            const chosen=Number.isInteger(answer)?q.options[answer]:null;
+            field(card,'Your answer',chosen||'',answer===q.answer?'is-correct':'is-incorrect');
+            field(card,'Correct answer',q.options[q.answer],'is-correct');
+        }else if(q.type==='fill'){
+            if(q.sentence)card.append(el('p',q.sentence,'practice-review-context'));
+            q.answers.forEach((expected,i)=>{
+                const part=el('div',null,'practice-review-part');
+                part.append(el('div',`Blank ${i+1}`,'practice-review-context'));
+                const ok=normalize(answer?.[i])===normalize(expected);
+                field(part,'Your answer',answer?.[i]||'',ok?'is-correct':'is-incorrect');
+                if(!ok)field(part,'Correct answer',expected,'is-correct');
+                card.append(part);
+            });
+        }else if(q.type==='error'){
+            card.append(el('p',q.sentence,'practice-review-context'));
+            const words=q.sentence.split(' ');
+            const expected=words.slice(q.errorIndex,q.errorIndex+(q.errorLength||1)).join(' ');
+            const picked=Number.isInteger(answer?.word)?words.slice(answer.word,answer.word+(answer.word===q.errorIndex?(q.errorLength||1):1)).join(' '):'';
+            const wordCorrect=answer?.word===q.errorIndex;
+            field(card,'Selected incorrect fragment',picked,wordCorrect?'is-correct':'is-incorrect');
+            if(!wordCorrect)field(card,'Correct fragment',expected,'is-correct');
+            const correctionCorrect=normalize(answer?.correction)===normalize(q.correctWord);
+            field(card,'Your correction',answer?.correction||'',correctionCorrect?'is-correct':'is-incorrect');
+            if(!correctionCorrect)field(card,'Correct replacement',q.correctWord,'is-correct');
+        }else if(q.type==='sentence'){
+            const submitted=Array.isArray(answer)?answer.map(i=>q.words[i]||'').join(' '):'';
+            field(card,'Your sentence',submitted,'is-incorrect');
+            field(card,'Correct sentence',q.answer.join(' '),'is-correct');
+        }
+        // Explanation is intentionally optional: it will appear when reviewed content is supplied.
+        if(q.explanation){
+            const details=el('div',null,'practice-review-explanation');
+            append(details,el('strong','Explanation'),el('p',q.explanation));card.append(details);
+        }
+        list.append(card);
+    }
 }
