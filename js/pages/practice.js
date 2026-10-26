@@ -50,8 +50,10 @@ function button(label, cls, action, type = 'button') {
 
 export function practice(mod) {
     const questions = mod.practice || [];
-    crumbs(app, mod, 'Practice');
-    header(app, 'Practice', 'Practice your classroom English', 'Work through each question. Answers are assessed together at the end.');
+    document.body.classList.add('practice-view');
+    const heading = el('div', null, 'practice-page-heading');
+    append(heading, link('← Back to Module', `/module/${mod.id}`, 'practice-module-back'), el('h1', 'Practice Test'));
+    app.append(heading);
     if (!questions.length) {
         app.append(el('p', 'No practice questions are available yet.', 'note'));
         return;
@@ -62,6 +64,7 @@ export function practice(mod) {
     let drawerOpen = false;
     let confirmOpen = false;
     const frame = el('div', null, 'practice-shell');
+    const main = el('div', null, 'practice-main');
     const toolbar = el('div', null, 'practice-toolbar');
     const count = el('span', null, 'practice-count');
     const progress = el('div', null, 'practice-progress');
@@ -74,8 +77,6 @@ export function practice(mod) {
     const finish = button('Finish Practice', 'btn', () => showConfirm());
     const controls = el('div', null, 'practice-controls');
     append(controls, back, next, finish);
-    const veil = el('div', null, 'practice-veil');
-    veil.onclick = () => setDrawer(false);
     const drawer = el('aside', null, 'practice-drawer');
     drawer.setAttribute('aria-label', 'Question navigator');
     const drawerHeading = el('div', null, 'practice-drawer-heading');
@@ -95,7 +96,8 @@ export function practice(mod) {
     const modalOverlay = el('div', null, 'practice-modal-overlay');
     modalOverlay.onclick = () => hideConfirm();
     append(toolbar, count, openNav);
-    append(frame, toolbar, progress, card, controls, veil, drawer, modalOverlay, dialog);
+    append(main, toolbar, progress, card, controls);
+    append(frame, main, drawer, modalOverlay, dialog);
     app.append(frame);
 
     function save() {
@@ -105,7 +107,7 @@ export function practice(mod) {
     function setDrawer(open) {
         drawerOpen = open;
         drawer.classList.toggle('is-open', open);
-        veil.classList.toggle('is-open', open);
+        frame.classList.toggle('navigator-open', open);
         openNav.setAttribute('aria-expanded', String(open));
         if (open) closeNav.focus();
     }

@@ -15,6 +15,7 @@ export async function route() {
     const isCurrent = () => currentNavigation === navigationId;
     const hash = location.hash;
 
+    document.body.classList.remove('practice-view');
     app.replaceChildren();
 
     try {
