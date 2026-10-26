@@ -51,6 +51,13 @@ export async function route() {
         }
         if (!isCurrent()) return;
 
+        // Module 01 uses the approved 35-task Practice dataset.
+        // Keep Theory and Teaching Cases in the original module JSON.
+        if (info.id === 'the-beginning-of-the-lesson' && parts[2] === 'practice') {
+            mod = {...mod, practice: await load('data/module-01-practice.json')};
+            if (!isCurrent()) return;
+        }
+
         if (!parts[2]) return modulePage(mod);
         if (parts[2] === 'theory') return theory(mod);
         if (parts[2] === 'practice' && parts[3] === 'results' && parts.length === 4) return practiceResults(mod);

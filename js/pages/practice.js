@@ -159,10 +159,26 @@ export function practice(mod) {
         }else if(q.type==='fill'){
             q.answers.forEach((_,n)=>{const input=el('input',null,'text-answer');input.type='text';input.placeholder=`Blank ${n+1}`;input.value=saved[q.id]?.[n]||'';input.oninput=()=>{saved[q.id][n]=input.value;update();};area.append(input);});
         }else if(q.type==='error'){
-            area.append(el('p','Select the incorrect word:','muted'));
+            const fragmentSize=q.errorLength||1;
+            area.append(el('p',fragmentSize>1?'Select the incorrect word or phrase:':'Select the incorrect word:','muted'));
             const tokens=el('div',null,'row practice-tokens');
-            q.sentence.split(' ').forEach((word,n)=>{const b=button(word,'icon-btn',()=>{saved[q.id].word=n;update();render();});if(saved[q.id]?.word===n)b.classList.add('is-selected');tokens.append(b);});
-            const correction=el('input',null,'text-answer');correction.placeholder='Correct word';correction.value=saved[q.id]?.correction||'';correction.oninput=()=>{saved[q.id].correction=correction.value;update();};
+            const words=q.sentence.split(' ');
+            if(fragmentSize>1){
+                // Keep the relevant two-word fragment as one selectable item.
+                for(let n=0;n<words.length;){
+                    const size=n===q.errorIndex?fragmentSize:1;
+                    const fragment=words.slice(n,n+size).join(' ');
+                    const current=n;
+                    const b=button(fragment,'icon-btn',()=>{saved[q.id].word=current;update();render();});
+                    if(saved[q.id]?.word===current)b.classList.add('is-selected');
+                    tokens.append(b);n+=size;
+                }
+            }else words.forEach((word,n)=>{
+                const b=button(word,'icon-btn',()=>{saved[q.id].word=n;update();render();});
+                if(saved[q.id]?.word===n)b.classList.add('is-selected');
+                tokens.append(b);
+            });
+            const correction=el('input',null,'text-answer');correction.placeholder=fragmentSize>1?'Correct phrase':'Correct word';correction.value=saved[q.id]?.correction||'';correction.oninput=()=>{saved[q.id].correction=correction.value;update();};
             append(area,tokens,el('p','Type the correct replacement:','muted'),correction);
         }else if(q.type==='sentence'){
             const pool=el('div',null,'row practice-tokens'),selection=el('div',null,'row practice-tokens');
