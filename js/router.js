@@ -5,7 +5,9 @@ import { home } from './pages/home.js';
 import { modulesPage } from './pages/modules.js';
 import { modulePage } from './pages/module.js';
 import { theory } from './pages/theory.js';
-import { practice, practiceResults, practiceReview } from './pages/practice.js';
+import { practice } from './pages/practice.js';
+import { practiceResults } from './pages/practice-results.js';
+import { practiceReview } from './pages/practice-review.js';
 import { cases } from './pages/cases.js';
 
 let navigationId = 0;
