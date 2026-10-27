@@ -1,5 +1,6 @@
 import { app } from './state.js';
 import { load, DataLoadError } from './data-service.js';
+import { loadModule } from './module-loader.js';
 import { el, append, link, header, notReady } from './utils/dom.js';
 import { home } from './pages/home.js';
 import { modulesPage } from './pages/modules.js';
@@ -43,7 +44,7 @@ export async function route() {
 
         let mod;
         try {
-            mod = await load(`data/${info.id}.json`);
+            mod = await loadModule(info, { includePractice: parts[2] === 'practice' });
         } catch (error) {
             if (!isCurrent()) return;
             if (error instanceof DataLoadError && error.status === 404) {
@@ -52,13 +53,6 @@ export async function route() {
             throw error;
         }
         if (!isCurrent()) return;
-
-        // Module 01 uses the approved 35-task Practice dataset.
-        // Keep Theory and Teaching Cases in the original module JSON.
-        if (info.id === 'the-beginning-of-the-lesson' && parts[2] === 'practice') {
-            mod = {...mod, practice: await load('data/module-01-practice.json')};
-            if (!isCurrent()) return;
-        }
 
         if (!parts[2]) return modulePage(mod);
         if (parts[2] === 'theory') return theory(mod);

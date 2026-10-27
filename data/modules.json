@@ -2,7 +2,8 @@
   {
     "id": "the-beginning-of-the-lesson",
     "title": "The Beginning of the Lesson",
-    "description": "Greetings, introductions, starting the lesson, attendance and late arrivals."
+    "description": "Greetings, introductions, starting the lesson, attendance and late arrivals.",
+    "practiceFile": "data/module-01-practice.json"
   },
   {
     "id": "communication-with-students",
