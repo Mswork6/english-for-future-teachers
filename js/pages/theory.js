@@ -1,5 +1,6 @@
-import { app } from '../state.js';
-import { el, append, link } from '../utils/dom.js';
+import {app} from '../state.js';
+import {el, append, link} from '../utils/dom.js';
+import {speakEnglish} from '../utils/speech.js';
 
 export function theory(mod) {
     const page = el('section', null, 'theory-page');
@@ -37,17 +38,7 @@ export function theory(mod) {
         listen.title = 'Listen to the phrase';
         listen.setAttribute('aria-label', `Listen to: ${phrase.en}`);
         listen.textContent = '🔊';
-        listen.addEventListener('click', () => {
-            if (!('speechSynthesis' in window)) {
-                window.alert('Speech synthesis is not supported in this browser.');
-                return;
-            }
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(phrase.en);
-            utterance.lang = 'en-GB';
-            utterance.rate = 0.9;
-            window.speechSynthesis.speak(utterance);
-        });
+        listen.addEventListener('click', () => speakEnglish(phrase.en));
         const example = el('div', null, 'theory-example');
         example.id = `theory-example-${index + 1}`;
         const exampleInner = el('div', null, 'theory-example-inner');

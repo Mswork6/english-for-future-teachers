@@ -1,10 +1,28 @@
-import { app } from '../state.js';
-import { el, append, link } from '../utils/dom.js';
+import {app} from '../state.js';
+import {el, append, link} from '../utils/dom.js';
 
 const SECTIONS = [
-    { title: 'Theory', description: 'Learn useful English expressions for classroom communication.', route: 'theory', icon: 'book-open', color: 'blue' },
-    { title: 'Practice', description: 'Complete interactive exercises and check your knowledge.', route: 'practice', icon: 'list-checks', color: 'green' },
-    { title: 'Teaching Cases', description: 'Make teaching decisions in realistic classroom situations.', route: 'cases', icon: 'messages-square', color: 'purple' }
+    {
+        title: 'Theory',
+        description: 'Learn useful English expressions for classroom communication.',
+        route: 'theory',
+        icon: 'book-open',
+        color: 'blue'
+    },
+    {
+        title: 'Practice',
+        description: 'Complete interactive exercises and check your knowledge.',
+        route: 'practice',
+        icon: 'list-checks',
+        color: 'green'
+    },
+    {
+        title: 'Teaching Cases',
+        description: 'Make teaching decisions in realistic classroom situations.',
+        route: 'cases',
+        icon: 'messages-square',
+        color: 'purple'
+    }
 ];
 
 export function modulePage(mod) {

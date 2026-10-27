@@ -1,4 +1,4 @@
-import { app } from '../state.js';
+import {app} from '../state.js';
 
 export function home(modules) {
     const section = document.createElement('section');

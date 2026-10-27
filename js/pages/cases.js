@@ -1,5 +1,5 @@
-import { app } from '../state.js';
-import { crumbs, header, demo, el, append } from '../utils/dom.js';
+import {app} from '../state.js';
+import {crumbs, header, demo, el, append} from '../utils/dom.js';
 
 export function cases(mod) {
     crumbs(app, mod, 'Teaching Cases');
