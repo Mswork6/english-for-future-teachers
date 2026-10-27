@@ -1,6 +1,6 @@
-import { app } from '../state.js';
-import { el, append, link } from '../utils/dom.js';
-import { speakEnglish } from '../utils/speech.js';
+import {app} from '../state.js';
+import {el, append, link} from '../utils/dom.js';
+import {speakEnglish} from '../utils/speech.js';
 
 export function theory(mod) {
     const page = el('section', null, 'theory-page');

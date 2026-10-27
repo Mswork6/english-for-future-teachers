@@ -1,14 +1,22 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { speakEnglish } from '../js/utils/speech.js';
+import {speakEnglish} from '../js/utils/speech.js';
 
 test('speech uses en-GB at the original speaking rate and cancels prior audio', () => {
     const calls = [];
-    const browser = { speechSynthesis: {
-        cancel: () => calls.push('cancel'),
-        speak: utterance => calls.push(utterance)
-    }};
-    class Utterance { constructor(text) { this.text = text; } }
+    const browser = {
+        speechSynthesis: {
+            cancel: () => calls.push('cancel'),
+            speak: utterance => calls.push(utterance)
+        }
+    };
+
+    class Utterance {
+        constructor(text) {
+            this.text = text;
+        }
+    }
+
     assert.equal(speakEnglish('Good morning', {browser, Utterance}), true);
     assert.equal(calls[0], 'cancel');
     assert.equal(calls[1].text, 'Good morning');
@@ -18,7 +26,11 @@ test('speech uses en-GB at the original speaking rate and cancels prior audio', 
 
 test('speech warns and does not throw when unavailable', () => {
     let message = '';
-    const browser = { alert: text => { message = text; } };
+    const browser = {
+        alert: text => {
+            message = text;
+        }
+    };
     assert.equal(speakEnglish('Hello', {browser, Utterance: undefined}), false);
     assert.match(message, /not supported/);
 });

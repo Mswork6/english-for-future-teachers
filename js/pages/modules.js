@@ -1,10 +1,10 @@
-import { app } from '../state.js';
-import { el, append, link } from '../utils/dom.js';
+import {app} from '../state.js';
+import {el, append, link} from '../utils/dom.js';
 
 const ICONS = [
-    { name: 'book-open', color: 'blue' },
-    { name: 'messages-square', color: 'green' },
-    { name: 'graduation-cap', color: 'purple' }
+    {name: 'book-open', color: 'blue'},
+    {name: 'messages-square', color: 'green'},
+    {name: 'graduation-cap', color: 'purple'}
 ];
 
 export function modulesPage(modules) {

@@ -1,18 +1,20 @@
-import test, { before, after } from 'node:test';
+import test, {before, after} from 'node:test';
 import assert from 'node:assert/strict';
-import { el, append, link, header, crumbs, demo, notReady } from '../js/utils/dom.js';
+import {el, append, link, header, crumbs, demo, notReady} from '../js/utils/dom.js';
 
 const originalDocument = globalThis.document;
 
 function element(tagName) {
     return {
         tagName, textContent: '', className: '', href: '', children: [],
-        append(...nodes) { this.children.push(...nodes); }
+        append(...nodes) {
+            this.children.push(...nodes);
+        }
     };
 }
 
 before(() => {
-    globalThis.document = { createElement: element };
+    globalThis.document = {createElement: element};
 });
 after(() => {
     if (originalDocument === undefined) delete globalThis.document;
@@ -51,7 +53,7 @@ test('header adds expected elements in order', () => {
 
 test('breadcrumbs render module and optional section', () => {
     const root = el('main');
-    crumbs(root, { id: 'test-module', title: 'Test Module' }, 'Practice');
+    crumbs(root, {id: 'test-module', title: 'Test Module'}, 'Practice');
     const nodes = root.children[0].children;
     assert.equal(root.children[0].className, 'breadcrumbs');
     assert.equal(nodes[0].href, '#/modules');
@@ -59,7 +61,7 @@ test('breadcrumbs render module and optional section', () => {
     assert.equal(nodes[4].textContent, 'Practice');
 
     const short = el('main');
-    crumbs(short, { id: 'test-module', title: 'Test Module' });
+    crumbs(short, {id: 'test-module', title: 'Test Module'});
     assert.equal(short.children[0].children.length, 3);
 });
 
