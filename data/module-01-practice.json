@@ -228,7 +228,8 @@
       "Good evening, everybody!",
       "Good night, everybody!"
     ],
-    "answer": 1
+    "answer": 1,
+    "explanation": "At 9 a.m., it is morning, so “Good morning, everybody!” is appropriate. “Good afternoon” and “Good evening” refer to later times of day; “Good night” is usually used when saying goodbye or going to bed."
   },
   {
     "id": "m01-choice-02",
@@ -241,7 +242,8 @@
       "I'm your new English teacher.",
       "I'm going to teach you mathematics."
     ],
-    "answer": 2
+    "answer": 2,
+    "explanation": "“I'm your new English teacher” clearly introduces the speaker as the class's new English teacher. The other options describe a former teacher, a student, or a teacher of a different subject."
   },
   {
     "id": "m01-choice-03",
@@ -254,7 +256,8 @@
       "Who is late today?",
       "Who is absent today?"
     ],
-    "answer": 3
+    "answer": 3,
+    "explanation": "“Who is absent today?” asks which students are missing from the current lesson. The other questions refer to a different day or ask about lateness rather than absence."
   },
   {
     "id": "m01-choice-04",
@@ -267,7 +270,8 @@
       "It's time to begin, please stop talking.",
       "You may discuss the lesson with your partner."
     ],
-    "answer": 2
+    "answer": 2,
+    "explanation": "“It's time to begin, please stop talking” both announces the start of the lesson and asks students to stop talking. The other options discuss continuing, ending, or allowing conversation."
   },
   {
     "id": "m01-choice-05",
@@ -280,7 +284,8 @@
       "Let's begin with exercise one.",
       "Please answer the first question."
     ],
-    "answer": 1
+    "answer": 1,
+    "explanation": "“Settle down now so we can start” asks the class to become calm and ready before the lesson begins. The other responses give instructions for lesson activities without directly addressing the noise and restlessness."
   },
   {
     "id": "m01-choice-06",
@@ -293,7 +298,8 @@
       "We started ten minutes ago. What have you been doing?",
       "We have ten minutes left. What have you finished?"
     ],
-    "answer": 2
+    "answer": 2,
+    "explanation": "“We started ten minutes ago. What have you been doing?” makes it clear that the lesson has already begun and asks the late student to account for the delay. The other options describe a future start, an early arrival, or completed work."
   },
   {
     "id": "m01-choice-07",
@@ -306,7 +312,8 @@
       "Have you finished your homework, David?",
       "Are you feeling better today, David?"
     ],
-    "answer": 3
+    "answer": 3,
+    "explanation": "“Are you feeling better today, David?” directly asks whether David's health has improved since he was ill. The other options ask about homework or readiness for the lesson, not his recovery."
   },
   {
     "id": "m01-fill-01",
@@ -805,8 +812,7 @@
     "sentence": "I've got five lesson with you each week.",
     "errorIndex": 3,
     "errorLength": 1,
-    "correctWord": "lessons",
-    "explanation": "After five, the countable noun lesson must be plural."
+    "correctWord": "lessons"
   },
   {
     "id": "m01-error-09",
@@ -816,8 +822,7 @@
     "sentence": "I think we can starts now.",
     "errorIndex": 4,
     "errorLength": 1,
-    "correctWord": "start",
-    "explanation": "After the modal verb can, use the base form of the verb."
+    "correctWord": "start"
   },
   {
     "id": "m01-error-10",
@@ -827,8 +832,7 @@
     "sentence": "Please stops talking so we can begin.",
     "errorIndex": 1,
     "errorLength": 1,
-    "correctWord": "stop",
-    "explanation": "An imperative uses the base form stop."
+    "correctWord": "stop"
   },
   {
     "id": "m01-error-11",
@@ -838,8 +842,7 @@
     "sentence": "Are you feeling gooder today, David?",
     "errorIndex": 3,
     "errorLength": 1,
-    "correctWord": "better",
-    "explanation": "Better is the comparative form used to ask whether someone has recovered."
+    "correctWord": "better"
   },
   {
     "id": "m01-error-12",
@@ -849,8 +852,7 @@
     "sentence": "Why you were absent last Friday, Tom?",
     "errorIndex": 1,
     "errorLength": 2,
-    "correctWord": "were you",
-    "explanation": "A direct question with be requires inversion: were you."
+    "correctWord": "were you"
   },
   {
     "id": "m01-error-13",
@@ -860,8 +862,7 @@
     "sentence": "Did you miss your train?",
     "errorIndex": 4,
     "errorLength": 1,
-    "correctWord": "bus",
-    "explanation": "The student missed a bus, not a train."
+    "correctWord": "bus"
   },
   {
     "id": "m01-error-14",
@@ -871,8 +872,7 @@
     "sentence": "I'm waiting for you to be loud.",
     "errorIndex": 6,
     "errorLength": 1,
-    "correctWord": "quiet",
-    "explanation": "The context requires quiet, not loud."
+    "correctWord": "quiet"
   },
   {
     "id": "m01-sentence-08",

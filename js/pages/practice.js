@@ -266,6 +266,14 @@ export function practiceReview(mod) {
         app.append(el('p','No completed attempt is available for review.','note'));
         return;
     }
+    // A completed attempt contains a snapshot of its questions.
+    // Use the current bank only to enrich explanation text, never to change
+    // the original question, answer, option order, or score.
+    const choiceExplanations = new Map(
+        (mod.practice || [])
+            .filter(q => q.type === 'choice' && typeof q.explanation === 'string')
+            .map(q => [q.id, q.explanation])
+    );
     const reviewed=questions.map((q,index)=>({q,index,points:data.grading.results[index]?.points??0,answer:data.answers?.[q.id]}));
     const correct=reviewed.filter(item=>item.points>=1-1e-9).length;
     const partial=reviewed.filter(item=>item.points>1e-9 && item.points<1-1e-9).length;
@@ -338,10 +346,15 @@ export function practiceReview(mod) {
             field(answerBody,'Your sentence',submitted,points>=1-1e-9?'is-correct':'is-incorrect');
             field(answerBody,'Correct sentence',q.answer.join(' '),'is-correct');
         }
-        // Explanation is intentionally optional: it will appear when reviewed content is supplied.
-        if(q.explanation){
-            const details=el('div',null,'practice-review-explanation');
-            append(details,el('strong','Explanation'),el('p',q.explanation));answerBody.append(details);
+        // Explanations are shown only for Multiple Choice.
+        // Updated content is available even for previously completed attempts.
+        if(q.type==='choice'){
+            const explanation=choiceExplanations.get(q.id) || q.explanation;
+            if(explanation){
+                const details=el('div',null,'practice-review-explanation');
+                append(details,el('strong','Explanation'),el('p',explanation));
+                answerBody.append(details);
+            }
         }
         list.append(card);
     }
