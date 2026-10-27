@@ -4,7 +4,7 @@ import { gradePractice } from '../practice/grading.js';
 import { selectPracticeQuestions } from '../practice/question-bank.js';
 
 const TYPES = {matching:'Matching Pairs',choice:'Multiple Choice',fill:'Fill in the Blanks',error:'Find and Correct the Error',sentence:'Sentence Building'};
-const storageKey = mod => `eft:practice:${mod.id}:attempt:v2`;
+const storageKey = mod => `eft:practice:${mod.id}:attempt:v4`;
 const resultKey = mod => `eft:practice:${mod.id}:result:v2`;
 const recentKey = mod => `eft:practice:${mod.id}:previous-question-ids:v1`;
 const empty = q => q.type === 'matching' ? {} : q.type === 'fill' || q.type === 'sentence' ? [] : q.type === 'error' ? {word:null,correction:''} : null;
@@ -17,7 +17,30 @@ function button(label, cls, action, type='button') {const b=el('button',label,cl
 
 export function practice(mod) {
     const bank = mod.practice || [];
-    const previous = safeRead(storageKey(mod));
+    // Reject stale/incompatible content instead of silently showing a previous bank.
+    if(mod.id === 'the-beginning-of-the-lesson') {
+        const matching = bank.filter(q => q.type === 'matching');
+        const phrases = matching.flatMap(q => q.pairs?.map(pair => pair[0]) || []);
+        const actual = new Map();
+        for(const q of matching) actual.set(q.category, (actual.get(q.category) || 0) + 1);
+        const expected = {Greetings:3,Introductions:1,'Time to Begin':3,Register:2,Late:1};
+        const valid = matching.length === 10 && phrases.length === 32 &&
+            new Set(phrases).size === 32 &&
+            Object.entries(expected).every(([category, count]) => actual.get(category) === count);
+        if(!valid) {
+            throw new Error('The Matching Pairs question bank is outdated. Please reload the site and check data/module-01-practice.json.');
+        }
+    }
+    const savedDraft = safeRead(storageKey(mod));
+    // Validate stored question IDs and payload against the currently loaded bank.
+    const bankById = new Map(bank.map(q => [q.id, q]));
+    const draftIsCurrent = Array.isArray(savedDraft?.questions) && savedDraft.questions.length === 35 &&
+        savedDraft.questions.every(q => bankById.has(q.id) &&
+            JSON.stringify(q) === JSON.stringify(bankById.get(q.id)));
+    const previous = draftIsCurrent ? savedDraft : null;
+    if(savedDraft && !draftIsCurrent) {
+        try { localStorage.removeItem(storageKey(mod)); } catch {}
+    }
     // A draft is an immutable selection: reloading must restore exactly the same questions.
     const questions = Array.isArray(previous?.questions) && previous.questions.length===35
         ? previous.questions

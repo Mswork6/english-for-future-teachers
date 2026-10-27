@@ -1,21 +1,14 @@
 [
   {
-    "id": "m01-matching-grouped-01",
+    "id": "m01-matching-unique-01",
     "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
+    "category": "Greetings",
     "title": "Greetings — Part 1",
+    "prompt": "Match the English expressions with their Russian translations.",
     "pairs": [
       [
         "Hello, everyone.",
         "Здравствуйте, все!"
-      ],
-      [
-        "Good morning, everybody.",
-        "Доброе утро всем!"
-      ],
-      [
-        "Good afternoon, class.",
-        "Добрый день, класс!"
       ],
       [
         "How are you getting on?",
@@ -28,14 +21,15 @@
     ]
   },
   {
-    "id": "m01-matching-grouped-02",
+    "id": "m01-matching-unique-02",
     "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
+    "category": "Greetings",
     "title": "Greetings — Part 2",
+    "prompt": "Match the English expressions with their Russian translations.",
     "pairs": [
       [
-        "How are things with you?",
-        "Как у вас дела?"
+        "Good morning, everybody.",
+        "Доброе утро всем!"
       ],
       [
         "Are you feeling better today, David?",
@@ -44,6 +38,23 @@
       [
         "What a rainy day!",
         "Какой дождливый день!"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-03",
+    "type": "matching",
+    "category": "Greetings",
+    "title": "Greetings — Part 3",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Good afternoon, class.",
+        "Добрый день, класс!"
+      ],
+      [
+        "How are things with you?",
+        "Как у вас дела?"
       ],
       [
         "Today is very cold, isn't it?",
@@ -52,10 +63,11 @@
     ]
   },
   {
-    "id": "m01-matching-grouped-03",
+    "id": "m01-matching-unique-04",
     "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
+    "category": "Introductions",
     "title": "Introductions",
+    "prompt": "Match the English expressions with their Russian translations.",
     "pairs": [
       [
         "My name is Mr/Mrs/Ms Smith. I'll be teaching you English this year.",
@@ -72,22 +84,15 @@
     ]
   },
   {
-    "id": "m01-matching-grouped-04",
+    "id": "m01-matching-unique-05",
     "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
+    "category": "Time to Begin",
     "title": "Time to Begin — Part 1",
+    "prompt": "Match the English expressions with their Russian translations.",
     "pairs": [
       [
         "Let's begin today's lesson.",
         "Давайте начнём сегодняшний урок."
-      ],
-      [
-        "Let's begin our lesson now.",
-        "Давайте теперь начнём наш урок."
-      ],
-      [
-        "I think we can start now.",
-        "Думаю, теперь мы можем начать."
       ],
       [
         "Is everybody ready to start?",
@@ -96,26 +101,44 @@
       [
         "Now we can get down to work.",
         "Теперь мы можем приступить к работе."
+      ],
+      [
+        "I'm waiting for you to be quiet.",
+        "Я жду, когда вы успокоитесь."
       ]
     ]
   },
   {
-    "id": "m01-matching-grouped-05",
+    "id": "m01-matching-unique-06",
     "type": "matching",
-    "prompt": "Match the English expressions with their Russian translations.",
+    "category": "Time to Begin",
     "title": "Time to Begin — Part 2",
+    "prompt": "Match the English expressions with their Russian translations.",
     "pairs": [
+      [
+        "Let's begin our lesson now.",
+        "Давайте теперь начнём наш урок."
+      ],
       [
         "It's time to begin, please stop talking.",
         "Пора начинать, пожалуйста, прекратите разговаривать."
       ],
       [
-        "I'm waiting for you to be quiet.",
-        "Я жду, когда вы успокоитесь."
-      ],
-      [
         "Settle down now so we can start.",
         "Успокойтесь, чтобы мы могли начать."
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-07",
+    "type": "matching",
+    "category": "Time to Begin",
+    "title": "Time to Begin — Part 3",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "I think we can start now.",
+        "Думаю, теперь мы можем начать."
       ],
       [
         "We won't start until everyone is quiet.",
@@ -128,30 +151,49 @@
     ]
   },
   {
-    "id": "m01-matching-grouped-06",
+    "id": "m01-matching-unique-08",
     "type": "matching",
+    "category": "Register",
+    "title": "Register — Part 1",
     "prompt": "Match the English expressions with their Russian translations.",
-    "title": "Register",
     "pairs": [
       [
         "Who isn't here today?",
         "Кого сегодня нет?"
       ],
       [
-        "Who is absent today?",
-        "Кто сегодня отсутствует?"
-      ],
-      [
         "Why were you absent last Friday, Tom?",
         "Почему тебя не было в прошлую пятницу, Том?"
+      ],
+      [
+        "What's the matter with Anna today?",
+        "Что случилось с Анной сегодня?"
       ]
     ]
   },
   {
-    "id": "m01-matching-grouped-07",
+    "id": "m01-matching-unique-09",
     "type": "matching",
+    "category": "Register",
+    "title": "Register — Part 2",
     "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Who is absent today?",
+        "Кто сегодня отсутствует?"
+      ],
+      [
+        "What's wrong with Anna today?",
+        "Что не так с Анной сегодня?"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-10",
+    "type": "matching",
+    "category": "Late",
     "title": "Late",
+    "prompt": "Match the English expressions with their Russian translations.",
     "pairs": [
       [
         "We started ten minutes ago. What have you been doing?",
@@ -164,6 +206,14 @@
       [
         "Did you miss your bus?",
         "Ты опоздал на автобус?"
+      ],
+      [
+        "Where have you been?",
+        "Где ты был?"
+      ],
+      [
+        "Don't let it happen again.",
+        "Не допускай, чтобы это повторилось."
       ]
     ]
   },
@@ -562,146 +612,6 @@
       "you",
       "been",
       "doing?"
-    ]
-  },
-  {
-    "id": "m01-matching-2026-08",
-    "type": "matching",
-    "title": "Greetings — Ways to Address the Class",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "pairs": [
-      [
-        "Hello, everyone.",
-        "Здравствуйте, все!"
-      ],
-      [
-        "Good afternoon, class.",
-        "Добрый день, класс!"
-      ],
-      [
-        "Good morning, everybody.",
-        "Доброе утро всем!"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-2026-09",
-    "type": "matching",
-    "title": "Greetings — Weather Comments",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "pairs": [
-      [
-        "What a lovely day!",
-        "Какой прекрасный день!"
-      ],
-      [
-        "What a rainy day!",
-        "Какой дождливый день!"
-      ],
-      [
-        "Today is very cold, isn't it?",
-        "Сегодня очень холодно, не правда ли?"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-2026-10",
-    "type": "matching",
-    "title": "Greetings — Feelings and Well-being",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "pairs": [
-      [
-        "How are you getting on?",
-        "Как вы поживаете?"
-      ],
-      [
-        "Are you feeling better today, David?",
-        "Ты сегодня чувствуешь себя лучше, Дэвид?"
-      ],
-      [
-        "What a lovely day!",
-        "Какой прекрасный день!"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-2026-11",
-    "type": "matching",
-    "title": "Register — Asking About Anna (Part 1)",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "pairs": [
-      [
-        "Who isn't here today?",
-        "Кого сегодня нет?"
-      ],
-      [
-        "What's the matter with Anna today?",
-        "Что случилось с Анной сегодня?"
-      ],
-      [
-        "Why were you absent last Friday, Tom?",
-        "Почему тебя не было в прошлую пятницу, Том?"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-2026-12",
-    "type": "matching",
-    "title": "Register — Asking About Anna (Part 2)",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "pairs": [
-      [
-        "Who is absent today?",
-        "Кто сегодня отсутствует?"
-      ],
-      [
-        "What's wrong with Anna today?",
-        "Что не так с Анной сегодня?"
-      ],
-      [
-        "Why were you absent last Friday, Tom?",
-        "Почему тебя не было в прошлую пятницу, Том?"
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-2026-13",
-    "type": "matching",
-    "title": "Time to Begin — Getting the Class Quiet",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "pairs": [
-      [
-        "I'm waiting for you to be quiet.",
-        "Я жду, когда вы успокоитесь."
-      ],
-      [
-        "Stop talking and be quiet.",
-        "Прекратите разговаривать и соблюдайте тишину."
-      ],
-      [
-        "Settle down now so we can start.",
-        "Успокойтесь, чтобы мы могли начать."
-      ]
-    ]
-  },
-  {
-    "id": "m01-matching-2026-14",
-    "type": "matching",
-    "title": "Late — Responding to Lateness",
-    "prompt": "Match the English expressions with their Russian translations.",
-    "pairs": [
-      [
-        "Where have you been?",
-        "Где ты был?"
-      ],
-      [
-        "Don't let it happen again.",
-        "Не допускай, чтобы это повторилось."
-      ],
-      [
-        "Did you oversleep?",
-        "Ты проспал?"
-      ]
     ]
   },
   {
