@@ -7,20 +7,6 @@ import {TYPES, empty, answered, navigate, button} from '../practice/shared.js';
 
 export function practice(mod) {
     const bank = mod.practice || [];
-    // Reject stale/incompatible content instead of silently showing a previous bank.
-    if (mod.id === 'the-beginning-of-the-lesson') {
-        const matching = bank.filter(q => q.type === 'matching');
-        const phrases = matching.flatMap(q => q.pairs?.map(pair => pair[0]) || []);
-        const actual = new Map();
-        for (const q of matching) actual.set(q.category, (actual.get(q.category) || 0) + 1);
-        const expected = {Greetings: 3, Introductions: 1, 'Time to Begin': 3, Register: 2, Late: 1};
-        const valid = matching.length === 10 && phrases.length === 32 &&
-            new Set(phrases).size === 32 &&
-            Object.entries(expected).every(([category, count]) => actual.get(category) === count);
-        if (!valid) {
-            throw new Error('The Matching Pairs question bank is outdated. Please reload the site and check data/module-01-practice.json.');
-        }
-    }
     const {questions, previous} = restoreAttempt(mod, bank);
     document.body.classList.add('practice-view');
     const heading = el('div', null, 'practice-page-heading');

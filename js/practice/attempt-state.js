@@ -20,7 +20,7 @@ export function restoreAttempt(mod, bank) {
     // A draft is an immutable selection: reloading must restore exactly the same questions.
     const questions = Array.isArray(previous?.questions) && previous.questions.length === 35
         ? previous.questions
-        : selectPracticeQuestions(bank, {perType: 7, previousIds: safeRead(recentKey(mod)) || []});
+        : selectPracticeQuestions(bank, {perType: 7, previousIds: safeRead(recentKey(mod)) || [], matchingQuotas: mod.matchingQuotas});
     return {questions, previous};
 }
 

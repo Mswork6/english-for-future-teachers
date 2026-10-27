@@ -10,13 +10,29 @@ export function shuffleQuestions(items, random = Math.random) {
     return values;
 }
 
-export const MATCHING_QUOTAS = Object.freeze({
-    Greetings: 2,
-    Introductions: 1,
-    'Time to Begin': 2,
-    Register: 1,
-    Late: 1
-});
+// Each module may provide its own Matching Pairs quotas via modules.json.
+// Without quotas, matching questions are sampled from the full matching pool.
+function validateQuotas(quotas, perType) {
+    if (quotas == null) return null;
+    if (typeof quotas !== 'object' || Array.isArray(quotas) || !Object.keys(quotas).length) {
+        throw new Error('matchingQuotas must be a non-empty category-to-count object');
+    }
+    const entries = Object.entries(quotas);
+    if (entries.some(([category, count]) => !category.trim() || !Number.isInteger(count) || count < 1)) {
+        throw new Error('matchingQuotas values must be positive integers');
+    }
+    if (entries.reduce((sum, [, count]) => sum + count, 0) !== perType) {
+        throw new Error(`Matching quotas require exactly ${perType} tasks`);
+    }
+    return entries;
+}
+
+function assertUniqueMatchingExpressions(questions) {
+    const expressions = questions.flatMap(q => q.pairs.map(pair => pair[0]));
+    if (new Set(expressions).size !== expressions.length) {
+        throw new Error('Matching bank contains repeated expressions');
+    }
+}
 
 function sampleWithPriority(pool, count, used, random) {
     if (pool.length < count) throw new Error(`Not enough questions: ${pool.length} available, ${count} required`);
@@ -25,24 +41,28 @@ function sampleWithPriority(pool, count, used, random) {
     return [...fresh, ...repeats].slice(0, count);
 }
 
-export function selectPracticeQuestions(bank, {perType = 7, previousIds = [], random = Math.random} = {}) {
+export function selectPracticeQuestions(bank, {perType = 7, previousIds = [], random = Math.random, matchingQuotas = null} = {}) {
     const used = new Set(previousIds);
     const picked = [];
     for (const type of TYPE_ORDER) {
         const pool = bank.filter(q => q.type === type);
         if (new Set(pool.map(q => q.id)).size !== pool.length) throw new Error(`Duplicate IDs in ${type} bank`);
-        if (type === 'matching' && pool.every(q => typeof q.category === 'string')) {
-            const quotaTotal = Object.values(MATCHING_QUOTAS).reduce((sum, n) => sum + n, 0);
-            if (perType !== quotaTotal) throw new Error(`Matching quotas require ${quotaTotal} tasks`);
-            const selection = [];
-            for (const [category, count] of Object.entries(MATCHING_QUOTAS)) {
-                const group = pool.filter(q => q.category === category);
-                selection.push(...sampleWithPriority(group, count, used, random));
+        if (type === 'matching') {
+            const quotas = validateQuotas(matchingQuotas, perType);
+            let selection;
+            if (quotas) {
+                selection = [];
+                for (const [category, count] of quotas) {
+                    const group = pool.filter(q => q.category === category);
+                    selection.push(...sampleWithPriority(group, count, used, random));
+                }
+                selection = shuffleQuestions(selection, random);
+            } else {
+                if (pool.length < perType) throw new Error(`Not enough matching questions: ${pool.length} available, ${perType} required`);
+                selection = sampleWithPriority(pool, perType, used, random);
             }
-            // Verify that matching expressions do not repeat across selected tasks.
-            const expressions = selection.flatMap(q => q.pairs.map(pair => pair[0]));
-            if (new Set(expressions).size !== expressions.length) throw new Error('Matching bank contains repeated expressions');
-            picked.push(...shuffleQuestions(selection, random));
+            assertUniqueMatchingExpressions(selection);
+            picked.push(...selection);
         } else {
             if (pool.length < perType) throw new Error(`Not enough ${type} questions: ${pool.length} available, ${perType} required`);
             picked.push(...sampleWithPriority(pool, perType, used, random));

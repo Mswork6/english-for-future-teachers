@@ -36,3 +36,12 @@ test('propagates failed loading instead of swallowing errors', async () => {
         }
     }), /Not found/);
 });
+
+
+test('passes per-module matching quotas to the practice renderer', async () => {
+    const info = {id: 'second', matchingQuotas: {'Instructions': 4, 'Feedback': 3}, practiceFile: 'data/second-practice.json'};
+    const result = await loadModule(info, {includePractice: true, loadJson: async path =>
+        path.endsWith('practice.json') ? [] : {id: 'second', theory: []}});
+    assert.deepEqual(result.matchingQuotas, info.matchingQuotas);
+    assert.deepEqual(result.practice, []);
+});
