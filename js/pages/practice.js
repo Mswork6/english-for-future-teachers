@@ -113,7 +113,7 @@ export function practice(mod) {
     }
     function go(n){if(n<0||n>=questions.length)return;index=n;save();render();window.scrollTo({top:0,behavior:'smooth'});}
     function render(){
-        document.querySelectorAll('.practice-select.is-open').forEach(p=>p._closeMenu?.());
+        document.querySelectorAll('.practice-select.is-open').forEach(p=>p._closeMenu?.(true));
         selectListeners.abort();selectListeners=new AbortController();
         const q=questions[index];card.replaceChildren();
         count.textContent=`Question ${index+1} of ${questions.length}`;
@@ -141,11 +141,28 @@ export function practice(mod) {
                 const entries=[];
                 // Place the options outside the document flow to avoid extending
                 // the page/footer. The menu is returned to its picker on close.
-                const close=()=>{
-                    picker.classList.remove('is-open');
-                    trigger.setAttribute('aria-expanded','false');
+                const animationMs=180;
+                let closingTimer=null;
+                let openingFrame=null;
+                let openUpwards=false;
+                const resetMenu=()=>{
+                    if(closingTimer!==null){clearTimeout(closingTimer);closingTimer=null;}
+                    if(openingFrame!==null){cancelAnimationFrame(openingFrame);openingFrame=null;}
                     if(list.parentElement!==picker)picker.append(list);
                     list.removeAttribute('style');
+                };
+                const close=(immediate=false)=>{
+                    if(!picker.classList.contains('is-open')){
+                        if(immediate)resetMenu();
+                        return;
+                    }
+                    picker.classList.remove('is-open');
+                    trigger.setAttribute('aria-expanded','false');
+                    if(openingFrame!==null){cancelAnimationFrame(openingFrame);openingFrame=null;}
+                    if(immediate){resetMenu();return;}
+                    list.style.pointerEvents='none';
+                    list.style.opacity='0';
+                    closingTimer=setTimeout(resetMenu,animationMs);
                 };
                 picker._closeMenu=close;
                 const positionMenu=()=>{
@@ -155,6 +172,7 @@ export function practice(mod) {
                     const below=Math.max(0,window.innerHeight-rect.bottom-gap-edge);
                     const above=Math.max(0,rect.top-gap-edge);
                     const upwards=below<230 && above>below;
+                    openUpwards=upwards;
                     const space=upwards?above:below;
                     const height=Math.max(0,Math.min(230,space));
                     const left=Math.max(edge,Math.min(rect.left,window.innerWidth-edge-Math.min(rect.width,window.innerWidth-2*edge)));
@@ -168,6 +186,9 @@ export function practice(mod) {
                     list.style.overflowY='auto';
                     list.style.display='grid';
                     list.style.boxSizing='border-box';
+                    // Animate visibility only. Keeping a transform on a fixed menu
+                    // can cause blurry glyph rasterization in Chromium.
+                    list.style.transition=`opacity ${animationMs}ms ease`;
                 };
                 window.addEventListener('resize',positionMenu,{signal:selectListeners.signal});
                 // Capture scroll from nested scroll containers as well.
@@ -187,12 +208,21 @@ export function practice(mod) {
                 });
                 function toggle(){
                     const opening=!picker.classList.contains('is-open');
-                    document.querySelectorAll('.practice-select.is-open').forEach(x=>x._closeMenu?.());
+                    document.querySelectorAll('.practice-select.is-open').forEach(x=>x._closeMenu?.(true));
                     if(opening){
+                        resetMenu();
                         picker.classList.add('is-open');
                         trigger.setAttribute('aria-expanded','true');
                         document.body.append(list);
                         positionMenu();
+                        list.style.opacity='0';
+                        list.style.pointerEvents='auto';
+                        openingFrame=requestAnimationFrame(()=>{
+                            openingFrame=null;
+                            if(picker.classList.contains('is-open')){
+                                list.style.opacity='1';
+                            }
+                        });
                     }
                 }
                 trigger.addEventListener('keydown',e=>{
