@@ -113,6 +113,7 @@ export function practice(mod) {
     }
     function go(n){if(n<0||n>=questions.length)return;index=n;save();render();window.scrollTo({top:0,behavior:'smooth'});}
     function render(){
+        document.querySelectorAll('.practice-select.is-open').forEach(p=>p._closeMenu?.());
         selectListeners.abort();selectListeners=new AbortController();
         const q=questions[index];card.replaceChildren();
         count.textContent=`Question ${index+1} of ${questions.length}`;
@@ -138,7 +139,39 @@ export function practice(mod) {
                 list.setAttribute('role','listbox');
                 list.setAttribute('aria-label',`Translations for ${source}`);
                 const entries=[];
-                const close=()=>{picker.classList.remove('is-open');trigger.setAttribute('aria-expanded','false');};
+                // Place the options outside the document flow to avoid extending
+                // the page/footer. The menu is returned to its picker on close.
+                const close=()=>{
+                    picker.classList.remove('is-open');
+                    trigger.setAttribute('aria-expanded','false');
+                    if(list.parentElement!==picker)picker.append(list);
+                    list.removeAttribute('style');
+                };
+                picker._closeMenu=close;
+                const positionMenu=()=>{
+                    if(!picker.classList.contains('is-open'))return;
+                    const rect=trigger.getBoundingClientRect();
+                    const gap=6, edge=8;
+                    const below=Math.max(0,window.innerHeight-rect.bottom-gap-edge);
+                    const above=Math.max(0,rect.top-gap-edge);
+                    const upwards=below<230 && above>below;
+                    const space=upwards?above:below;
+                    const height=Math.max(0,Math.min(230,space));
+                    const left=Math.max(edge,Math.min(rect.left,window.innerWidth-edge-Math.min(rect.width,window.innerWidth-2*edge)));
+                    list.style.position='fixed';
+                    list.style.zIndex='1000';
+                    list.style.left=`${left}px`;
+                    list.style.width=`${Math.min(rect.width,window.innerWidth-2*edge)}px`;
+                    list.style.maxHeight=`${height}px`;
+                    list.style.top=upwards?`${Math.max(edge,rect.top-gap-height)}px`:`${rect.bottom+gap}px`;
+                    list.style.bottom='auto';
+                    list.style.overflowY='auto';
+                    list.style.display='grid';
+                    list.style.boxSizing='border-box';
+                };
+                window.addEventListener('resize',positionMenu,{signal:selectListeners.signal});
+                // Capture scroll from nested scroll containers as well.
+                window.addEventListener('scroll',positionMenu,{signal:selectListeners.signal,capture:true});
                 const choose=value=>{
                     saved[q.id][n]=value;
                     label.textContent=value||'Select translation';
@@ -154,11 +187,13 @@ export function practice(mod) {
                 });
                 function toggle(){
                     const opening=!picker.classList.contains('is-open');
-                    document.querySelectorAll('.practice-select.is-open').forEach(x=>{
-                        x.classList.remove('is-open');
-                        x.querySelector('.practice-select-trigger')?.setAttribute('aria-expanded','false');
-                    });
-                    if(opening){picker.classList.add('is-open');trigger.setAttribute('aria-expanded','true');}
+                    document.querySelectorAll('.practice-select.is-open').forEach(x=>x._closeMenu?.());
+                    if(opening){
+                        picker.classList.add('is-open');
+                        trigger.setAttribute('aria-expanded','true');
+                        document.body.append(list);
+                        positionMenu();
+                    }
                 }
                 trigger.addEventListener('keydown',e=>{
                     if(e.key==='ArrowDown'||e.key==='ArrowUp'){
@@ -177,7 +212,7 @@ export function practice(mod) {
                     }else if(e.key==='Tab')close();
                 });
                 document.addEventListener('pointerdown',e=>{
-                    if(!picker.contains(e.target))close();
+                    if(!picker.contains(e.target)&&!list.contains(e.target))close();
                 },{signal:selectListeners.signal});
                 picker.append(trigger,list);wrap.append(picker);area.append(wrap);
             });
