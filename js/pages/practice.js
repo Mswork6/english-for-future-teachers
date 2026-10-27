@@ -247,7 +247,7 @@ export function practiceResults(mod){
     const groups=[];resultQuestions.forEach((q,n)=>{let item=groups.find(x=>x.type===q.type);if(!item){item={type:q.type,score:0,count:0};groups.push(item);}item.score+=grading.results[n]?.points||0;item.count++;});
     groups.forEach(item=>{const row=el('div',null,'practice-result-row');append(row,el('span',TYPES[item.type]||item.type),el('strong',`${Number(item.score.toFixed(2))} / ${item.count}`));byType.append(row);});
     panel.append(byType);const actions=el('div',null,'practice-result-actions');actions.append(link('Return to Module',`/module/${mod.id}`,'btn'));
-    actions.append(link('Review Mistakes',`/module/${mod.id}/practice/review`,'btn secondary'));
+    actions.append(link('Review Answers',`/module/${mod.id}/practice/review`,'btn secondary'));
     actions.append(button('Try Again','btn secondary',()=>{try{localStorage.removeItem(storageKey(mod));localStorage.removeItem(resultKey(mod));}catch{}navigate(`/module/${mod.id}/practice`);}));
     panel.append(actions);app.append(panel);
 }
@@ -257,8 +257,8 @@ export function practiceResults(mod){
 export function practiceReview(mod) {
     const data=safeRead(resultKey(mod));
     const questions=Array.isArray(data?.questions)?data.questions:[];
-    crumbs(app,mod,'Review Mistakes');
-    header(app,'Practice','Review Mistakes','Compare your submitted answers with the correct answers.');
+    crumbs(app,mod,'Review Answers');
+    header(app,'Practice','Review Answers','Review all submitted answers, including correct, incorrect and partially correct tasks.');
     const actions=el('div',null,'practice-review-links');
     append(actions,link('← Back to Results',`/module/${mod.id}/practice/results`,'btn secondary'),link('Return to Module',`/module/${mod.id}`,'btn secondary'));
     app.append(actions);
@@ -266,9 +266,11 @@ export function practiceReview(mod) {
         app.append(el('p','No completed attempt is available for review.','note'));
         return;
     }
-    const missed=questions.map((q,index)=>({q,index,points:data.grading.results[index]?.points??0,answer:data.answers?.[q.id]}))
-        .filter(item=>item.points<1-1e-9);
-    const count=el('p',missed.length?`${missed.length} of ${questions.length} tasks need review.`:'All tasks were answered correctly. Great work!','practice-review-count');
+    const reviewed=questions.map((q,index)=>({q,index,points:data.grading.results[index]?.points??0,answer:data.answers?.[q.id]}));
+    const correct=reviewed.filter(item=>item.points>=1-1e-9).length;
+    const partial=reviewed.filter(item=>item.points>1e-9 && item.points<1-1e-9).length;
+    const incorrect=reviewed.length-correct-partial;
+    const count=el('p',`${correct} correct · ${partial} partially correct · ${incorrect} incorrect or unanswered. ${reviewed.length} tasks in total.`,'practice-review-count');
     app.append(count);
     const list=el('div',null,'practice-review-list');app.append(list);
     const normalize=v=>String(v??'').trim().toLowerCase();
@@ -277,7 +279,7 @@ export function practiceReview(mod) {
         append(item,el('span',label,'practice-review-label'),el('div',value||'Not answered','practice-review-value'));
         parent.append(item);
     };
-    for(const {q,index,points,answer} of missed){
+    for(const {q,index,points,answer} of reviewed){
         const card=el('article',null,'panel practice-review-card');
         append(card,el('div',`Question ${index+1} · ${TYPES[q.type]||q.type} · ${Number(points.toFixed(2))} / 1 point`,'label'),el('h2',q.title||`Task ${index+1}`),el('p',q.prompt,'practice-review-prompt'));
         if(q.type==='matching'){
@@ -315,7 +317,7 @@ export function practiceReview(mod) {
             if(!correctionCorrect)field(card,'Correct replacement',q.correctWord,'is-correct');
         }else if(q.type==='sentence'){
             const submitted=Array.isArray(answer)?answer.map(i=>q.words[i]||'').join(' '):'';
-            field(card,'Your sentence',submitted,'is-incorrect');
+            field(card,'Your sentence',submitted,points>=1-1e-9?'is-correct':'is-incorrect');
             field(card,'Correct sentence',q.answer.join(' '),'is-correct');
         }
         // Explanation is intentionally optional: it will appear when reviewed content is supplied.
