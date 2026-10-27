@@ -209,7 +209,7 @@ export function practice(mod) {
                 tokens.append(b);
             });
             const correction=el('input',null,'text-answer');correction.placeholder=fragmentSize>1?'Correct phrase':'Correct word';correction.value=saved[q.id]?.correction||'';correction.oninput=()=>{saved[q.id].correction=correction.value;update();};
-            append(area,tokens,el('p','Type the correct replacement:','muted'),correction);
+            append(area,tokens,el('p','Type only the correct word or phrase, without punctuation (no full stop, comma, question mark or exclamation mark).','muted'),correction);
         }else if(q.type==='sentence'){
             const pool=el('div',null,'row practice-tokens'),selection=el('div',null,'row practice-tokens');
             const draw=()=>{pool.replaceChildren();selection.replaceChildren();q.words.forEach((w,n)=>{if(saved[q.id].includes(n))return;pool.append(button(w,'icon-btn',()=>{saved[q.id].push(n);update();draw();}));});saved[q.id].forEach(n=>selection.append(button(q.words[n],'icon-btn is-selected',()=>{saved[q.id]=saved[q.id].filter(x=>x!==n);update();draw();})));};
@@ -281,21 +281,38 @@ export function practiceReview(mod) {
     };
     for(const {q,index,points,answer} of reviewed){
         const card=el('article',null,'panel practice-review-card');
-        append(card,el('div',`Question ${index+1} · ${TYPES[q.type]||q.type} · ${Number(points.toFixed(2))} / 1 point`,'label'),el('h2',q.title||`Task ${index+1}`),el('p',q.prompt,'practice-review-prompt'));
+        append(card,el('div',`Question ${index+1} · ${TYPES[q.type]||q.type} · ${Number(points.toFixed(2))} / 1 point`,'label'),el('p',q.prompt,'practice-review-prompt'));
+        const answerBody=card; // Existing answer comparison remains visible.
         if(q.type==='matching'){
             for(const [i,[english,russian]] of q.pairs.entries()){
                 const part=el('div',null,'practice-review-part');
                 part.append(el('div',english,'practice-review-context'));
                 field(part,'Your answer',answer?.[i]||'',normalize(answer?.[i])===normalize(russian)?'is-correct':'is-incorrect');
                 if(normalize(answer?.[i])!==normalize(russian))field(part,'Correct answer',russian,'is-correct');
-                card.append(part);
+                answerBody.append(part);
             }
         }else if(q.type==='choice'){
             const chosen=Number.isInteger(answer)?q.options[answer]:null;
-            field(card,'Your answer',chosen||'',answer===q.answer?'is-correct':'is-incorrect');
-            field(card,'Correct answer',q.options[q.answer],'is-correct');
+            field(answerBody,'Your answer',chosen||'',answer===q.answer?'is-correct':'is-incorrect');
+            field(answerBody,'Correct answer',q.options[q.answer],'is-correct');
+            // Only the original multiple-choice options are collapsible; the answer comparison stays visible.
+            const choices=el('details',null,'practice-review-options');
+            const optionsToggle=el('summary','Show all options','practice-review-options-toggle');
+            choices.append(optionsToggle);
+            const optionsBody=el('div',null,'practice-review-options-body');
+            q.options.forEach((option,optionIndex)=>{
+                const optionRow=el('div',null,'practice-review-option');
+                optionRow.append(el('span',`${String.fromCharCode(65+optionIndex)}. ${option}`));
+                const marks=el('span',null,'practice-review-option-marks');
+                if(optionIndex===answer)marks.append(el('span','Your choice','practice-review-option-mark is-student'));
+                if(optionIndex===q.answer)marks.append(el('span','Correct','practice-review-option-mark is-key'));
+                optionRow.append(marks);optionsBody.append(optionRow);
+            });
+            choices.append(optionsBody);
+            choices.addEventListener('toggle',()=>{optionsToggle.textContent=choices.open?'Hide all options':'Show all options';});
+            card.append(choices);
         }else if(q.type==='fill'){
-            if(q.sentence)card.append(el('p',q.sentence,'practice-review-context'));
+            if(q.sentence)answerBody.append(el('p',q.sentence,'practice-review-context'));
             q.answers.forEach((expected,i)=>{
                 const part=el('div',null,'practice-review-part');
                 part.append(el('div',`Blank ${i+1}`,'practice-review-context'));
@@ -303,28 +320,28 @@ export function practiceReview(mod) {
                 const ok=matchesAcceptedAnswer(answer?.[i],expected);
                 field(part,'Your answer',answer?.[i]||'',ok?'is-correct':'is-incorrect');
                 if(!ok)field(part,accepted.length>1?'Accepted answers':'Correct answer',accepted.join(' / '),'is-correct');
-                card.append(part);
+                answerBody.append(part);
             });
         }else if(q.type==='error'){
-            card.append(el('p',q.sentence,'practice-review-context'));
+            answerBody.append(el('p',q.sentence,'practice-review-context'));
             const words=q.sentence.split(' ');
             const expected=words.slice(q.errorIndex,q.errorIndex+(q.errorLength||1)).join(' ');
             const picked=Number.isInteger(answer?.word)?words.slice(answer.word,answer.word+(answer.word===q.errorIndex?(q.errorLength||1):1)).join(' '):'';
             const wordCorrect=answer?.word===q.errorIndex;
-            field(card,'Selected incorrect fragment',picked,wordCorrect?'is-correct':'is-incorrect');
-            if(!wordCorrect)field(card,'Correct fragment',expected,'is-correct');
+            field(answerBody,'Selected incorrect fragment',picked,wordCorrect?'is-correct':'is-incorrect');
+            if(!wordCorrect)field(answerBody,'Correct fragment',expected,'is-correct');
             const correctionCorrect=normalize(answer?.correction)===normalize(q.correctWord);
-            field(card,'Your correction',answer?.correction||'',correctionCorrect?'is-correct':'is-incorrect');
-            if(!correctionCorrect)field(card,'Correct replacement',q.correctWord,'is-correct');
+            field(answerBody,'Your correction',answer?.correction||'',correctionCorrect?'is-correct':'is-incorrect');
+            if(!correctionCorrect)field(answerBody,'Correct replacement',q.correctWord,'is-correct');
         }else if(q.type==='sentence'){
             const submitted=Array.isArray(answer)?answer.map(i=>q.words[i]||'').join(' '):'';
-            field(card,'Your sentence',submitted,points>=1-1e-9?'is-correct':'is-incorrect');
-            field(card,'Correct sentence',q.answer.join(' '),'is-correct');
+            field(answerBody,'Your sentence',submitted,points>=1-1e-9?'is-correct':'is-incorrect');
+            field(answerBody,'Correct sentence',q.answer.join(' '),'is-correct');
         }
         // Explanation is intentionally optional: it will appear when reviewed content is supplied.
         if(q.explanation){
             const details=el('div',null,'practice-review-explanation');
-            append(details,el('strong','Explanation'),el('p',q.explanation));card.append(details);
+            append(details,el('strong','Explanation'),el('p',q.explanation));answerBody.append(details);
         }
         list.append(card);
     }
