@@ -778,7 +778,10 @@
     "context": "You want to find out which student is missing today.",
     "sentence": "Who ________ here ________?",
     "answers": [
-      "isn't",
+      [
+        "isn't",
+        "is not"
+      ],
       "today"
     ]
   },

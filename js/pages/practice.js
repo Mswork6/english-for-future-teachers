@@ -1,6 +1,6 @@
 import { app } from '../state.js';
 import { crumbs, header, el, append, link } from '../utils/dom.js';
-import { gradePractice } from '../practice/grading.js';
+import { gradePractice, matchesAcceptedAnswer } from '../practice/grading.js';
 import { selectPracticeQuestions } from '../practice/question-bank.js';
 
 const TYPES = {matching:'Matching Pairs',choice:'Multiple Choice',fill:'Fill in the Blanks',error:'Find and Correct the Error',sentence:'Sentence Building'};
@@ -299,9 +299,10 @@ export function practiceReview(mod) {
             q.answers.forEach((expected,i)=>{
                 const part=el('div',null,'practice-review-part');
                 part.append(el('div',`Blank ${i+1}`,'practice-review-context'));
-                const ok=normalize(answer?.[i])===normalize(expected);
+                const accepted=Array.isArray(expected)?expected:[expected];
+                const ok=matchesAcceptedAnswer(answer?.[i],expected);
                 field(part,'Your answer',answer?.[i]||'',ok?'is-correct':'is-incorrect');
-                if(!ok)field(part,'Correct answer',expected,'is-correct');
+                if(!ok)field(part,accepted.length>1?'Accepted answers':'Correct answer',accepted.join(' / '),'is-correct');
                 card.append(part);
             });
         }else if(q.type==='error'){
