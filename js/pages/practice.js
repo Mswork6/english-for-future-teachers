@@ -1,132 +1,200 @@
-import { app } from '../state.js';
-import { el, append, link } from '../utils/dom.js';
-import { gradePractice } from '../practice/grading.js';
-import { selectPracticeQuestions } from '../practice/question-bank.js';
-import { renderAnswer } from '../practice/question-renderers.js';
-import { TYPES, storageKey, resultKey, recentKey, empty, answered, icon,
-         safeRead, persist, navigate, button } from '../practice/shared.js';
+import {app} from '../state.js';
+import {el, append, link} from '../utils/dom.js';
+import {gradePractice} from '../practice/grading.js';
+import {renderAnswer} from '../practice/question-renderers.js';
+import {restoreAttempt, saveDraft, completeAttempt} from '../practice/attempt-state.js';
+import {TYPES, empty, answered, navigate, button} from '../practice/shared.js';
 
 export function practice(mod) {
     const bank = mod.practice || [];
     // Reject stale/incompatible content instead of silently showing a previous bank.
-    if(mod.id === 'the-beginning-of-the-lesson') {
+    if (mod.id === 'the-beginning-of-the-lesson') {
         const matching = bank.filter(q => q.type === 'matching');
         const phrases = matching.flatMap(q => q.pairs?.map(pair => pair[0]) || []);
         const actual = new Map();
-        for(const q of matching) actual.set(q.category, (actual.get(q.category) || 0) + 1);
-        const expected = {Greetings:3,Introductions:1,'Time to Begin':3,Register:2,Late:1};
+        for (const q of matching) actual.set(q.category, (actual.get(q.category) || 0) + 1);
+        const expected = {Greetings: 3, Introductions: 1, 'Time to Begin': 3, Register: 2, Late: 1};
         const valid = matching.length === 10 && phrases.length === 32 &&
             new Set(phrases).size === 32 &&
             Object.entries(expected).every(([category, count]) => actual.get(category) === count);
-        if(!valid) {
+        if (!valid) {
             throw new Error('The Matching Pairs question bank is outdated. Please reload the site and check data/module-01-practice.json.');
         }
     }
-    const savedDraft = safeRead(storageKey(mod));
-    // Validate stored question IDs and payload against the currently loaded bank.
-    const bankById = new Map(bank.map(q => [q.id, q]));
-    const draftIsCurrent = Array.isArray(savedDraft?.questions) && savedDraft.questions.length === 35 &&
-        savedDraft.questions.every(q => bankById.has(q.id) &&
-            JSON.stringify(q) === JSON.stringify(bankById.get(q.id)));
-    const previous = draftIsCurrent ? savedDraft : null;
-    if(savedDraft && !draftIsCurrent) {
-        try { localStorage.removeItem(storageKey(mod)); } catch {}
-    }
-    // A draft is an immutable selection: reloading must restore exactly the same questions.
-    const questions = Array.isArray(previous?.questions) && previous.questions.length===35
-        ? previous.questions
-        : selectPracticeQuestions(bank,{perType:7,previousIds:safeRead(recentKey(mod))||[]});
+    const {questions, previous} = restoreAttempt(mod, bank);
     document.body.classList.add('practice-view');
-    const heading=el('div',null,'practice-page-heading');
-    append(heading,link('← Back to Module',`/module/${mod.id}`,'practice-module-back'),el('h1','Practice Test'));
+    const heading = el('div', null, 'practice-page-heading');
+    append(heading, link('← Back to Module', `/module/${mod.id}`, 'practice-module-back'), el('h1', 'Practice Test'));
     app.append(heading);
-    if(!questions.length){app.append(el('p','No practice questions are available yet.','note'));return;}
-    const saved = Object.fromEntries(questions.map(q=>[q.id, previous?.answers?.[q.id] ?? empty(q)]));
-    let index = Math.min(Math.max(Number(previous?.index)||0,0),questions.length-1);
-    let drawerOpen=false;
-    let confirmOpen=false;
-    let selectListeners=new AbortController();
-    const frame=el('div',null,'practice-shell');
-    const main=el('div',null,'practice-main');
-    const toolbar=el('div',null,'practice-toolbar');
-    const count=el('span',null,'practice-count');
-    const progress=el('div',null,'practice-progress');
-    const bar=el('div',null,'practice-progress-bar');progress.append(bar);
-    const openNav=button('All questions','btn secondary practice-nav-toggle',()=>setDrawer(true));
-    const card=el('section',null,'question practice-active-question');
-    const back=button('← Previous','btn secondary',()=>go(index-1));
-    const next=button('Next →','btn',()=>go(index+1));
-    const finish=button('Finish Practice','btn',()=>showConfirm());
-    const controls=el('div',null,'practice-controls');append(controls,back,next,finish);
-    const drawer=el('aside',null,'practice-drawer');drawer.setAttribute('aria-label','Question navigator');
-    const drawerHeading=el('div',null,'practice-drawer-heading');
-    const closeNav=button('×','practice-close',()=>setDrawer(false));closeNav.setAttribute('aria-label','Close navigator');
-    append(drawerHeading,el('h2','Question Navigator'),closeNav);
-    const groups=el('div',null,'practice-groups');
-    const drawerSummary=el('p',null,'practice-summary');
-    append(drawer,drawerHeading,groups,drawerSummary,button('Finish Practice','btn practice-finish',()=>{setDrawer(false);showConfirm();}));
-    const dialog=el('div',null,'practice-dialog');dialog.setAttribute('role','dialog');dialog.setAttribute('aria-modal','true');dialog.setAttribute('aria-label','Finish practice confirmation');
-    const modalOverlay=el('div',null,'practice-modal-overlay');
-    modalOverlay.onclick=()=>hideConfirm();
-    append(toolbar,count,openNav);
-    append(main,toolbar,progress,card,controls);
-    append(frame,main,drawer);
+    if (!questions.length) {
+        app.append(el('p', 'No practice questions are available yet.', 'note'));
+        return;
+    }
+    const saved = Object.fromEntries(questions.map(q => [q.id, previous?.answers?.[q.id] ?? empty(q)]));
+    let index = Math.min(Math.max(Number(previous?.index) || 0, 0), questions.length - 1);
+    let drawerOpen = false;
+    let confirmOpen = false;
+    let selectListeners = new AbortController();
+    const frame = el('div', null, 'practice-shell');
+    const main = el('div', null, 'practice-main');
+    const toolbar = el('div', null, 'practice-toolbar');
+    const count = el('span', null, 'practice-count');
+    const progress = el('div', null, 'practice-progress');
+    const bar = el('div', null, 'practice-progress-bar');
+    progress.append(bar);
+    const openNav = button('All questions', 'btn secondary practice-nav-toggle', () => setDrawer(true));
+    const card = el('section', null, 'question practice-active-question');
+    const back = button('← Previous', 'btn secondary', () => go(index - 1));
+    const next = button('Next →', 'btn', () => go(index + 1));
+    const finish = button('Finish Practice', 'btn', () => showConfirm());
+    const controls = el('div', null, 'practice-controls');
+    append(controls, back, next, finish);
+    const drawer = el('aside', null, 'practice-drawer');
+    drawer.setAttribute('aria-label', 'Question navigator');
+    const drawerHeading = el('div', null, 'practice-drawer-heading');
+    const closeNav = button('×', 'practice-close', () => setDrawer(false));
+    closeNav.setAttribute('aria-label', 'Close navigator');
+    append(drawerHeading, el('h2', 'Question Navigator'), closeNav);
+    const groups = el('div', null, 'practice-groups');
+    const drawerSummary = el('p', null, 'practice-summary');
+    append(drawer, drawerHeading, groups, drawerSummary, button('Finish Practice', 'btn practice-finish', () => {
+        setDrawer(false);
+        showConfirm();
+    }));
+    const dialog = el('div', null, 'practice-dialog');
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+    dialog.setAttribute('aria-label', 'Finish practice confirmation');
+    const modalOverlay = el('div', null, 'practice-modal-overlay');
+    modalOverlay.onclick = () => hideConfirm();
+    append(toolbar, count, openNav);
+    append(main, toolbar, progress, card, controls);
+    append(frame, main, drawer);
     app.append(frame);
     // Mount the modal at document level so its fixed backdrop covers the entire viewport.
     document.body.append(modalOverlay, dialog);
-    const cleanupModal=()=>{modalOverlay.remove();dialog.remove();};
-    window.addEventListener('hashchange',cleanupModal,{once:true});
+    const cleanupModal = () => {
+        modalOverlay.remove();
+        dialog.remove();
+    };
+    window.addEventListener('hashchange', cleanupModal, {once: true});
 
-    function save(){persist(storageKey(mod),{index,answers:saved,questions});}
-    function setDrawer(open){
-        drawerOpen=open;
-        drawer.classList.toggle('is-open',open);
-        frame.classList.toggle('navigator-open',open);
-        openNav.setAttribute('aria-expanded',String(open));
-        if(open)closeNav.focus();
+    function save() {
+        saveDraft(mod, {index, answers: saved, questions});
     }
-    function hideConfirm(){confirmOpen=false;dialog.classList.remove('is-open');modalOverlay.classList.remove('is-open');}
-    function showConfirm(){
-        setDrawer(false);confirmOpen=true;
-        const missing=questions.filter(q=>!answered(q,saved[q.id])).length;
+
+    function setDrawer(open) {
+        drawerOpen = open;
+        drawer.classList.toggle('is-open', open);
+        frame.classList.toggle('navigator-open', open);
+        openNav.setAttribute('aria-expanded', String(open));
+        if (open) closeNav.focus();
+    }
+
+    function hideConfirm() {
+        confirmOpen = false;
+        dialog.classList.remove('is-open');
+        modalOverlay.classList.remove('is-open');
+    }
+
+    function showConfirm() {
+        setDrawer(false);
+        confirmOpen = true;
+        const missing = questions.filter(q => !answered(q, saved[q.id])).length;
         dialog.replaceChildren();
-        append(dialog,el('h2','Finish Practice?'),el('p',missing?`${missing} question(s) are not fully answered. You can return to them or submit anyway.`:'Your answers will be checked now. You will see the results on a separate page.'));
-        const buttons=el('div',null,'practice-modal-actions');
-        append(buttons,button('Keep working','btn secondary',hideConfirm),button('Submit answers','btn',()=>{
-            const grading=gradePractice(questions,saved);
-            persist(resultKey(mod),{grading,answers:saved,submittedAt:Date.now(),questionIds:questions.map(q=>q.id),questions});
-            persist(recentKey(mod),questions.map(q=>q.id));
-            try{localStorage.removeItem(storageKey(mod));}catch{}
+        append(dialog, el('h2', 'Finish Practice?'), el('p', missing ? `${missing} question(s) are not fully answered. You can return to them or submit anyway.` : 'Your answers will be checked now. You will see the results on a separate page.'));
+        const buttons = el('div', null, 'practice-modal-actions');
+        append(buttons, button('Keep working', 'btn secondary', hideConfirm), button('Submit answers', 'btn', () => {
+            const grading = gradePractice(questions, saved);
+            completeAttempt(mod, {
+                grading,
+                answers: saved,
+                submittedAt: Date.now(),
+                questionIds: questions.map(q => q.id),
+                questions
+            });
             hideConfirm();
             navigate(`/module/${mod.id}/practice/results`);
-        }));dialog.append(buttons);
-        dialog.classList.add('is-open');modalOverlay.classList.add('is-open');buttons.querySelector('button').focus();
+        }));
+        dialog.append(buttons);
+        dialog.classList.add('is-open');
+        modalOverlay.classList.add('is-open');
+        buttons.querySelector('button').focus();
     }
-    function go(n){if(n<0||n>=questions.length)return;index=n;save();render();window.scrollTo({top:0,behavior:'smooth'});}
-    function render(){
-        document.querySelectorAll('.practice-select.is-open').forEach(p=>p._closeMenu?.(true));
-        selectListeners.abort();selectListeners=new AbortController();
-        const q=questions[index];card.replaceChildren();
-        count.textContent=`Question ${index+1} of ${questions.length}`;
-        bar.style.width=`${(index+1)/questions.length*100}%`;
-        append(card,el('div',`Task ${index+1} · ${TYPES[q.type]||q.type}`,'label'),el('h3',q.prompt));
-        const area=el('div',null,'practice-answer-area');card.append(area);
-        const update=()=>{save();renderGroups();};
-        renderAnswer(q, area, { saved, update, render, selectListeners });
-        back.disabled=index===0;next.hidden=index===questions.length-1;finish.hidden=index!==questions.length-1;
-        renderGroups();window.lucide?.createIcons();
+
+    function go(n) {
+        if (n < 0 || n >= questions.length) return;
+        index = n;
+        save();
+        render();
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
-    function renderGroups(){
-        groups.replaceChildren();const segments=[];
-        questions.forEach((q,n)=>{let segment=segments.find(s=>s.type===q.type);if(!segment){segment={type:q.type,items:[]};segments.push(segment);}segment.items.push({q,n});});
-        segments.forEach(s=>{const section=el('section',null,'practice-nav-section');section.append(el('h3',TYPES[s.type]||s.type));const grid=el('div',null,'practice-number-grid');
-            s.items.forEach(({q,n})=>{const b=button(String(n+1),'practice-number',()=>go(n));if(n===index){b.classList.add('is-current');b.setAttribute('aria-current','step');}if(answered(q,saved[q.id]))b.classList.add('is-answered');b.setAttribute('aria-label',`Question ${n+1}${answered(q,saved[q.id])?', answered':''}`);grid.append(b);});section.append(grid);groups.append(section);});
-        const done=questions.filter(q=>answered(q,saved[q.id])).length;drawerSummary.textContent=`${done} of ${questions.length} answered`;
+
+    function render() {
+        document.querySelectorAll('.practice-select.is-open').forEach(p => p._closeMenu?.(true));
+        selectListeners.abort();
+        selectListeners = new AbortController();
+        const q = questions[index];
+        card.replaceChildren();
+        count.textContent = `Question ${index + 1} of ${questions.length}`;
+        bar.style.width = `${(index + 1) / questions.length * 100}%`;
+        append(card, el('div', `Task ${index + 1} · ${TYPES[q.type] || q.type}`, 'label'), el('h3', q.prompt));
+        const area = el('div', null, 'practice-answer-area');
+        card.append(area);
+        const update = () => {
+            save();
+            renderGroups();
+        };
+        renderAnswer(q, area, {saved, update, render, selectListeners});
+        back.disabled = index === 0;
+        next.hidden = index === questions.length - 1;
+        finish.hidden = index !== questions.length - 1;
+        renderGroups();
+        window.lucide?.createIcons();
     }
-    const onKey=e=>{if(e.key==='Escape'){if(confirmOpen)hideConfirm();else if(drawerOpen)setDrawer(false);}};
+
+    function renderGroups() {
+        groups.replaceChildren();
+        const segments = [];
+        questions.forEach((q, n) => {
+            let segment = segments.find(s => s.type === q.type);
+            if (!segment) {
+                segment = {type: q.type, items: []};
+                segments.push(segment);
+            }
+            segment.items.push({q, n});
+        });
+        segments.forEach(s => {
+            const section = el('section', null, 'practice-nav-section');
+            section.append(el('h3', TYPES[s.type] || s.type));
+            const grid = el('div', null, 'practice-number-grid');
+            s.items.forEach(({q, n}) => {
+                const b = button(String(n + 1), 'practice-number', () => go(n));
+                if (n === index) {
+                    b.classList.add('is-current');
+                    b.setAttribute('aria-current', 'step');
+                }
+                if (answered(q, saved[q.id])) b.classList.add('is-answered');
+                b.setAttribute('aria-label', `Question ${n + 1}${answered(q, saved[q.id]) ? ', answered' : ''}`);
+                grid.append(b);
+            });
+            section.append(grid);
+            groups.append(section);
+        });
+        const done = questions.filter(q => answered(q, saved[q.id])).length;
+        drawerSummary.textContent = `${done} of ${questions.length} answered`;
+    }
+
+    const onKey = e => {
+        if (e.key === 'Escape') {
+            if (confirmOpen) hideConfirm(); else if (drawerOpen) setDrawer(false);
+        }
+    };
     // Remove the previous page's listener when navigating back to Practice.
     window.__practiceKeyController?.abort();
-    const controller=new AbortController();window.__practiceKeyController=controller;
-    document.addEventListener('keydown',onKey,{signal:controller.signal});
-    save();render();
+    const controller = new AbortController();
+    window.__practiceKeyController = controller;
+    document.addEventListener('keydown', onKey, {signal: controller.signal});
+    save();
+    render();
 }
