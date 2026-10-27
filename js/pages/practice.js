@@ -1,10 +1,12 @@
 import { app } from '../state.js';
 import { crumbs, header, el, append, link } from '../utils/dom.js';
 import { gradePractice } from '../practice/grading.js';
+import { selectPracticeQuestions } from '../practice/question-bank.js';
 
 const TYPES = {matching:'Matching Pairs',choice:'Multiple Choice',fill:'Fill in the Blanks',error:'Find and Correct the Error',sentence:'Sentence Building'};
-const storageKey = mod => `eft:practice:${mod.id}:attempt:v1`;
-const resultKey = mod => `eft:practice:${mod.id}:result:v1`;
+const storageKey = mod => `eft:practice:${mod.id}:attempt:v2`;
+const resultKey = mod => `eft:practice:${mod.id}:result:v2`;
+const recentKey = mod => `eft:practice:${mod.id}:previous-question-ids:v1`;
 const empty = q => q.type === 'matching' ? {} : q.type === 'fill' || q.type === 'sentence' ? [] : q.type === 'error' ? {word:null,correction:''} : null;
 const answered = (q,a) => q.type === 'matching' ? q.pairs.every((_,i)=>Boolean(a?.[i])) : q.type === 'choice' ? Number.isInteger(a) : q.type === 'fill' ? q.answers.every((_,i)=>Boolean(a?.[i]?.trim())) : q.type === 'error' ? Number.isInteger(a?.word) && Boolean(a?.correction?.trim()) : q.type === 'sentence' ? a?.length === q.words.length : false;
 const icon = name => { const i=el('i'); i.setAttribute('data-lucide',name);return i; };
@@ -14,13 +16,17 @@ function navigate(path) {location.hash='#'+path;}
 function button(label, cls, action, type='button') {const b=el('button',label,cls);b.type=type;b.addEventListener('click',action);return b;}
 
 export function practice(mod) {
-    const questions = mod.practice || [];
+    const bank = mod.practice || [];
+    const previous = safeRead(storageKey(mod));
+    // A draft is an immutable selection: reloading must restore exactly the same questions.
+    const questions = Array.isArray(previous?.questions) && previous.questions.length===35
+        ? previous.questions
+        : selectPracticeQuestions(bank,{perType:7,previousIds:safeRead(recentKey(mod))||[]});
     document.body.classList.add('practice-view');
     const heading=el('div',null,'practice-page-heading');
     append(heading,link('← Back to Module',`/module/${mod.id}`,'practice-module-back'),el('h1','Practice Test'));
     app.append(heading);
     if(!questions.length){app.append(el('p','No practice questions are available yet.','note'));return;}
-    const previous = safeRead(storageKey(mod));
     const saved = Object.fromEntries(questions.map(q=>[q.id, previous?.answers?.[q.id] ?? empty(q)]));
     let index = Math.min(Math.max(Number(previous?.index)||0,0),questions.length-1);
     let drawerOpen=false;
@@ -57,7 +63,7 @@ export function practice(mod) {
     const cleanupModal=()=>{modalOverlay.remove();dialog.remove();};
     window.addEventListener('hashchange',cleanupModal,{once:true});
 
-    function save(){persist(storageKey(mod),{index,answers:saved});}
+    function save(){persist(storageKey(mod),{index,answers:saved,questions});}
     function setDrawer(open){
         drawerOpen=open;
         drawer.classList.toggle('is-open',open);
@@ -74,7 +80,8 @@ export function practice(mod) {
         const buttons=el('div',null,'practice-modal-actions');
         append(buttons,button('Keep working','btn secondary',hideConfirm),button('Submit answers','btn',()=>{
             const grading=gradePractice(questions,saved);
-            persist(resultKey(mod),{grading,answers:saved,submittedAt:Date.now(),questionIds:questions.map(q=>q.id)});
+            persist(resultKey(mod),{grading,answers:saved,submittedAt:Date.now(),questionIds:questions.map(q=>q.id),questions});
+            persist(recentKey(mod),questions.map(q=>q.id));
             try{localStorage.removeItem(storageKey(mod));}catch{}
             hideConfirm();
             navigate(`/module/${mod.id}/practice/results`);
@@ -207,13 +214,14 @@ export function practiceResults(mod){
     crumbs(app,mod,'Practice Results');
     const data=safeRead(resultKey(mod));
     header(app,'Practice','Practice Results','Your final score for the completed attempt.');
-    if(!data || !data.grading || JSON.stringify(data.questionIds)!==JSON.stringify((mod.practice||[]).map(q=>q.id))){
+    const resultQuestions=Array.isArray(data?.questions)?data.questions:[];
+    if(!data?.grading || resultQuestions.length!==35){
         append(app,el('p','There are no results for a completed attempt yet.','note'),link('Go to Practice',`/module/${mod.id}/practice`,'btn'));return;
     }
     const {grading}=data;const panel=el('section',null,'panel practice-results');
     append(panel,el('div',`${Number(grading.total.toFixed(2))} / ${grading.maximum}`,'practice-results-score'),el('div',`${grading.percentage}%`,'practice-results-percent'),el('p','Your final score','muted'));
     const byType=el('div',null,'practice-result-breakdown');
-    const groups=[];(mod.practice||[]).forEach((q,n)=>{let item=groups.find(x=>x.type===q.type);if(!item){item={type:q.type,score:0,count:0};groups.push(item);}item.score+=grading.results[n]?.points||0;item.count++;});
+    const groups=[];resultQuestions.forEach((q,n)=>{let item=groups.find(x=>x.type===q.type);if(!item){item={type:q.type,score:0,count:0};groups.push(item);}item.score+=grading.results[n]?.points||0;item.count++;});
     groups.forEach(item=>{const row=el('div',null,'practice-result-row');append(row,el('span',TYPES[item.type]||item.type),el('strong',`${Number(item.score.toFixed(2))} / ${item.count}`));byType.append(row);});
     panel.append(byType);const actions=el('div',null,'practice-result-actions');actions.append(link('Return to Module',`/module/${mod.id}`,'btn'));
     actions.append(link('Review Mistakes',`/module/${mod.id}/practice/review`,'btn secondary'));
@@ -224,14 +232,14 @@ export function practiceResults(mod){
 
 // Read-only review of the submitted attempt. All keys come from the approved module data.
 export function practiceReview(mod) {
-    const questions=mod.practice||[];
     const data=safeRead(resultKey(mod));
+    const questions=Array.isArray(data?.questions)?data.questions:[];
     crumbs(app,mod,'Review Mistakes');
     header(app,'Practice','Review Mistakes','Compare your submitted answers with the correct answers.');
     const actions=el('div',null,'practice-review-links');
     append(actions,link('← Back to Results',`/module/${mod.id}/practice/results`,'btn secondary'),link('Return to Module',`/module/${mod.id}`,'btn secondary'));
     app.append(actions);
-    if(!data?.grading?.results || JSON.stringify(data.questionIds)!==JSON.stringify(questions.map(q=>q.id))){
+    if(!data?.grading?.results || questions.length!==35){
         app.append(el('p','No completed attempt is available for review.','note'));
         return;
     }
