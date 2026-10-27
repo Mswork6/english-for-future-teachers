@@ -5,5 +5,8 @@
 @import url("./home.css");
 @import url("./theory.css");
 @import url("./practice.css");
+@import url("./practice-review.css");
 @import url("./cases.css");
 @import url("./catalog.css");
+
+@import url("./practice-review-disclosure.css");

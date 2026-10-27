@@ -1,0 +1,19 @@
+/* Only the options list for Multiple Choice is collapsible.
+   The existing Your answer / Correct answer fields are never hidden. */
+.practice-review-options{margin-top:14px;border:1px solid var(--color-border);border-radius:12px;overflow:hidden;background:#fff}
+.practice-review-options-toggle{list-style:none;padding:12px 16px;cursor:pointer;background:#f4f7ff;color:#2556aa;font-weight:700;user-select:none}
+.practice-review-options-toggle::-webkit-details-marker{display:none}
+.practice-review-options-toggle::after{content:'⌄';float:right;font-size:1.25rem;line-height:1;transition:transform .2s}
+.practice-review-options[open] .practice-review-options-toggle::after{transform:rotate(180deg)}
+.practice-review-options-toggle:hover{background:#eaf0fc}
+.practice-review-options-toggle:focus-visible{outline:3px solid var(--color-primary);outline-offset:-3px}
+.practice-review-options-body{padding:8px 14px 12px;animation:practice-options-appear .2s ease}
+.practice-review-option{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 4px;border-bottom:1px solid var(--color-border)}
+.practice-review-option:last-child{border-bottom:0}
+.practice-review-option-marks{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0}
+.practice-review-option-mark{font-size:.76rem;font-weight:700;border-radius:7px;padding:3px 7px}
+.practice-review-option-mark.is-student{background:#e8effe;color:#285fc0}
+.practice-review-option-mark.is-key{background:#e2f6e9;color:#187446}
+@keyframes practice-options-appear{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.practice-review-option{align-items:flex-start;flex-direction:column}.practice-review-option-marks{flex-shrink:1}}
+@media(prefers-reduced-motion:reduce){.practice-review-options-body{animation:none}.practice-review-options-toggle::after{transition:none}}

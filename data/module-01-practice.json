@@ -1,0 +1,1021 @@
+[
+  {
+    "id": "m01-matching-unique-01",
+    "type": "matching",
+    "category": "Greetings",
+    "title": "Greetings — Part 1",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Hello, everyone.",
+        "Здравствуйте, все!"
+      ],
+      [
+        "How are you getting on?",
+        "Как у вас дела?"
+      ],
+      [
+        "What a lovely day!",
+        "Какой прекрасный день!"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-02",
+    "type": "matching",
+    "category": "Greetings",
+    "title": "Greetings — Part 2",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Good morning, everybody.",
+        "Доброе утро всем!"
+      ],
+      [
+        "Are you feeling better today, David?",
+        "Ты сегодня чувствуешь себя лучше, Дэвид?"
+      ],
+      [
+        "What a rainy day!",
+        "Какой дождливый день!"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-03",
+    "type": "matching",
+    "category": "Greetings",
+    "title": "Greetings — Part 3",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Good afternoon, class.",
+        "Добрый день, класс!"
+      ],
+      [
+        "How are things with you?",
+        "Как у вас дела?"
+      ],
+      [
+        "Today is very cold, isn't it?",
+        "Сегодня очень холодно, не правда ли?"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-04",
+    "type": "matching",
+    "category": "Introductions",
+    "title": "Introductions",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "My name is Mr/Mrs/Ms Smith. I'll be teaching you English this year.",
+        "Меня зовут мистер/миссис/мисс Смит. В этом году я буду преподавать вам английский язык."
+      ],
+      [
+        "I'm your new English teacher.",
+        "Я ваш новый учитель английского языка."
+      ],
+      [
+        "I've got five lessons with you each week.",
+        "У нас с вами будет пять уроков в неделю."
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-05",
+    "type": "matching",
+    "category": "Time to Begin",
+    "title": "Time to Begin — Part 1",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Let's begin today's lesson.",
+        "Давайте начнём сегодняшний урок."
+      ],
+      [
+        "Is everybody ready to start?",
+        "Все готовы начать?"
+      ],
+      [
+        "Now we can get down to work.",
+        "Теперь мы можем приступить к работе."
+      ],
+      [
+        "I'm waiting for you to be quiet.",
+        "Я жду, когда вы успокоитесь."
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-06",
+    "type": "matching",
+    "category": "Time to Begin",
+    "title": "Time to Begin — Part 2",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Let's begin our lesson now.",
+        "Давайте теперь начнём наш урок."
+      ],
+      [
+        "It's time to begin, please stop talking.",
+        "Пора начинать, пожалуйста, прекратите разговаривать."
+      ],
+      [
+        "Settle down now so we can start.",
+        "Успокойтесь, чтобы мы могли начать."
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-07",
+    "type": "matching",
+    "category": "Time to Begin",
+    "title": "Time to Begin — Part 3",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "I think we can start now.",
+        "Думаю, теперь мы можем начать."
+      ],
+      [
+        "We won't start until everyone is quiet.",
+        "Мы не начнём, пока все не успокоятся."
+      ],
+      [
+        "Stop talking and be quiet.",
+        "Прекратите разговаривать и соблюдайте тишину."
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-08",
+    "type": "matching",
+    "category": "Register",
+    "title": "Register — Part 1",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Who isn't here today?",
+        "Кого сегодня нет?"
+      ],
+      [
+        "Why were you absent last Friday, Tom?",
+        "Почему тебя не было в прошлую пятницу, Том?"
+      ],
+      [
+        "What's the matter with Anna today?",
+        "Что случилось с Анной сегодня?"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-09",
+    "type": "matching",
+    "category": "Register",
+    "title": "Register — Part 2",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "Who is absent today?",
+        "Кто сегодня отсутствует?"
+      ],
+      [
+        "What's wrong with Anna today?",
+        "Что не так с Анной сегодня?"
+      ]
+    ]
+  },
+  {
+    "id": "m01-matching-unique-10",
+    "type": "matching",
+    "category": "Late",
+    "title": "Late",
+    "prompt": "Match the English expressions with their Russian translations.",
+    "pairs": [
+      [
+        "We started ten minutes ago. What have you been doing?",
+        "Мы начали десять минут назад. Чем ты занимался всё это время?"
+      ],
+      [
+        "Did you oversleep?",
+        "Ты проспал?"
+      ],
+      [
+        "Did you miss your bus?",
+        "Ты опоздал на автобус?"
+      ],
+      [
+        "Where have you been?",
+        "Где ты был?"
+      ],
+      [
+        "Don't let it happen again.",
+        "Не допускай, чтобы это повторилось."
+      ]
+    ]
+  },
+  {
+    "id": "m01-choice-01",
+    "type": "choice",
+    "title": "Greeting the Class",
+    "prompt": "You enter the classroom at 9 a.m. Which greeting is appropriate for this time of day?",
+    "options": [
+      "Good afternoon, everybody!",
+      "Good morning, everybody!",
+      "Good evening, everybody!",
+      "Good night, everybody!"
+    ],
+    "answer": 1,
+    "explanation": "At 9 a.m., it is morning, so “Good morning, everybody!” is appropriate. “Good afternoon” and “Good evening” refer to later times of day; “Good night” is usually used when saying goodbye or going to bed."
+  },
+  {
+    "id": "m01-choice-02",
+    "type": "choice",
+    "title": "Introducing Yourself",
+    "prompt": "You are meeting a class for the first time. You want to tell the students that you are their new English teacher. Which statement expresses this?",
+    "options": [
+      "I was your English teacher last year.",
+      "I'm a student in this English class.",
+      "I'm your new English teacher.",
+      "I'm going to teach you mathematics."
+    ],
+    "answer": 2,
+    "explanation": "“I'm your new English teacher” clearly introduces the speaker as the class's new English teacher. The other options describe a former teacher, a student, or a teacher of a different subject."
+  },
+  {
+    "id": "m01-choice-03",
+    "type": "choice",
+    "title": "Checking Attendance",
+    "prompt": "You are taking attendance at the beginning of the lesson. What should you ask?",
+    "options": [
+      "Who was absent yesterday?",
+      "Who will be absent tomorrow?",
+      "Who is late today?",
+      "Who is absent today?"
+    ],
+    "answer": 3,
+    "explanation": "“Who is absent today?” asks which students are missing from the current lesson. The other questions refer to a different day or ask about lateness rather than absence."
+  },
+  {
+    "id": "m01-choice-04",
+    "type": "choice",
+    "title": "Asking for Silence",
+    "prompt": "The lesson is about to begin, but some students are still talking. What should you say?",
+    "options": [
+      "Let's continue the lesson with the dialogue.",
+      "It's time to finish today's lesson.",
+      "It's time to begin, please stop talking.",
+      "You may discuss the lesson with your partner."
+    ],
+    "answer": 2,
+    "explanation": "“It's time to begin, please stop talking” both announces the start of the lesson and asks students to stop talking. The other options discuss continuing, ending, or allowing conversation."
+  },
+  {
+    "id": "m01-choice-05",
+    "type": "choice",
+    "title": "Settling the Class",
+    "prompt": "The students are noisy and restless before the lesson. What should you say to calm them down?",
+    "options": [
+      "Please get your books out.",
+      "Settle down now so we can start.",
+      "Let's begin with exercise one.",
+      "Please answer the first question."
+    ],
+    "answer": 1,
+    "explanation": "“Settle down now so we can start” asks the class to become calm and ready before the lesson begins. The other responses give instructions for lesson activities without directly addressing the noise and restlessness."
+  },
+  {
+    "id": "m01-choice-06",
+    "type": "choice",
+    "title": "Dealing with a Late Student",
+    "prompt": "A student arrives ten minutes late. You want to ask about the delay. What should you say?",
+    "options": [
+      "We will start in ten minutes.",
+      "You arrived ten minutes early.",
+      "We started ten minutes ago. What have you been doing?",
+      "We have ten minutes left. What have you finished?"
+    ],
+    "answer": 2,
+    "explanation": "“We started ten minutes ago. What have you been doing?” makes it clear that the lesson has already begun and asks the late student to account for the delay. The other options describe a future start, an early arrival, or completed work."
+  },
+  {
+    "id": "m01-choice-07",
+    "type": "choice",
+    "title": "Showing Concern",
+    "prompt": "David missed school yesterday because he was ill. Today he has returned to class. You want to ask specifically whether his health has improved. What should you say?",
+    "options": [
+      "How are you getting on with your homework?",
+      "Are you ready for today's lesson, David?",
+      "Have you finished your homework, David?",
+      "Are you feeling better today, David?"
+    ],
+    "answer": 3,
+    "explanation": "“Are you feeling better today, David?” directly asks whether David's health has improved since he was ill. The other options ask about homework or readiness for the lesson, not his recovery."
+  },
+  {
+    "id": "m01-fill-01",
+    "type": "fill",
+    "title": "Greeting the Class",
+    "prompt": "You enter the classroom in the morning. Complete the greeting. Good ________, everybody!",
+    "answers": [
+      "morning"
+    ],
+    "sentence": "Good ________, everybody!",
+    "context": "You enter the classroom in the morning. Complete the greeting."
+  },
+  {
+    "id": "m01-fill-02",
+    "type": "fill",
+    "title": "Introducing Yourself",
+    "prompt": "You are meeting your students for the first time. Complete the introduction. I'm your ________ English ________.",
+    "answers": [
+      "new",
+      "teacher"
+    ],
+    "sentence": "I'm your ________ English ________.",
+    "context": "You are meeting your students for the first time. Complete the introduction."
+  },
+  {
+    "id": "m01-fill-03",
+    "type": "fill",
+    "title": "Checking Attendance",
+    "prompt": "You need to check which students are absent today. Who ________ absent ________?",
+    "answers": [
+      "is",
+      "today"
+    ],
+    "sentence": "Who ________ absent ________?",
+    "context": "You need to check which students are absent today."
+  },
+  {
+    "id": "m01-fill-04",
+    "type": "fill",
+    "title": "Getting Ready",
+    "prompt": "You want to check whether the class is ready to begin. Is everybody ________ to ________?",
+    "answers": [
+      "ready",
+      "start"
+    ],
+    "sentence": "Is everybody ________ to ________?",
+    "context": "You want to check whether the class is ready to begin."
+  },
+  {
+    "id": "m01-fill-05",
+    "type": "fill",
+    "title": "Starting the Lesson",
+    "prompt": "The students are ready. Complete the phrase that starts the lesson. Let's ________ today's ________.",
+    "answers": [
+      "begin",
+      "lesson"
+    ],
+    "sentence": "Let's ________ today's ________.",
+    "context": "The students are ready. Complete the phrase that starts the lesson."
+  },
+  {
+    "id": "m01-fill-06",
+    "type": "fill",
+    "title": "Managing Noise",
+    "prompt": "Students are talking. You want them to become quiet before you start. We won't ________ until everyone is ________.",
+    "answers": [
+      "start",
+      "quiet"
+    ],
+    "sentence": "We won't ________ until everyone is ________.",
+    "context": "Students are talking. You want them to become quiet before you start."
+  },
+  {
+    "id": "m01-fill-07",
+    "type": "fill",
+    "title": "Addressing Lateness",
+    "prompt": "A student arrives late. Complete the teacher's remark. We ________ ten minutes ________. What have you been ________?",
+    "answers": [
+      "started",
+      "ago",
+      "doing"
+    ],
+    "sentence": "We ________ ten minutes ________. What have you been ________?",
+    "context": "A student arrives late. Complete the teacher's remark."
+  },
+  {
+    "id": "m01-error-01",
+    "type": "error",
+    "title": "Introducing Yourself",
+    "prompt": "A teacher introduces themselves to a new class. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "I'm your new English teach.",
+    "errorIndex": 4,
+    "errorLength": 1,
+    "correctWord": "teacher"
+  },
+  {
+    "id": "m01-error-02",
+    "type": "error",
+    "title": "Starting the Lesson",
+    "prompt": "The teacher is about to begin the lesson. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Let's begins today's lesson.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "begin"
+  },
+  {
+    "id": "m01-error-03",
+    "type": "error",
+    "title": "Checking Attendance",
+    "prompt": "The teacher wants to know which students are absent. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Who are absent today?",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "is"
+  },
+  {
+    "id": "m01-error-04",
+    "type": "error",
+    "title": "Checking Readiness",
+    "prompt": "The teacher checks whether students are ready. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Is ready everybody to start?",
+    "errorIndex": 1,
+    "errorLength": 2,
+    "correctWord": "everybody ready"
+  },
+  {
+    "id": "m01-error-05",
+    "type": "error",
+    "title": "Beginning the Lesson",
+    "prompt": "The teacher wants the class to begin working. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Now we can get down to sleep.",
+    "errorIndex": 6,
+    "errorLength": 1,
+    "correctWord": "work"
+  },
+  {
+    "id": "m01-error-06",
+    "type": "error",
+    "title": "Checking Attendance",
+    "prompt": "The teacher asks Tom why he missed the previous Friday's lesson. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Why were you present last Friday, Tom?",
+    "errorIndex": 3,
+    "errorLength": 1,
+    "correctWord": "absent"
+  },
+  {
+    "id": "m01-error-07",
+    "type": "error",
+    "title": "Addressing a Late Student",
+    "prompt": "The teacher asks a late student what he has been doing. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "We started ten minutes ago. What have you been do?",
+    "errorIndex": 9,
+    "errorLength": 1,
+    "correctWord": "doing"
+  },
+  {
+    "id": "m01-sentence-01",
+    "type": "sentence",
+    "title": "Greeting the Class",
+    "prompt": "You enter the classroom in the morning. Arrange the words to make a correct sentence.",
+    "words": [
+      "everybody!",
+      "Good",
+      "morning,"
+    ],
+    "answer": [
+      "Good",
+      "morning,",
+      "everybody!"
+    ]
+  },
+  {
+    "id": "m01-sentence-02",
+    "type": "sentence",
+    "title": "Introducing Yourself",
+    "prompt": "You are meeting your students for the first time. Arrange the words to make a correct sentence.",
+    "words": [
+      "teacher.",
+      "new",
+      "I'm",
+      "English",
+      "your"
+    ],
+    "answer": [
+      "I'm",
+      "your",
+      "new",
+      "English",
+      "teacher."
+    ]
+  },
+  {
+    "id": "m01-sentence-03",
+    "type": "sentence",
+    "title": "Checking Attendance",
+    "prompt": "You want to check attendance. Arrange the words to make a correct sentence.",
+    "words": [
+      "today?",
+      "is",
+      "Who",
+      "absent"
+    ],
+    "answer": [
+      "Who",
+      "is",
+      "absent",
+      "today?"
+    ]
+  },
+  {
+    "id": "m01-sentence-04",
+    "type": "sentence",
+    "title": "Getting Ready",
+    "prompt": "You want to check whether your students are ready. Arrange the words to make a correct sentence.",
+    "words": [
+      "to",
+      "everybody",
+      "start?",
+      "Is",
+      "ready"
+    ],
+    "answer": [
+      "Is",
+      "everybody",
+      "ready",
+      "to",
+      "start?"
+    ]
+  },
+  {
+    "id": "m01-sentence-05",
+    "type": "sentence",
+    "title": "Starting the Lesson",
+    "prompt": "Students are still talking, but the lesson is about to begin. Arrange the words to make a correct sentence.",
+    "words": [
+      "please",
+      "It's",
+      "talking.",
+      "begin,",
+      "stop",
+      "time",
+      "to"
+    ],
+    "answer": [
+      "It's",
+      "time",
+      "to",
+      "begin,",
+      "please",
+      "stop",
+      "talking."
+    ]
+  },
+  {
+    "id": "m01-sentence-06",
+    "type": "sentence",
+    "title": "Managing the Class",
+    "prompt": "The class is noisy and you are waiting for silence. Arrange the words to make a correct sentence.",
+    "words": [
+      "everyone",
+      "start",
+      "quiet.",
+      "until",
+      "won't",
+      "is",
+      "We"
+    ],
+    "answer": [
+      "We",
+      "won't",
+      "start",
+      "until",
+      "everyone",
+      "is",
+      "quiet."
+    ]
+  },
+  {
+    "id": "m01-sentence-07",
+    "type": "sentence",
+    "title": "Addressing a Late Student",
+    "prompt": "A student enters the classroom ten minutes late. Arrange the words to make a correct sentence.",
+    "words": [
+      "doing?",
+      "ago.",
+      "started",
+      "you",
+      "ten",
+      "We",
+      "been",
+      "minutes",
+      "What",
+      "have"
+    ],
+    "answer": [
+      "We",
+      "started",
+      "ten",
+      "minutes",
+      "ago.",
+      "What",
+      "have",
+      "you",
+      "been",
+      "doing?"
+    ]
+  },
+  {
+    "id": "m01-choice-08",
+    "type": "choice",
+    "title": "Greetings",
+    "prompt": "You enter the classroom at 2 p.m. You want to greet the whole class appropriately. What should you say?",
+    "options": [
+      "Good morning, everybody!",
+      "Good afternoon, class!",
+      "Good night, class!",
+      "See you tomorrow, class!"
+    ],
+    "answer": 1,
+    "explanation": "Afternoon is appropriate at 2 p.m.; the other greetings are for another time or are farewells."
+  },
+  {
+    "id": "m01-choice-09",
+    "type": "choice",
+    "title": "Introductions",
+    "prompt": "It is your first lesson with a new class. You want to tell students how many lessons you have with them every week. Which sentence does this?",
+    "options": [
+      "I'll be teaching you English this year.",
+      "I've got five lessons with you each week.",
+      "Let's begin our lesson now.",
+      "We started ten minutes ago."
+    ],
+    "answer": 1,
+    "explanation": "This expression states the number of weekly lessons."
+  },
+  {
+    "id": "m01-choice-10",
+    "type": "choice",
+    "title": "Time to Begin",
+    "prompt": "The students have stopped talking. You believe the class is now ready to begin. Which statement expresses that opinion?",
+    "options": [
+      "We won't start until everyone is quiet.",
+      "I'm waiting for you to be quiet.",
+      "I think we can start now.",
+      "Please stop talking."
+    ],
+    "answer": 2,
+    "explanation": "This statement says that the teacher believes starting is now possible."
+  },
+  {
+    "id": "m01-choice-11",
+    "type": "choice",
+    "title": "Time to Begin",
+    "prompt": "The class is still talking. You want to state that you are waiting for silence, rather than ask them a question. Which sentence fits?",
+    "options": [
+      "Is everybody ready to start?",
+      "I'm waiting for you to be quiet.",
+      "Who is absent today?",
+      "Let's begin our lesson now."
+    ],
+    "answer": 1,
+    "explanation": "This expression directly states that the teacher is waiting for the class to be quiet."
+  },
+  {
+    "id": "m01-choice-12",
+    "type": "choice",
+    "title": "Register",
+    "prompt": "Tom was not at school last Friday. You want to ask him the reason for his absence. What should you say?",
+    "options": [
+      "Why were you absent last Friday, Tom?",
+      "Who is absent today?",
+      "Were you late today, Tom?",
+      "Did you miss your bus today, Tom?"
+    ],
+    "answer": 0,
+    "explanation": "Only this question asks about the specified absence last Friday."
+  },
+  {
+    "id": "m01-choice-13",
+    "type": "choice",
+    "title": "Late",
+    "prompt": "A student has just arrived late and says they slept through their alarm. You want to check whether they overslept. What do you ask?",
+    "options": [
+      "Did you miss your bus?",
+      "Did you oversleep?",
+      "Are you feeling better today?",
+      "Who is absent today?"
+    ],
+    "answer": 1,
+    "explanation": "Oversleep means sleeping longer than intended."
+  },
+  {
+    "id": "m01-choice-14",
+    "type": "choice",
+    "title": "Time to Begin",
+    "prompt": "The students are now settled and you want them to begin working, not just listening to instructions. Which phrase fits best?",
+    "options": [
+      "Let's begin our lesson now.",
+      "Now we can get down to work.",
+      "Who is absent today?",
+      "I'm waiting for you to be quiet."
+    ],
+    "answer": 1,
+    "explanation": "Get down to work specifically means to begin working."
+  },
+  {
+    "id": "m01-fill-08",
+    "type": "fill",
+    "title": "Greetings",
+    "prompt": "You greet the class after lunch, at 2 p.m. Good ________, class!",
+    "context": "You greet the class after lunch, at 2 p.m.",
+    "sentence": "Good ________, class!",
+    "answers": [
+      "afternoon"
+    ]
+  },
+  {
+    "id": "m01-fill-09",
+    "type": "fill",
+    "title": "Greetings",
+    "prompt": "You notice the rainy weather when you greet the students. What a ________ day!",
+    "context": "You notice the rainy weather when you greet the students.",
+    "sentence": "What a ________ day!",
+    "answers": [
+      "rainy"
+    ]
+  },
+  {
+    "id": "m01-fill-10",
+    "type": "fill",
+    "title": "Introductions",
+    "prompt": "At the first lesson you explain how many lessons the class has with you each week. I've got five ________ with you each ________.",
+    "context": "At the first lesson you explain how many lessons the class has with you each week.",
+    "sentence": "I've got five ________ with you each ________.",
+    "answers": [
+      "lessons",
+      "week"
+    ]
+  },
+  {
+    "id": "m01-fill-11",
+    "type": "fill",
+    "title": "Time to Begin",
+    "prompt": "You think the class is ready to start. I ________ we can ________ now.",
+    "context": "You think the class is ready to start.",
+    "sentence": "I ________ we can ________ now.",
+    "answers": [
+      "think",
+      "start"
+    ]
+  },
+  {
+    "id": "m01-fill-12",
+    "type": "fill",
+    "title": "Time to Begin",
+    "prompt": "You tell a noisy class that you are waiting for silence. I'm ________ for you to be ________.",
+    "context": "You tell a noisy class that you are waiting for silence.",
+    "sentence": "I'm ________ for you to be ________.",
+    "answers": [
+      "waiting",
+      "quiet"
+    ]
+  },
+  {
+    "id": "m01-fill-13",
+    "type": "fill",
+    "title": "Register",
+    "prompt": "You want to find out which student is missing today. Who ________ here ________?",
+    "context": "You want to find out which student is missing today.",
+    "sentence": "Who ________ here ________?",
+    "answers": [
+      [
+        "isn't",
+        "is not"
+      ],
+      "today"
+    ]
+  },
+  {
+    "id": "m01-fill-14",
+    "type": "fill",
+    "title": "Late",
+    "prompt": "A late student says they could not get to school because of public transport. Ask whether they missed the bus. Did you ________ your ________?",
+    "context": "A late student says they could not get to school because of public transport. Ask whether they missed the bus.",
+    "sentence": "Did you ________ your ________?",
+    "answers": [
+      "miss",
+      "bus"
+    ]
+  },
+  {
+    "id": "m01-error-08",
+    "type": "error",
+    "title": "Introductions",
+    "prompt": "You tell a new class how many English lessons they will have with you each week. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "I've got five lesson with you each week.",
+    "errorIndex": 3,
+    "errorLength": 1,
+    "correctWord": "lessons"
+  },
+  {
+    "id": "m01-error-09",
+    "type": "error",
+    "title": "Time to Begin",
+    "prompt": "You tell a class you are ready to begin the lesson. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "I think we can starts now.",
+    "errorIndex": 4,
+    "errorLength": 1,
+    "correctWord": "start"
+  },
+  {
+    "id": "m01-error-10",
+    "type": "error",
+    "title": "Time to Begin",
+    "prompt": "You ask students to stop talking before the lesson begins. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Please stops talking so we can begin.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "stop"
+  },
+  {
+    "id": "m01-error-11",
+    "type": "error",
+    "title": "Greetings",
+    "prompt": "You ask David about his recovery after an illness. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Are you feeling gooder today, David?",
+    "errorIndex": 3,
+    "errorLength": 1,
+    "correctWord": "better"
+  },
+  {
+    "id": "m01-error-12",
+    "type": "error",
+    "title": "Register",
+    "prompt": "You ask a student about the reason for being absent last Friday. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Why you were absent last Friday, Tom?",
+    "errorIndex": 1,
+    "errorLength": 2,
+    "correctWord": "were you"
+  },
+  {
+    "id": "m01-error-13",
+    "type": "error",
+    "title": "Late",
+    "prompt": "A student explains that their bus left without them. You ask about that. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Did you miss your train?",
+    "errorIndex": 4,
+    "errorLength": 1,
+    "correctWord": "bus"
+  },
+  {
+    "id": "m01-error-14",
+    "type": "error",
+    "title": "Time to Begin",
+    "prompt": "The class is talking loudly, and you want everyone to become quiet. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "I'm waiting for you to be loud.",
+    "errorIndex": 6,
+    "errorLength": 1,
+    "correctWord": "quiet"
+  },
+  {
+    "id": "m01-sentence-08",
+    "type": "sentence",
+    "title": "Greetings",
+    "prompt": "You enter the classroom after lunch. Arrange the words to make a correct sentence.",
+    "words": [
+      "class!",
+      "afternoon,",
+      "Good"
+    ],
+    "answer": [
+      "Good",
+      "afternoon,",
+      "class!"
+    ]
+  },
+  {
+    "id": "m01-sentence-09",
+    "type": "sentence",
+    "title": "Greetings",
+    "prompt": "You are speaking to the class about today’s beautiful weather. Arrange the words to make a correct sentence.",
+    "words": [
+      "day!",
+      "lovely",
+      "What",
+      "a"
+    ],
+    "answer": [
+      "What",
+      "a",
+      "lovely",
+      "day!"
+    ]
+  },
+  {
+    "id": "m01-sentence-10",
+    "type": "sentence",
+    "title": "Introductions",
+    "prompt": "You want to tell your new class how many lessons you will have with them each week. Arrange the words to make a correct sentence.",
+    "words": [
+      "each",
+      "lessons",
+      "week.",
+      "got",
+      "you",
+      "with",
+      "five",
+      "I've"
+    ],
+    "answer": [
+      "I've",
+      "got",
+      "five",
+      "lessons",
+      "with",
+      "you",
+      "each",
+      "week."
+    ]
+  },
+  {
+    "id": "m01-sentence-11",
+    "type": "sentence",
+    "title": "Time to Begin",
+    "prompt": "Everyone has settled down. You believe you can begin. Arrange the words to make a correct sentence.",
+    "words": [
+      "now.",
+      "can",
+      "think",
+      "I",
+      "start",
+      "we"
+    ],
+    "answer": [
+      "I",
+      "think",
+      "we",
+      "can",
+      "start",
+      "now."
+    ]
+  },
+  {
+    "id": "m01-sentence-12",
+    "type": "sentence",
+    "title": "Time to Begin",
+    "prompt": "The class is still talking. You are waiting for silence. Arrange the words to make a correct sentence.",
+    "words": [
+      "quiet.",
+      "you",
+      "to",
+      "waiting",
+      "be",
+      "for",
+      "I'm"
+    ],
+    "answer": [
+      "I'm",
+      "waiting",
+      "for",
+      "you",
+      "to",
+      "be",
+      "quiet."
+    ]
+  },
+  {
+    "id": "m01-sentence-13",
+    "type": "sentence",
+    "title": "Register",
+    "prompt": "You are checking whether anyone is missing today. Arrange the words to make a correct sentence.",
+    "words": [
+      "today?",
+      "here",
+      "isn't",
+      "Who"
+    ],
+    "answer": [
+      "Who",
+      "isn't",
+      "here",
+      "today?"
+    ]
+  },
+  {
+    "id": "m01-sentence-14",
+    "type": "sentence",
+    "title": "Late",
+    "prompt": "A student arrives late and says there was a problem with the bus. Arrange the words to make a correct sentence.",
+    "words": [
+      "bus?",
+      "miss",
+      "your",
+      "Did",
+      "you"
+    ],
+    "answer": [
+      "Did",
+      "you",
+      "miss",
+      "your",
+      "bus?"
+    ]
+  }
+]

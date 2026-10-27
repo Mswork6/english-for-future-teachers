@@ -5,7 +5,7 @@ import { home } from './pages/home.js';
 import { modulesPage } from './pages/modules.js';
 import { modulePage } from './pages/module.js';
 import { theory } from './pages/theory.js';
-import { practice } from './pages/practice.js';
+import { practice, practiceResults, practiceReview } from './pages/practice.js';
 import { cases } from './pages/cases.js';
 
 let navigationId = 0;
@@ -15,6 +15,7 @@ export async function route() {
     const isCurrent = () => currentNavigation === navigationId;
     const hash = location.hash;
 
+    document.body.classList.remove('practice-view');
     app.replaceChildren();
 
     try {
@@ -50,9 +51,18 @@ export async function route() {
         }
         if (!isCurrent()) return;
 
+        // Module 01 uses the approved 35-task Practice dataset.
+        // Keep Theory and Teaching Cases in the original module JSON.
+        if (info.id === 'the-beginning-of-the-lesson' && parts[2] === 'practice') {
+            mod = {...mod, practice: await load('data/module-01-practice.json')};
+            if (!isCurrent()) return;
+        }
+
         if (!parts[2]) return modulePage(mod);
         if (parts[2] === 'theory') return theory(mod);
-        if (parts[2] === 'practice') return practice(mod);
+        if (parts[2] === 'practice' && parts[3] === 'results' && parts.length === 4) return practiceResults(mod);
+        if (parts[2] === 'practice' && parts[3] === 'review' && parts.length === 4) return practiceReview(mod);
+        if (parts[2] === 'practice' && parts.length === 3) return practice(mod);
         if (parts[2] === 'cases') return cases(mod);
         throw new Error('Unknown section');
     } catch (error) {
