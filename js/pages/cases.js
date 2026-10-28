@@ -5,8 +5,7 @@ import {renderSchoolDay, renderSchoolDayResults} from '../cases/school-day.js';
 const CASES = {
     'the-beginning-of-the-lesson': [
         {id:'starting-the-school-day',title:'Starting the School Day',description:'Greet the pupils, check attendance and begin the lesson.',difficulty:'Easy',steps:4,available:true},
-        {id:'a-late-pupil',title:'A Late Pupil',description:'Calmly manage class conversations and a late arrival.',difficulty:'Medium',steps:4,available:true},
-        {id:'case-03',title:'Teaching Case 3',description:'Another classroom situation. Content coming soon.',available:false}
+        {id:'a-late-pupil',title:'A Late Pupil',description:'Calmly manage class conversations and a late arrival.',difficulty:'Medium',steps:4,available:true}
     ]
 };
 
