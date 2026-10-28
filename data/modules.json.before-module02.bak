@@ -1,0 +1,25 @@
+[
+  {
+    "id": "the-beginning-of-the-lesson",
+    "title": "The Beginning of the Lesson",
+    "description": "Greetings, introductions, starting the lesson, attendance and late arrivals.",
+    "practiceFile": "data/module-01-practice.json",
+    "matchingQuotas": {
+      "Greetings": 2,
+      "Introductions": 1,
+      "Time to Begin": 2,
+      "Register": 1,
+      "Late": 1
+    }
+  },
+  {
+    "id": "during-the-lesson",
+    "title": "During the Lesson",
+    "description": "Classroom instructions, comprehension, classroom management, encouragement, feedback and special situations."
+  },
+  {
+    "id": "teaching-practice",
+    "title": "Teaching Practice",
+    "description": "Language for teaching activities and feedback."
+  }
+]

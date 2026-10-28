@@ -1,0 +1,1555 @@
+[
+  {
+    "id": "m02-matching-01",
+    "type": "matching",
+    "category": "Opening a lesson and inviting responses",
+    "title": "Opening a lesson and inviting responses",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "We'll learn how to ...",
+        "An announcement of the skill pupils are going to learn"
+      ],
+      [
+        "Are you ready?",
+        "A question checking whether pupils are prepared to start"
+      ],
+      [
+        "Any questions?",
+        "An invitation for pupils to ask about something unclear"
+      ],
+      [
+        "Whose turn is it to read?",
+        "A question asking which pupil should read next"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-02",
+    "type": "matching",
+    "category": "Textbook and physical classroom actions",
+    "title": "Textbook and physical classroom actions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Open your books at page ...",
+        "An instruction to open a textbook at a specified page"
+      ],
+      [
+        "Stand up.",
+        "A command to rise from a seated position"
+      ],
+      [
+        "Put your hands down.",
+        "A request to lower raised hands"
+      ],
+      [
+        "Come out and write it on the board.",
+        "An instruction to come forward and write on the board"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-03",
+    "type": "matching",
+    "category": "Page navigation and coordinated actions",
+    "title": "Page navigation and coordinated actions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Turn to page ...",
+        "An instruction to find a specified page by turning the pages"
+      ],
+      [
+        "Stand by your desks.",
+        "A direction to stand beside one’s desk"
+      ],
+      [
+        "Hold your books up.",
+        "A request to raise textbooks so they can be seen"
+      ],
+      [
+        "All together now.",
+        "A cue to perform or say something at the same time"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-04",
+    "type": "matching",
+    "category": "Communicating with the class",
+    "title": "Communicating with the class",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Do you get it?",
+        "An informal question checking whether a particular idea was understood"
+      ],
+      [
+        "Come in.",
+        "Permission or an invitation to enter the room"
+      ],
+      [
+        "Sit down.",
+        "An instruction to take a seated position"
+      ],
+      [
+        "Stop talking.",
+        "A firm instruction to stop having conversations"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-05",
+    "type": "matching",
+    "category": "Guiding participation and movement",
+    "title": "Guiding participation and movement",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Are you with me?",
+        "A check that listeners are still following the speaker’s explanation"
+      ],
+      [
+        "Go out.",
+        "An instruction to leave a room"
+      ],
+      [
+        "Come to the front of the class.",
+        "An instruction to move to the front of the classroom"
+      ],
+      [
+        "I want you all to join in.",
+        "A request that everyone should participate in the activity"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-06",
+    "type": "matching",
+    "category": "Wellbeing and classroom management",
+    "title": "Wellbeing and classroom management",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Are you OK?",
+        "A question asking whether someone is all right"
+      ],
+      [
+        "Hold your pens up.",
+        "A request to raise pens for the teacher to see"
+      ],
+      [
+        "The whole class, please.",
+        "A prompt directed to every pupil rather than a single pupil"
+      ],
+      [
+        "Leave that alone now.",
+        "An instruction to stop handling or using something for now"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-07",
+    "type": "matching",
+    "category": "Checking progress and safety",
+    "title": "Checking progress and safety",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Do you follow me?",
+        "A question checking whether listeners can follow the reasoning being explained"
+      ],
+      [
+        "Open your books at page 75.",
+        "A complete instruction to open textbooks on page seventy-five"
+      ],
+      [
+        "Next one, please.",
+        "A request for the next pupil or item in a sequence"
+      ],
+      [
+        "Be careful.",
+        "A warning to act cautiously to avoid danger or mistakes"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-08",
+    "type": "matching",
+    "category": "Explaining lesson stages",
+    "title": "Explaining lesson stages",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "OK so far?",
+        "A brief check whether the explanation has been clear up to this point"
+      ],
+      [
+        "First, ...",
+        "A word introducing the initial step in a sequence"
+      ],
+      [
+        "For the last thing today, let's ...",
+        "A phrase introducing the final classroom activity of the day"
+      ],
+      [
+        "Who knows the answer?",
+        "A question inviting anyone who knows an answer to volunteer"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-09",
+    "type": "matching",
+    "category": "Directions and learner responses",
+    "title": "Directions and learner responses",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "First of all, ...",
+        "A phrase introducing what must be done before all other steps"
+      ],
+      [
+        "Look this way.",
+        "An instruction to direct attention towards the teacher"
+      ],
+      [
+        "A full sentence, please.",
+        "A request to answer using a complete sentence"
+      ],
+      [
+        "What about this word?",
+        "A question directing attention to a particular word"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-10",
+    "type": "matching",
+    "category": "Moving through an activity",
+    "title": "Moving through an activity",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "After that, ...",
+        "A transition to something that happens after a previous step"
+      ],
+      [
+        "Listen to what ... is saying.",
+        "An instruction to pay attention to what another person is saying"
+      ],
+      [
+        "Yes, that's right.",
+        "A statement confirming that an answer is correct"
+      ],
+      [
+        "Have a go!",
+        "An encouragement to attempt a task"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-11",
+    "type": "matching",
+    "category": "Changing tasks and responding to work",
+    "title": "Changing tasks and responding to work",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Next, ...",
+        "A signal introducing the upcoming step in a sequence"
+      ],
+      [
+        "Louder, please!",
+        "A request to speak with greater volume"
+      ],
+      [
+        "Almost. Try again.",
+        "Feedback indicating that an answer is close but needs another attempt"
+      ],
+      [
+        "That really is very kind of you.",
+        "An expression of thanks for someone’s kindness"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-12",
+    "type": "matching",
+    "category": "Responding to pupils",
+    "title": "Responding to pupils",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Fine.",
+        "A brief expression of approval or acceptance"
+      ],
+      [
+        "That's interesting!",
+        "A reaction showing that an idea has caught the teacher’s interest"
+      ],
+      [
+        "Don't worry about it.",
+        "Reassurance that someone need not be upset about a mistake"
+      ],
+      [
+        "Have another try!",
+        "An invitation to attempt a task once more"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-13",
+    "type": "matching",
+    "category": "Feedback on different outcomes",
+    "title": "Feedback on different outcomes",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Magnificent!",
+        "Very enthusiastic praise for an exceptionally impressive performance"
+      ],
+      [
+        "That's it!",
+        "Confirmation that a pupil has found exactly the sought answer or method"
+      ],
+      [
+        "It depends.",
+        "A response saying the answer varies according to the circumstances"
+      ],
+      [
+        "You've improved a lot.",
+        "A comment recognizing noticeable progress over time"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-14",
+    "type": "matching",
+    "category": "Feedback and special occasions",
+    "title": "Feedback and special occasions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Well done.",
+        "Praise for a task or performance that has just been completed"
+      ],
+      [
+        "Unfortunately not.",
+        "A polite statement that a suggested answer is not correct"
+      ],
+      [
+        "Happy birthday!",
+        "A greeting to someone on the anniversary of their birth"
+      ],
+      [
+        "Did you oversleep?",
+        "A question asking whether a late pupil woke up too late"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-15",
+    "type": "matching",
+    "category": "School events and behaviour",
+    "title": "School events and behaviour",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Merry Christmas!",
+        "A seasonal greeting for Christmas"
+      ],
+      [
+        "Did you miss your bus?",
+        "A question asking whether someone failed to catch their bus"
+      ],
+      [
+        "Don't let it happen again.",
+        "A warning that a particular mistake or behaviour must not be repeated"
+      ],
+      [
+        "Congratulations!",
+        "A phrase used to celebrate someone’s success or important achievement"
+      ]
+    ]
+  },
+  {
+    "id": "m02-matching-16",
+    "type": "matching",
+    "category": "Everyday personal situations",
+    "title": "Everyday personal situations",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "I hope you all have a good Christmas.",
+        "A wish for pupils to enjoy the Christmas holidays"
+      ],
+      [
+        "Do you feel better today?",
+        "A question asking whether an unwell pupil feels better today"
+      ],
+      [
+        "I have a headache.",
+        "A statement that the speaker is experiencing head pain"
+      ],
+      [
+        "Do you mind if I sit down?",
+        "A polite request for permission to sit down"
+      ]
+    ]
+  },
+  {
+    "id": "m02-choice-01",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "The pupils are looking at the teacher with their textbooks closed. The teacher wants them to open the books to page 6.",
+    "options": [
+      "Hold your books up.",
+      "Open your books at page 6.",
+      "Turn to page 75.",
+      "Put your hands down."
+    ],
+    "answer": 1,
+    "explanation": "Only “Open your books at page 6” instructs pupils to open the textbook at the specified page. “Hold your books up” means lift the books; the last option identifies a different page. “Put your hands down” concerns raised hands, not textbooks."
+  },
+  {
+    "id": "m02-choice-02",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "All pupils are already ready to repeat a word. The teacher wants them to begin speaking at the same moment rather than take individual turns.",
+    "options": [
+      "Next one, please.",
+      "Whose turn is it to read?",
+      "All together now.",
+      "A full sentence, please."
+    ],
+    "answer": 2,
+    "explanation": "“All together now” is a cue for simultaneous speaking. “Next one, please” advances to the following turn; “Whose turn is it to read?” asks who reads next. “A full sentence, please” requests the form of an individual answer, not simultaneous repetition."
+  },
+  {
+    "id": "m02-choice-03",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil gives the correct idea but answers using only one word. The teacher wants a grammatically complete response.",
+    "options": [
+      "A full sentence, please.",
+      "Louder, please!",
+      "Have another try!",
+      "Whose turn is it to read?"
+    ],
+    "answer": 0,
+    "explanation": "The issue is the FORM of the answer, not its volume or correctness. “A full sentence, please” asks for a complete sentence. “Whose turn is it to read?” asks about turn-taking, not answer structure."
+  },
+  {
+    "id": "m02-choice-04",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "The teacher is midway through a difficult explanation and wants to check that the students can follow the reasoning.",
+    "options": [
+      "Are you ready?",
+      "Have a go!",
+      "Do you follow me?",
+      "Who knows the answer?"
+    ],
+    "answer": 2,
+    "explanation": "“Do you follow me?” explicitly checks whether the students are following the explanation. “Are you ready?” asks about readiness, and “Have a go!” encourages an attempt. “Who knows the answer?” invites a response; it does not check whether the current explanation is understood."
+  },
+  {
+    "id": "m02-choice-05",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil enters late. Rather than guessing the cause, the teacher asks where the pupil has been.",
+    "options": [
+      "Where have you been?",
+      "Did you oversleep?",
+      "Did you miss your bus?",
+      "Any questions?"
+    ],
+    "answer": 0,
+    "explanation": "“Where have you been?” asks about the pupil’s whereabouts without assuming a reason. The other two options suggest particular causes of lateness. “Any questions?” invites questions; it does not ask where the late pupil has been."
+  },
+  {
+    "id": "m02-choice-06",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil has just finished an assigned presentation successfully. The teacher wants to praise the completed work.",
+    "options": [
+      "Well done.",
+      "You’ve improved a lot.",
+      "Have another try!",
+      "Unfortunately not."
+    ],
+    "answer": 0,
+    "explanation": "“Well done” praises this completed task. “You’ve improved a lot” compares progress over time, and “Have another try!” asks for a new attempt. “Unfortunately not” rejects an answer rather than praising completed work."
+  },
+  {
+    "id": "m02-choice-07",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A student gives an answer that is nearly right. The teacher wants them to make another attempt.",
+    "options": [
+      "That’s it!",
+      "Congratulations!",
+      "Almost. Try again.",
+      "You’re on the right lines."
+    ],
+    "answer": 2,
+    "explanation": "“Almost. Try again.” recognises a nearly correct answer and directly invites another attempt. “That’s it!” confirms success, while “Congratulations!” celebrates an achievement. “You’re on the right lines” suggests a promising approach, but does not explicitly request a fresh attempt after a nearly correct answer."
+  },
+  {
+    "id": "m02-choice-08",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "The teacher is going into the corridor for one minute and promises the class that they will return.",
+    "options": [
+      "I’ve got to go next door for a moment.",
+      "I’ll be back in a moment.",
+      "There’s no hurry.",
+      "Come in."
+    ],
+    "answer": 1,
+    "explanation": "“I’ll be back in a moment” is the only option that directly PROMISES a return. Going next door describes the destination; “There’s no hurry” concerns time pressure. “Come in” permits someone to enter, not promises that the teacher will return."
+  },
+  {
+    "id": "m02-choice-09",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil asks the teacher for permission to sit down because they feel dizzy.",
+    "options": [
+      "Sit down.",
+      "Do you mind if I sit down?",
+      "Are you better now?",
+      "Are you ready?"
+    ],
+    "answer": 1,
+    "explanation": "“Do you mind if I sit down?” politely requests permission. “Sit down” is an instruction; “Are you better now?” asks about health. “Are you ready?” checks readiness, not permission to sit."
+  },
+  {
+    "id": "m02-choice-10",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "Two pupils are chatting while the teacher is giving instructions. The teacher asks them to stop the conversation.",
+    "options": [
+      "Look this way.",
+      "Stop talking.",
+      "Listen to what Anna is saying.",
+      "Put your hands down."
+    ],
+    "answer": 1,
+    "explanation": "“Stop talking” specifically asks pupils to end the conversation. The others redirect attention but do not explicitly ask them to stop speaking. “Put your hands down” is about raised hands, not conversations."
+  },
+  {
+    "id": "m02-choice-11",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil’s answer is correct, but classmates at the back cannot hear it. The teacher asks for greater volume.",
+    "options": [
+      "A full sentence, please.",
+      "All together now.",
+      "Louder, please!",
+      "Have another try!"
+    ],
+    "answer": 2,
+    "explanation": "“Louder, please!” addresses volume. A full sentence concerns structure; “All together now” cues a group response. “Have another try!” asks for a repeat attempt, not louder speech."
+  },
+  {
+    "id": "m02-choice-12",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "The teacher wants a pupil to come to the board and write the solution, not just approach the front.",
+    "options": [
+      "Come out and write it on the board.",
+      "Come to the front of the class.",
+      "Look this way.",
+      "Hold your books up."
+    ],
+    "answer": 0,
+    "explanation": "Only “Come out and write it on the board” asks for both movement and writing. Coming to the front omits the writing step. “Hold your books up” asks pupils to raise textbooks rather than write on the board."
+  },
+  {
+    "id": "m02-choice-13",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "Compared with earlier lessons, a pupil’s pronunciation has become noticeably better. The teacher comments on progress over time.",
+    "options": [
+      "That’s very good.",
+      "You did a great job.",
+      "You’ve improved a lot.",
+      "Have a go!"
+    ],
+    "answer": 2,
+    "explanation": "“You’ve improved a lot” refers to change over time. The other responses praise an answer or completed task without explicitly referring to progress. “Have a go!” encourages a first attempt, not improvement over time."
+  },
+  {
+    "id": "m02-choice-14",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil is thinking carefully about a difficult question. The teacher reassures them that they may take their time.",
+    "options": [
+      "Next one, please.",
+      "Have another try!",
+      "There’s no hurry.",
+      "Be careful."
+    ],
+    "answer": 2,
+    "explanation": "“There’s no hurry” removes time pressure. The other options advance to another person or ask for another attempt. “Be careful” advises caution, not freedom from time pressure."
+  },
+  {
+    "id": "m02-choice-15",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "After showing an example, the teacher wants to ask informally whether pupils understand it.",
+    "options": [
+      "Do you get it?",
+      "Are you ready?",
+      "Who knows the answer?",
+      "Come to the front of the class."
+    ],
+    "answer": 0,
+    "explanation": "“Do you get it?” checks comprehension. “Are you ready?” asks about readiness, and “Who knows the answer?” invites a person to answer a question. “Come to the front of the class” gives a movement instruction and does not ask about understanding."
+  },
+  {
+    "id": "m02-choice-16",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "For a demonstration, one particular pupil must leave their desk and stand at the front, without writing anything.",
+    "options": [
+      "Stand by your desks.",
+      "Come to the front of the class.",
+      "Come out and write it on the board.",
+      "Hold your pens up."
+    ],
+    "answer": 1,
+    "explanation": "“Come to the front of the class” requests movement to the front only. The other options ask for a different position or an additional writing action. “Hold your pens up” is about displaying pens rather than moving to the front."
+  },
+  {
+    "id": "m02-choice-17",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "Pupils have already completed the first two steps. The teacher introduces an activity that must happen AFTER those steps.",
+    "options": [
+      "First of all, ...",
+      "For the last thing today, let’s ...",
+      "After that, ...",
+      "Whose turn is it to read?"
+    ],
+    "answer": 2,
+    "explanation": "“After that” explicitly connects a following step to what has already happened. “First of all” begins a sequence; “For the last thing today” introduces the final lesson activity. “Whose turn is it to read?” asks about whose reading turn comes next, not the next stage of the activity."
+  },
+  {
+    "id": "m02-choice-18",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "Pupils are taking turns reading aloud. The teacher wants to identify whose turn it is next.",
+    "options": [
+      "Whose turn is it to read?",
+      "Who knows the answer?",
+      "Next one, please.",
+      "Any questions?"
+    ],
+    "answer": 0,
+    "explanation": "“Whose turn is it to read?” asks WHICH pupil should read. “Next one, please” asks the next person to proceed without asking who it is. “Any questions?” invites questions about the material rather than identifying the next reader."
+  },
+  {
+    "id": "m02-choice-19",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil voluntarily helps the teacher carry a heavy box. The teacher wants to thank the pupil specifically for being considerate.",
+    "options": [
+      "You did a great job.",
+      "That really is very kind of you.",
+      "Well done.",
+      "Congratulations!"
+    ],
+    "answer": 1,
+    "explanation": "“That really is very kind of you” recognises a thoughtful act. The other phrases praise how well a task was performed. “Congratulations!” celebrates an achievement, but does not specifically acknowledge the pupil’s considerate act."
+  },
+  {
+    "id": "m02-choice-20",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil asks if there will be time for a game. The teacher cannot give a fixed answer because it depends on finishing the exercise.",
+    "options": [
+      "Unfortunately not.",
+      "There’s no hurry.",
+      "It depends.",
+      "Yes, that’s right."
+    ],
+    "answer": 2,
+    "explanation": "“It depends” expresses a conditional answer. “Unfortunately not” is a definite refusal, while “There’s no hurry” reassures somebody about time. “Yes, that’s right” confirms a correct statement, but does not express dependence on a condition."
+  },
+  {
+    "id": "m02-choice-21",
+    "type": "choice",
+    "title": "Classroom situations",
+    "prompt": "A pupil returns to school after being absent yesterday due to illness. The teacher wants to ask explicitly whether they feel better TODAY.",
+    "options": [
+      "Do you feel better today?",
+      "Did you miss your bus?",
+      "Are you ready?",
+      "Where have you been?"
+    ],
+    "answer": 0,
+    "explanation": "“Do you feel better today?” asks about wellbeing and contrasts today with the previous illness. The other options ask about lateness or readiness. “Where have you been?” asks about whereabouts, not recovery from illness."
+  },
+  {
+    "id": "m02-fill-01",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher says, “Please open your books ________ page 75.” Complete the fixed textbook instruction.",
+    "context": "The teacher says, “Please open your books ___ page 75.” Complete the fixed textbook instruction.",
+    "sentence": "Please open your books ________ page 75.",
+    "answers": [
+      "at"
+    ]
+  },
+  {
+    "id": "m02-fill-02",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher directs pupils to a page: “Turn ________ page 5.”",
+    "context": "The teacher directs pupils to a page: “Turn ___ page 5.”",
+    "sentence": "Turn ________ page 5.",
+    "answers": [
+      "to"
+    ]
+  },
+  {
+    "id": "m02-fill-03",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher checks readiness before starting: “Are you ________ to begin?”",
+    "context": "The teacher checks readiness before starting: “Are you ___ to begin?”",
+    "sentence": "Are you ________ to begin?",
+    "answers": [
+      "ready"
+    ]
+  },
+  {
+    "id": "m02-fill-04",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "To check whether pupils understand the explanation, the teacher asks: “Do you ________ me?”",
+    "context": "To check whether pupils understand the explanation, the teacher asks: “Do you ___ me?”",
+    "sentence": "Do you ________ me?",
+    "answers": [
+      "follow"
+    ]
+  },
+  {
+    "id": "m02-fill-05",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "Pupils must stand beside, not on, their desks: “Stand ________ your desks.”",
+    "context": "Pupils must stand beside, not on, their desks: “Stand ___ your desks.”",
+    "sentence": "Stand ________ your desks.",
+    "answers": [
+      "by"
+    ]
+  },
+  {
+    "id": "m02-fill-06",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher tells pupils to lower their raised hands: “Put your hands ________.”",
+    "context": "The teacher tells pupils to lower their raised hands: “Put your hands ___.”",
+    "sentence": "Put your hands ________.",
+    "answers": [
+      "down"
+    ]
+  },
+  {
+    "id": "m02-fill-07",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher invites everyone to answer: “The whole ________, please.”",
+    "context": "The teacher invites everyone to answer: “The whole ___, please.”",
+    "sentence": "The whole ________, please.",
+    "answers": [
+      "class"
+    ]
+  },
+  {
+    "id": "m02-fill-08",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher cues everyone to speak at the same time: “All ________ now.”",
+    "context": "The teacher cues everyone to speak at the same time: “All ___ now.”",
+    "sentence": "All ________ now.",
+    "answers": [
+      "together"
+    ]
+  },
+  {
+    "id": "m02-fill-09",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "Introducing the very first step, the teacher says: “________ of all, listen carefully.”",
+    "context": "Introducing the very first step, the teacher says: “___ of all, listen carefully.”",
+    "sentence": "________ of all, listen carefully.",
+    "answers": [
+      "First"
+    ]
+  },
+  {
+    "id": "m02-fill-10",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher asks who should read next: “Whose ________ is it to read?”",
+    "context": "The teacher asks who should read next: “Whose ___ is it to read?”",
+    "sentence": "Whose ________ is it to read?",
+    "answers": [
+      "turn"
+    ]
+  },
+  {
+    "id": "m02-fill-11",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "A pupil replies with one word. The teacher requests: “A full ________, please.”",
+    "context": "A pupil replies with one word. The teacher requests: “A full ___, please.”",
+    "sentence": "A full ________, please.",
+    "answers": [
+      "sentence"
+    ]
+  },
+  {
+    "id": "m02-fill-12",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "A pupil has made a mistake and is invited to repeat the attempt: “Have another ________!”",
+    "context": "A pupil has made a mistake and is invited to repeat the attempt: “Have another ___!”",
+    "sentence": "Have another ________!",
+    "answers": [
+      "try"
+    ]
+  },
+  {
+    "id": "m02-fill-13",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "After successful work, the teacher praises the pupil: “You did a great ________.”",
+    "context": "After successful work, the teacher praises the pupil: “You did a great ___.”",
+    "sentence": "You did a great ________.",
+    "answers": [
+      "job"
+    ]
+  },
+  {
+    "id": "m02-fill-14",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "A pupil is rushing unnecessarily. The teacher reassures them: “There’s no ________.”",
+    "context": "A pupil is rushing unnecessarily. The teacher reassures them: “There’s no ___.”",
+    "sentence": "There’s no ________.",
+    "answers": [
+      "hurry"
+    ]
+  },
+  {
+    "id": "m02-fill-15",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher asks pupils to rise from their chairs, not sit: “________ up.”",
+    "context": "The teacher asks pupils to rise from their chairs, not sit: “___ up.”",
+    "sentence": "________ up.",
+    "answers": [
+      "Stand"
+    ]
+  },
+  {
+    "id": "m02-fill-16",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher asks pupils to raise their writing instruments for inspection: “Hold your ________ up.” (Use the plural noun in the vocabulary card for writing instruments.)",
+    "context": "The teacher asks pupils to raise their writing instruments for inspection: “Hold your ___ up.” (Use the plural noun in the vocabulary card for writing instruments.)",
+    "sentence": "Hold your ________ up.",
+    "answers": [
+      "pens"
+    ]
+  },
+  {
+    "id": "m02-fill-17",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher refers to a task that follows the warm-up: “________ that, compare your answers.”",
+    "context": "The teacher refers to a task that follows the warm-up: “___ that, compare your answers.”",
+    "sentence": "________ that, compare your answers.",
+    "answers": [
+      "After"
+    ]
+  },
+  {
+    "id": "m02-fill-18",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The teacher is asked whether an extra activity will happen, but the decision is conditional: “It ________.”",
+    "context": "The teacher is asked whether an extra activity will happen, but the decision is conditional: “It ___.”",
+    "sentence": "It ________.",
+    "answers": [
+      "depends"
+    ]
+  },
+  {
+    "id": "m02-fill-19",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "During a potentially risky experiment the teacher warns: “Be ________.”",
+    "context": "During a potentially risky experiment the teacher warns: “Be ___.”",
+    "sentence": "Be ________.",
+    "answers": [
+      "careful"
+    ]
+  },
+  {
+    "id": "m02-fill-20",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "The pupil is upset about a small mistake. The teacher says: “Don’t ________ about it.”",
+    "context": "The pupil is upset about a small mistake. The teacher says: “Don’t ___ about it.”",
+    "sentence": "Don’t ________ about it.",
+    "answers": [
+      "worry"
+    ]
+  },
+  {
+    "id": "m02-fill-21",
+    "type": "fill",
+    "title": "Complete the classroom expression",
+    "prompt": "Before a competition, the teacher wishes the class: “Best of ________!”",
+    "context": "Before a competition, the teacher wishes the class: “Best of ___!”",
+    "sentence": "Best of ________!",
+    "answers": [
+      "luck"
+    ]
+  },
+  {
+    "id": "m02-error-01",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Open your books in page 75.",
+    "errorIndex": 3,
+    "errorLength": 1,
+    "correctWord": "at"
+  },
+  {
+    "id": "m02-error-02",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Stand by you desks.",
+    "errorIndex": 2,
+    "errorLength": 1,
+    "correctWord": "your"
+  },
+  {
+    "id": "m02-error-03",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Come to front of the class.",
+    "errorIndex": 2,
+    "errorLength": 1,
+    "correctWord": "the front"
+  },
+  {
+    "id": "m02-error-04",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Stop to talking.",
+    "errorIndex": 1,
+    "errorLength": 2,
+    "correctWord": "talking"
+  },
+  {
+    "id": "m02-error-05",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Look at this way.",
+    "errorIndex": 1,
+    "errorLength": 2,
+    "correctWord": "this"
+  },
+  {
+    "id": "m02-error-06",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Listen to what the teacher saying.",
+    "errorIndex": 5,
+    "errorLength": 1,
+    "correctWord": "is saying"
+  },
+  {
+    "id": "m02-error-07",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Do you follows me?",
+    "errorIndex": 2,
+    "errorLength": 1,
+    "correctWord": "follow"
+  },
+  {
+    "id": "m02-error-08",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Put you hands down.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "your"
+  },
+  {
+    "id": "m02-error-09",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "The whole classes, please.",
+    "errorIndex": 2,
+    "errorLength": 1,
+    "correctWord": "class"
+  },
+  {
+    "id": "m02-error-10",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Whose turn it is to read?",
+    "errorIndex": 2,
+    "errorLength": 2,
+    "correctWord": "is it"
+  },
+  {
+    "id": "m02-error-11",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Any questiones?",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "questions"
+  },
+  {
+    "id": "m02-error-12",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "A full sentences, please.",
+    "errorIndex": 2,
+    "errorLength": 1,
+    "correctWord": "sentence"
+  },
+  {
+    "id": "m02-error-13",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "You did a great jobs.",
+    "errorIndex": 4,
+    "errorLength": 1,
+    "correctWord": "job"
+  },
+  {
+    "id": "m02-error-14",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "There is no hurries.",
+    "errorIndex": 3,
+    "errorLength": 1,
+    "correctWord": "hurry"
+  },
+  {
+    "id": "m02-error-15",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Come ins.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "in"
+  },
+  {
+    "id": "m02-error-16",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Stand ups.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "up"
+  },
+  {
+    "id": "m02-error-17",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Hold you pens up.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "your"
+  },
+  {
+    "id": "m02-error-18",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Come out and write it in the board.",
+    "errorIndex": 5,
+    "errorLength": 1,
+    "correctWord": "on"
+  },
+  {
+    "id": "m02-error-19",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Be carefully.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "careful"
+  },
+  {
+    "id": "m02-error-20",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Don't worries about it.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "worry"
+  },
+  {
+    "id": "m02-error-21",
+    "type": "error",
+    "title": "Correct a classroom expression",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "You've improve a lot.",
+    "errorIndex": 1,
+    "errorLength": 1,
+    "correctWord": "improved"
+  },
+  {
+    "id": "m02-sentence-01",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "5",
+      "to",
+      "Turn",
+      ".",
+      "page"
+    ],
+    "answer": [
+      "Turn",
+      "to",
+      "page",
+      "5",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-02",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      ".",
+      "Open",
+      "at",
+      "6",
+      "your",
+      "books",
+      "page"
+    ],
+    "answer": [
+      "Open",
+      "your",
+      "books",
+      "at",
+      "page",
+      "6",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-03",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "follow",
+      "Do",
+      "me",
+      "?",
+      "you"
+    ],
+    "answer": [
+      "Do",
+      "you",
+      "follow",
+      "me",
+      "?"
+    ]
+  },
+  {
+    "id": "m02-sentence-04",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "?",
+      "ready",
+      "you",
+      "Are"
+    ],
+    "answer": [
+      "Are",
+      "you",
+      "ready",
+      "?"
+    ]
+  },
+  {
+    "id": "m02-sentence-05",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "All",
+      "now",
+      ".",
+      "together"
+    ],
+    "answer": [
+      "All",
+      "together",
+      "now",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-06",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "out",
+      "on",
+      "Come",
+      "and",
+      "the",
+      ".",
+      "write",
+      "it",
+      "board"
+    ],
+    "answer": [
+      "Come",
+      "out",
+      "and",
+      "write",
+      "it",
+      "on",
+      "the",
+      "board",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-07",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "?",
+      "Any",
+      "questions"
+    ],
+    "answer": [
+      "Any",
+      "questions",
+      "?"
+    ]
+  },
+  {
+    "id": "m02-sentence-08",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "full",
+      "sentence",
+      "A",
+      ".",
+      ",",
+      "please"
+    ],
+    "answer": [
+      "A",
+      "full",
+      "sentence",
+      ",",
+      "please",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-09",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "again",
+      "it",
+      "Don't",
+      "let",
+      "happen",
+      "."
+    ],
+    "answer": [
+      "Don't",
+      "let",
+      "it",
+      "happen",
+      "again",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-10",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "Stand",
+      "desks",
+      "by",
+      "your",
+      "."
+    ],
+    "answer": [
+      "Stand",
+      "by",
+      "your",
+      "desks",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-11",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "your",
+      "hands",
+      ".",
+      "down",
+      "Put"
+    ],
+    "answer": [
+      "Put",
+      "your",
+      "hands",
+      "down",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-12",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "?",
+      "read",
+      "to",
+      "is",
+      "turn",
+      "it",
+      "Whose"
+    ],
+    "answer": [
+      "Whose",
+      "turn",
+      "is",
+      "it",
+      "to",
+      "read",
+      "?"
+    ]
+  },
+  {
+    "id": "m02-sentence-13",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "another",
+      "try",
+      "!",
+      "Have"
+    ],
+    "answer": [
+      "Have",
+      "another",
+      "try",
+      "!"
+    ]
+  },
+  {
+    "id": "m02-sentence-14",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "improved",
+      "lot",
+      ".",
+      "You've",
+      "a"
+    ],
+    "answer": [
+      "You've",
+      "improved",
+      "a",
+      "lot",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-15",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      ".",
+      "in",
+      "Come"
+    ],
+    "answer": [
+      "Come",
+      "in",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-16",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      ".",
+      "Stand",
+      "up"
+    ],
+    "answer": [
+      "Stand",
+      "up",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-17",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "you",
+      "join",
+      "I",
+      "all",
+      "in",
+      "want",
+      "to",
+      "."
+    ],
+    "answer": [
+      "I",
+      "want",
+      "you",
+      "all",
+      "to",
+      "join",
+      "in",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-18",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      ".",
+      "careful",
+      "Be"
+    ],
+    "answer": [
+      "Be",
+      "careful",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-19",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      ".",
+      "that's",
+      "Yes",
+      "right",
+      ","
+    ],
+    "answer": [
+      "Yes",
+      ",",
+      "that's",
+      "right",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-20",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      ".",
+      "done",
+      "Well"
+    ],
+    "answer": [
+      "Well",
+      "done",
+      "."
+    ]
+  },
+  {
+    "id": "m02-sentence-21",
+    "type": "sentence",
+    "title": "Classroom expressions",
+    "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
+    "words": [
+      "oversleep",
+      "Did",
+      "?",
+      "you"
+    ],
+    "answer": [
+      "Did",
+      "you",
+      "oversleep",
+      "?"
+    ]
+  }
+]

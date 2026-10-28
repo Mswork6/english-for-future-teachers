@@ -16,6 +16,21 @@ export function practice(mod) {
         app.append(el('p', 'No practice questions are available yet.', 'note'));
         return;
     }
+    // Draw each Matching Pairs option order once per attempt, then persist it.
+    // Older drafts (without this field) are initialized once on first resume.
+    const matchingOrders = Object.fromEntries(questions.filter(q => q.type === 'matching').map(q => {
+        const values = q.pairs.map(pair => pair[1]);
+        const stored = previous?.matchingOrders?.[q.id];
+        const valid = Array.isArray(stored) && stored.length === values.length &&
+            new Set(stored).size === values.length && values.every(value => stored.includes(value));
+        if (valid) return [q.id, stored];
+        const shuffled = [...values];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return [q.id, shuffled];
+    }));
     const saved = Object.fromEntries(questions.map(q => [q.id, previous?.answers?.[q.id] ?? empty(q)]));
     let index = Math.min(Math.max(Number(previous?.index) || 0, 0), questions.length - 1);
     let drawerOpen = false;
@@ -66,7 +81,7 @@ export function practice(mod) {
     window.addEventListener('hashchange', cleanupModal, {once: true});
 
     function save() {
-        saveDraft(mod, {index, answers: saved, questions});
+        saveDraft(mod, {index, answers: saved, questions, matchingOrders});
     }
 
     function setDrawer(open) {
@@ -131,7 +146,7 @@ export function practice(mod) {
             save();
             renderGroups();
         };
-        renderAnswer(q, area, {saved, update, render, selectListeners});
+        renderAnswer(q, area, {saved, update, render, selectListeners, matchingOrders});
         back.disabled = index === 0;
         next.hidden = index === questions.length - 1;
         finish.hidden = index !== questions.length - 1;

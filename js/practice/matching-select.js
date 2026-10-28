@@ -3,8 +3,8 @@ import {button} from './shared.js';
 
 // Matching Pairs dropdown, including viewport positioning and focus behavior.
 // Event listeners are cleaned up by the owning Practice page.
-export function renderMatching(q, area, {saved, update, selectListeners}) {
-    const options = q.pairs.map(p => p[1]).reverse();
+export function renderMatching(q, area, {saved, update, selectListeners, matchingOrders}) {
+    const options = matchingOrders[q.id];
     q.pairs.forEach(([source], n) => {
         const wrap = el('div', null, 'practice-match-row');
         wrap.append(el('span', source));

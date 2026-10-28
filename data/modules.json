@@ -13,9 +13,10 @@
     }
   },
   {
-    "id": "communication-with-students",
-    "title": "Communication with Students",
-    "description": "Supportive, respectful communication with learners."
+    "id": "during-the-lesson",
+    "title": "During the Lesson",
+    "description": "Classroom instructions, communication, feedback, and learner support during the lesson.",
+    "practiceFile": "data/module-02-practice.json"
   },
   {
     "id": "teaching-practice",
