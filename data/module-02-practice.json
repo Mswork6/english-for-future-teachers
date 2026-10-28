@@ -1140,18 +1140,16 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      "5",
+      "5.",
       "to",
       "Turn",
-      ".",
       "page"
     ],
     "answer": [
       "Turn",
       "to",
       "page",
-      "5",
-      "."
+      "5."
     ]
   },
   {
@@ -1160,10 +1158,9 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      ".",
       "Open",
       "at",
-      "6",
+      "6.",
       "your",
       "books",
       "page"
@@ -1174,8 +1171,7 @@
       "books",
       "at",
       "page",
-      "6",
-      "."
+      "6."
     ]
   },
   {
@@ -1186,16 +1182,14 @@
     "words": [
       "follow",
       "Do",
-      "me",
-      "?",
+      "me?",
       "you"
     ],
     "answer": [
       "Do",
       "you",
       "follow",
-      "me",
-      "?"
+      "me?"
     ]
   },
   {
@@ -1204,16 +1198,14 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      "?",
-      "ready",
+      "ready?",
       "you",
       "Are"
     ],
     "answer": [
       "Are",
       "you",
-      "ready",
-      "?"
+      "ready?"
     ]
   },
   {
@@ -1223,15 +1215,13 @@
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
       "All",
-      "now",
-      ".",
+      "now.",
       "together"
     ],
     "answer": [
       "All",
       "together",
-      "now",
-      "."
+      "now."
     ]
   },
   {
@@ -1245,10 +1235,9 @@
       "Come",
       "and",
       "the",
-      ".",
       "write",
       "it",
-      "board"
+      "board."
     ],
     "answer": [
       "Come",
@@ -1258,8 +1247,7 @@
       "it",
       "on",
       "the",
-      "board",
-      "."
+      "board."
     ]
   },
   {
@@ -1268,14 +1256,12 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      "?",
       "Any",
-      "questions"
+      "questions?"
     ],
     "answer": [
       "Any",
-      "questions",
-      "?"
+      "questions?"
     ]
   },
   {
@@ -1285,19 +1271,15 @@
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
       "full",
-      "sentence",
+      "sentence,",
       "A",
-      ".",
-      ",",
-      "please"
+      "please."
     ],
     "answer": [
       "A",
       "full",
-      "sentence",
-      ",",
-      "please",
-      "."
+      "sentence,",
+      "please."
     ]
   },
   {
@@ -1306,20 +1288,18 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      "again",
+      "again.",
       "it",
       "Don't",
       "let",
-      "happen",
-      "."
+      "happen"
     ],
     "answer": [
       "Don't",
       "let",
       "it",
       "happen",
-      "again",
-      "."
+      "again."
     ]
   },
   {
@@ -1329,17 +1309,15 @@
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
       "Stand",
-      "desks",
+      "desks.",
       "by",
-      "your",
-      "."
+      "your"
     ],
     "answer": [
       "Stand",
       "by",
       "your",
-      "desks",
-      "."
+      "desks."
     ]
   },
   {
@@ -1350,16 +1328,14 @@
     "words": [
       "your",
       "hands",
-      ".",
-      "down",
+      "down.",
       "Put"
     ],
     "answer": [
       "Put",
       "your",
       "hands",
-      "down",
-      "."
+      "down."
     ]
   },
   {
@@ -1368,8 +1344,7 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      "?",
-      "read",
+      "read?",
       "to",
       "is",
       "turn",
@@ -1382,8 +1357,7 @@
       "is",
       "it",
       "to",
-      "read",
-      "?"
+      "read?"
     ]
   },
   {
@@ -1393,15 +1367,13 @@
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
       "another",
-      "try",
-      "!",
+      "try!",
       "Have"
     ],
     "answer": [
       "Have",
       "another",
-      "try",
-      "!"
+      "try!"
     ]
   },
   {
@@ -1411,8 +1383,7 @@
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
       "improved",
-      "lot",
-      ".",
+      "lot.",
       "You've",
       "a"
     ],
@@ -1420,8 +1391,7 @@
       "You've",
       "improved",
       "a",
-      "lot",
-      "."
+      "lot."
     ]
   },
   {
@@ -1430,14 +1400,12 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      ".",
-      "in",
+      "in.",
       "Come"
     ],
     "answer": [
       "Come",
-      "in",
-      "."
+      "in."
     ]
   },
   {
@@ -1446,14 +1414,12 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      ".",
       "Stand",
-      "up"
+      "up."
     ],
     "answer": [
       "Stand",
-      "up",
-      "."
+      "up."
     ]
   },
   {
@@ -1466,10 +1432,9 @@
       "join",
       "I",
       "all",
-      "in",
+      "in.",
       "want",
-      "to",
-      "."
+      "to"
     ],
     "answer": [
       "I",
@@ -1478,8 +1443,7 @@
       "all",
       "to",
       "join",
-      "in",
-      "."
+      "in."
     ]
   },
   {
@@ -1488,14 +1452,12 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      ".",
-      "careful",
+      "careful.",
       "Be"
     ],
     "answer": [
       "Be",
-      "careful",
-      "."
+      "careful."
     ]
   },
   {
@@ -1504,18 +1466,14 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      ".",
       "that's",
-      "Yes",
-      "right",
-      ","
+      "Yes,",
+      "right."
     ],
     "answer": [
-      "Yes",
-      ",",
+      "Yes,",
       "that's",
-      "right",
-      "."
+      "right."
     ]
   },
   {
@@ -1524,14 +1482,12 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      ".",
-      "done",
+      "done.",
       "Well"
     ],
     "answer": [
       "Well",
-      "done",
-      "."
+      "done."
     ]
   },
   {
@@ -1540,16 +1496,14 @@
     "title": "Classroom expressions",
     "prompt": "Arrange the words and punctuation to make the correct classroom expression.",
     "words": [
-      "oversleep",
+      "oversleep?",
       "Did",
-      "?",
       "you"
     ],
     "answer": [
       "Did",
       "you",
-      "oversleep",
-      "?"
+      "oversleep?"
     ]
   }
 ]
