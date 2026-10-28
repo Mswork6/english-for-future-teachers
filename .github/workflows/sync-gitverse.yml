@@ -1,0 +1,46 @@
+
+name: Sync GitHub to GitVerse
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gitverse-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push master to GitVerse
+        env:
+          GITVERSE_TOKEN: ${{ secrets.GITVERSE_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$GITVERSE_TOKEN" ]; then
+            echo "::error::GITVERSE_TOKEN is missing"
+            exit 1
+          fi
+
+          git config --global \
+            credential.helper \
+            '!f() { echo "username=mswork6"; echo "password=$GITVERSE_TOKEN"; }; f'
+
+          git remote add gitverse \
+            https://gitverse.ru/mswork6/english-for-future-teachers.git
+
+          git push gitverse HEAD:refs/heads/master
