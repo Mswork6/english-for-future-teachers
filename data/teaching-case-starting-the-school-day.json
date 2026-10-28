@@ -1,0 +1,270 @@
+{
+  "id": "starting-the-school-day",
+  "title": "Starting the School Day",
+  "difficulty": "Easy",
+  "summary": "You are teaching English to a primary school class. It is a normal school morning. Your task is to greet the pupils, check attendance and organise the beginning of the lesson.",
+  "steps": [
+    {
+      "title": "Greeting the Class",
+      "opening": [
+        "It is 9:00 a.m. You enter the classroom. The pupils are sitting at their desks. Some are looking at the board, while others are preparing their notebooks.",
+        "The pupils notice you and wait for the lesson to begin."
+      ],
+      "question": "What would you say first?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Good morning, everybody!",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "class",
+              "text": "Good morning, teacher!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils greet you together and look towards the front of the classroom."
+            }
+          ],
+          "feedback": "An appropriate morning greeting addressed to the whole class."
+        },
+        {
+          "id": "B",
+          "text": "How are things with you?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "maria",
+              "text": "I'm fine, thank you!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "A few other pupils smile and look towards you."
+            }
+          ],
+          "feedback": "A friendly conversational opener, but less appropriate than greeting the whole class first."
+        },
+        {
+          "id": "C",
+          "text": "I think we can start now.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils stop preparing their notebooks and look towards you."
+            },
+            {
+              "speaker": "narrator",
+              "text": "They wait for further instructions."
+            }
+          ],
+          "feedback": "This skips the morning greeting."
+        }
+      ],
+      "transition": [
+        "You walk to your desk and open the attendance register.",
+        "You notice that Anna's desk is empty."
+      ]
+    },
+    {
+      "title": "Checking Attendance",
+      "opening": [
+        "Anna is not at her desk. You have not yet confirmed whether she is absent today.",
+        "You want to check attendance before making a note in the register."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Who is absent today?",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "maria",
+              "text": "Anna is absent today."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You find Anna's name in the register and mark her absence."
+            }
+          ],
+          "feedback": "The question identifies who is absent today."
+        },
+        {
+          "id": "B",
+          "text": "What's the matter with Anna today?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "maria",
+              "text": "Anna isn't here today. I don't know why."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You confirm that Anna is absent and mark her absence in the register."
+            }
+          ],
+          "feedback": "This assumes something is wrong with Anna rather than neutrally checking attendance."
+        },
+        {
+          "id": "C",
+          "text": "Why were you absent last Friday, Anton?",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "anton",
+              "text": "I was here last Friday."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You return to the register. Maria notices that you are checking attendance."
+            },
+            {
+              "speaker": "maria",
+              "text": "Anna is absent today."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You mark Anna's absence."
+            }
+          ],
+          "feedback": "A question about last Friday does not establish today's attendance."
+        }
+      ],
+      "transition": [
+        "You finish checking attendance and close the register.",
+        "The pupils are sitting quietly. A few are putting their notebooks and pencil cases in order."
+      ]
+    },
+    {
+      "title": "Getting Ready",
+      "opening": [
+        "The attendance check is complete. The pupils are looking towards the front of the classroom.",
+        "Before beginning the lesson, you want to check whether everyone is ready."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "I think we can start now.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils turn towards you. Maria finishes putting her pencil case away."
+            },
+            {
+              "speaker": "narrator",
+              "text": "The class prepares to begin, although you have not directly checked everyone's readiness."
+            }
+          ],
+          "feedback": "The teacher starts moving forward without directly checking readiness."
+        },
+        {
+          "id": "B",
+          "text": "Is everybody ready to start?",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "class",
+              "text": "Yes, we're ready!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils look towards you, ready to begin."
+            }
+          ],
+          "feedback": "Directly checks whether everyone is ready."
+        },
+        {
+          "id": "C",
+          "text": "I'm waiting for you to be quiet.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils look towards you. Nobody is talking."
+            },
+            {
+              "speaker": "maria",
+              "text": "We're quiet, teacher."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You notice that the class is already paying attention."
+            }
+          ],
+          "feedback": "The class is already quiet, so the warning is unnecessary."
+        }
+      ],
+      "transition": [
+        "Everyone finishes preparing their materials.",
+        "The classroom is quiet, and all pupils are ready for the lesson."
+      ]
+    },
+    {
+      "title": "Beginning the Lesson",
+      "opening": [
+        "The organisational part of the lesson is complete. You have checked attendance, and the class is ready.",
+        "You want to officially begin today's English lesson."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Settle down now so we can start.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils remain seated quietly."
+            },
+            {
+              "speaker": "narrator",
+              "text": "They look towards you, waiting for the first activity."
+            }
+          ],
+          "feedback": "The class is already settled; no disciplinary prompt is needed."
+        },
+        {
+          "id": "B",
+          "text": "Let's begin today's lesson.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils turn their attention towards the board."
+            },
+            {
+              "speaker": "narrator",
+              "text": "They are ready to follow your first instruction."
+            }
+          ],
+          "feedback": "Clearly signals the official start of the lesson."
+        },
+        {
+          "id": "C",
+          "text": "Is everybody ready to start?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "class",
+              "text": "Yes, teacher!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils confirm their readiness once again and wait for you to continue."
+            }
+          ],
+          "feedback": "A reasonable question, but readiness has already been established."
+        }
+      ],
+      "transition": []
+    }
+  ],
+  "final": [
+    "You turn towards the board and introduce the first learning activity.",
+    "The pupils listen attentively.",
+    "The English lesson is underway."
+  ]
+}
