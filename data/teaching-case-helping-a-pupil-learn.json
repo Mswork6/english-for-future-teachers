@@ -178,7 +178,6 @@
       "title": "Encouraging Participation",
       "opening": [
         "Anna has chosen a word for the first sentence, but she seems uncertain about her answer.",
-        "Anna: “I think I know, but I'm not sure. Can I try?”",
         "You want to encourage Anna to attempt the answer without being afraid of making a mistake."
       ],
       "question": "What would you say?",
@@ -247,6 +246,12 @@
       "transition": [
         "Anna gives her answer. She has chosen an incorrect verb form, although the rest of the sentence is correct.",
         "You want to help her recognise that she is close to the correct answer and encourage her to try again."
+      ],
+      "openingMessages": [
+        {
+          "speaker": "anna",
+          "text": "I think I know, but I'm not sure. Can I try?"
+        }
       ]
     },
     {
@@ -409,7 +414,6 @@
       "title": "Continuing Independently",
       "opening": [
         "Anna looks at the next sentence in her book.",
-        "Anna: “I think I can do the next one myself.”",
         "You want to support her independence and encourage her to continue with the exercise."
       ],
       "question": "What would you say?",
@@ -479,7 +483,13 @@
           "feedback": "This unnecessarily stops the exercise rather than supporting independence."
         }
       ],
-      "transition": []
+      "transition": [],
+      "openingMessages": [
+        {
+          "speaker": "anna",
+          "text": "I think I can do the next one myself."
+        }
+      ]
     }
   ],
   "final": [

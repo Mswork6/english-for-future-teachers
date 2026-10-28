@@ -8,13 +8,15 @@ const resultsKey = id => `efft:case:${id}:latest`;
 const resultsRoute = (mod,id) => `#/module/${mod.id}/cases/${id}/results`;
 const ACTORS = {
     teacher: {name:'You · Teacher', avatar:'teacher.webp'},
-    maria: {name:'Maria', avatar:'sophie.webp'},
-    anton: {name:'Anton', avatar:'daniel.webp'},
-    alex: {name:'Alex', avatar:'max.webp'},
-    class: {name:'Class', avatar:'max.webp'},
-    anna: {name:'Anna', avatar:'sophie.webp'},
-    some_pupils: {name:'Some pupils', avatar:'max.webp'},
-    other_pupils: {name:'Other pupils', avatar:'max.webp'}
+    maria: {name:'Maria', avatar:'maria.webp'},
+    anton: {name:'Anton', avatar:'anton.webp'},
+    alex: {name:'Alex', avatar:'alex.webp'},
+    class: {name:'Class', avatar:'class.webp'},
+    anna: {name:'Anna', avatar:'anna.webp'},
+    sophie: {name:'Sofia', avatar:'sofia.webp'},
+    sofia: {name:'Sofia', avatar:'sofia.webp'},
+    some_pupils: {name:'Some pupils', avatar:'class.webp'},
+    other_pupils: {name:'Other pupils', avatar:'class.webp'}
 };
 
 function icon(name) { const i=el('i'); i.dataset.lucide=name; return i; }
@@ -68,7 +70,11 @@ export async function renderSchoolDay(mod, caseId, {onBack} = {}) {
         });
         $('tc-send').disabled=true;
         $('tc-send').textContent='Send response →';
-        // Opening scene is displayed in the contextual panel above the chat.
+        // Display spoken opening lines as chat messages, not as narration.
+        // Each step is entered once, so opening messages are not duplicated.
+        for (const event of data.openingMessages || []) {
+            addMessage(event.speaker, event.text);
+        }
         window.lucide?.createIcons();
     }
     function setStoryContext(lines, label='Story continues') {
