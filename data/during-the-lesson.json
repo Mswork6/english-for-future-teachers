@@ -1,0 +1,513 @@
+{
+  "id": "during-the-lesson",
+  "title": "During the Lesson",
+  "theoryTitle": "During the Lesson",
+  "theory": [
+    {
+      "category": "Instructions used at the beginning of a session",
+      "en": "We'll learn how to ...",
+      "ru": "Сегодня мы научимся …",
+      "example": "Introducing the aim of the lesson, the teacher says, “We'll learn how to describe our daily routines today.”"
+    },
+    {
+      "category": "Instructions used at the beginning of a session",
+      "en": "Are you ready?",
+      "ru": "Вы готовы?",
+      "example": "Before starting a new activity, the teacher asks, “Are you ready?”"
+    },
+    {
+      "category": "Instructions used at the beginning of a session",
+      "en": "Open your books at page ...",
+      "ru": "Откройте учебники на странице …",
+      "example": "The teacher says, “Open your books at page 42 and look at exercise three.”"
+    },
+    {
+      "category": "Instructions used at the beginning of a session",
+      "en": "Turn to page ...",
+      "ru": "Переверните на страницу … / Откройте страницу …",
+      "example": "To find the reading text, the teacher instructs, “Turn to page 18.”"
+    },
+    {
+      "category": "Comprehension Language",
+      "en": "Do you get it?",
+      "ru": "Вам понятно?",
+      "example": "After demonstrating the solution, the teacher asks, “Do you get it?”"
+    },
+    {
+      "category": "Comprehension Language",
+      "en": "Are you with me?",
+      "ru": "Вы следите за ходом объяснения?",
+      "example": "While explaining the grammar rule, the teacher pauses: “Are you with me?”"
+    },
+    {
+      "category": "Comprehension Language",
+      "en": "Are you OK?",
+      "ru": "Всё понятно? / Всё в порядке?",
+      "example": "Seeing a puzzled expression, the teacher asks, “Are you OK? Would you like another example?”"
+    },
+    {
+      "category": "Comprehension Language",
+      "en": "Do you follow me?",
+      "ru": "Вы понимаете, о чём я говорю?",
+      "example": "After a detailed explanation, the teacher checks, “Do you follow me?”"
+    },
+    {
+      "category": "Comprehension Language",
+      "en": "OK so far?",
+      "ru": "Пока всё понятно?",
+      "example": "Halfway through the instructions, the teacher asks, “OK so far?”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Come in.",
+      "ru": "Заходите.",
+      "example": "When a late pupil knocks, the teacher says, “Come in.”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Go out.",
+      "ru": "Выйдите, пожалуйста.",
+      "example": "During a fire drill, the teacher instructs the class, “Go out calmly and follow me.”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Stand by your desks.",
+      "ru": "Встаньте возле своих парт.",
+      "example": "Before a speaking activity, the teacher says, “Stand by your desks.”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Stand up.",
+      "ru": "Встаньте.",
+      "example": "To begin a short movement break, the teacher says, “Stand up.”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Sit down.",
+      "ru": "Садитесь.",
+      "example": "After the activity, the teacher says, “Sit down, please.”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Come to the front of the class.",
+      "ru": "Выйдите к доске / к передней части класса.",
+      "example": "The teacher invites a volunteer: “Come to the front of the class and show us your drawing.”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Put your hands down.",
+      "ru": "Опустите руки.",
+      "example": "After choosing a pupil to answer, the teacher says to the others, “Put your hands down.”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Hold your books up.",
+      "ru": "Поднимите учебники, чтобы их было видно.",
+      "example": "To check the covers, the teacher says, “Hold your books up so I can see them.”"
+    },
+    {
+      "category": "Other common instructions",
+      "en": "Hold your pens up.",
+      "ru": "Поднимите ручки, чтобы их было видно.",
+      "example": "Before a handwriting task, the teacher says, “Hold your pens up.”"
+    },
+    {
+      "category": "Giving instructions",
+      "en": "Open your books at page 75.",
+      "ru": "Откройте учебники на странице 75.",
+      "example": "During a reading lesson, the teacher says, “Open your books at page 75.”"
+    },
+    {
+      "category": "Giving instructions",
+      "en": "I want you all to join in.",
+      "ru": "Я хочу, чтобы все приняли участие.",
+      "example": "Before the discussion, the teacher says, “I want you all to join in.”"
+    },
+    {
+      "category": "Giving instructions",
+      "en": "The whole class, please.",
+      "ru": "Весь класс, пожалуйста.",
+      "example": "To invite a choral answer, the teacher says, “The whole class, please.”"
+    },
+    {
+      "category": "Giving instructions",
+      "en": "All together now.",
+      "ru": "А теперь все вместе.",
+      "example": "Practising pronunciation, the teacher prompts, “All together now: three, two, one.”"
+    },
+    {
+      "category": "Giving instructions",
+      "en": "Come out and write it on the board.",
+      "ru": "Выйдите к доске и напишите это.",
+      "example": "The teacher asks a pupil, “Come out and write it on the board.”"
+    },
+    {
+      "category": "Sequencing",
+      "en": "First, ...",
+      "ru": "Сначала …",
+      "example": "Explaining the procedure, the teacher says, “First, read the question carefully.”"
+    },
+    {
+      "category": "Sequencing",
+      "en": "First of all, ...",
+      "ru": "Прежде всего …",
+      "example": "Before giving instructions, the teacher says, “First of all, listen to the dialogue.”"
+    },
+    {
+      "category": "Sequencing",
+      "en": "After that, ...",
+      "ru": "После этого …",
+      "example": "The teacher continues, “After that, compare your answers with a partner.”"
+    },
+    {
+      "category": "Sequencing",
+      "en": "Then, ...",
+      "ru": "Затем …",
+      "example": "Moving to the second step, the teacher says, “Then, write two examples.”"
+    },
+    {
+      "category": "Sequencing",
+      "en": "Next, ...",
+      "ru": "Далее …",
+      "example": "The teacher explains, “Next, discuss your ideas in pairs.”"
+    },
+    {
+      "category": "Sequencing",
+      "en": "Next one, please.",
+      "ru": "Следующий, пожалуйста. / Следующее задание, пожалуйста.",
+      "example": "After one pupil finishes reading, the teacher says, “Next one, please.”"
+    },
+    {
+      "category": "Sequencing",
+      "en": "For the last thing today, let's ...",
+      "ru": "В завершение сегодняшнего урока давайте …",
+      "example": "Near the end of the class, the teacher says, “For the last thing today, let's review the new words.”"
+    },
+    {
+      "category": "Sequencing",
+      "en": "Whose turn is it to read?",
+      "ru": "Чья очередь читать?",
+      "example": "Before reading aloud, the teacher asks, “Whose turn is it to read?”"
+    },
+    {
+      "category": "Supervision",
+      "en": "Stop talking.",
+      "ru": "Перестаньте разговаривать.",
+      "example": "When chatter interrupts the lesson, the teacher says, “Stop talking and listen, please.”"
+    },
+    {
+      "category": "Supervision",
+      "en": "Look this way.",
+      "ru": "Посмотрите сюда.",
+      "example": "Pointing to a diagram on the board, the teacher says, “Look this way.”"
+    },
+    {
+      "category": "Supervision",
+      "en": "Leave that alone now.",
+      "ru": "Пока отложите это / Не трогайте это сейчас.",
+      "example": "When pupils start using materials too early, the teacher says, “Leave that alone now. We'll use it later.”"
+    },
+    {
+      "category": "Supervision",
+      "en": "Be careful.",
+      "ru": "Будьте осторожны.",
+      "example": "During a science demonstration, the teacher warns, “Be careful with the glass.”"
+    },
+    {
+      "category": "Supervision",
+      "en": "Listen to what ... is saying.",
+      "ru": "Послушайте, что говорит …",
+      "example": "While one pupil gives an answer, the teacher says, “Listen to what Anna is saying.”"
+    },
+    {
+      "category": "Questions",
+      "en": "Any questions?",
+      "ru": "Есть вопросы?",
+      "example": "After explaining the homework, the teacher asks, “Any questions?”"
+    },
+    {
+      "category": "Questions",
+      "en": "Who knows the answer?",
+      "ru": "Кто знает ответ?",
+      "example": "The teacher invites participation: “Who knows the answer?”"
+    },
+    {
+      "category": "Questions",
+      "en": "Louder, please!",
+      "ru": "Погромче, пожалуйста!",
+      "example": "When a pupil speaks too quietly, the teacher says, “Louder, please!”"
+    },
+    {
+      "category": "Questions",
+      "en": "A full sentence, please.",
+      "ru": "Ответьте полным предложением, пожалуйста.",
+      "example": "Encouraging a complete response, the teacher says, “A full sentence, please.”"
+    },
+    {
+      "category": "Responding to questions",
+      "en": "Yes, that's right.",
+      "ru": "Да, правильно.",
+      "example": "After a correct answer, the teacher confirms, “Yes, that's right.”"
+    },
+    {
+      "category": "Responding to questions",
+      "en": "Fine.",
+      "ru": "Хорошо.",
+      "example": "The teacher listens to a pupil's explanation and responds, “Fine. Let's continue.”"
+    },
+    {
+      "category": "Responding to questions",
+      "en": "Almost. Try again.",
+      "ru": "Почти правильно. Попробуйте ещё раз.",
+      "example": "When a pupil is close to the answer, the teacher says, “Almost. Try again.”"
+    },
+    {
+      "category": "Responding to questions",
+      "en": "What about this word?",
+      "ru": "А как насчёт этого слова?",
+      "example": "Looking at the next item in the text, the teacher asks, “What about this word?”"
+    },
+    {
+      "category": "Encouragement",
+      "en": "That's interesting!",
+      "ru": "Как интересно!",
+      "example": "After hearing an unusual idea, the teacher responds, “That's interesting!”"
+    },
+    {
+      "category": "Encouragement",
+      "en": "That really is very kind of you.",
+      "ru": "Это очень любезно с вашей стороны.",
+      "example": "When a pupil helps distribute materials, the teacher says, “That really is very kind of you.”"
+    },
+    {
+      "category": "Encouragement",
+      "en": "Don't worry about it.",
+      "ru": "Не переживайте из-за этого.",
+      "example": "Reassuring a pupil who makes a small mistake, the teacher says, “Don't worry about it.”"
+    },
+    {
+      "category": "Encouragement",
+      "en": "Have a go!",
+      "ru": "Попробуйте!",
+      "example": "Encouraging a hesitant pupil, the teacher says, “Have a go!”"
+    },
+    {
+      "category": "Encouragement",
+      "en": "Have another try!",
+      "ru": "Попробуйте ещё раз!",
+      "example": "After an incorrect attempt, the teacher says, “Have another try!”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Magnificent!",
+      "ru": "Великолепно!",
+      "example": "After an excellent presentation, the teacher exclaims, “Magnificent!”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Right!",
+      "ru": "Верно!",
+      "example": "Checking an answer, the teacher confirms, “Right!”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Fine!",
+      "ru": "Отлично!",
+      "example": "After reviewing the work, the teacher says, “Fine! You can move on.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Very good!",
+      "ru": "Очень хорошо!",
+      "example": "The teacher praises a correct explanation: “Very good!”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "That's very good.",
+      "ru": "Это очень хорошо.",
+      "example": "After hearing an accurate answer, the teacher says, “That's very good.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Great stuff!",
+      "ru": "Здорово!",
+      "example": "When the group finishes a difficult task, the teacher says, “Great stuff!”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Well done.",
+      "ru": "Молодец! / Молодцы!",
+      "example": "The teacher tells the pupils after their performance, “Well done.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "You did a great job.",
+      "ru": "Вы отлично справились.",
+      "example": "After a successful group project, the teacher says, “You did a great job.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "That's it!",
+      "ru": "Вот именно! / Правильно!",
+      "example": "When the pupil finds the correct word, the teacher says, “That's it!”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Yes, you've got it.",
+      "ru": "Да, вы всё правильно поняли.",
+      "example": "After a pupil explains the rule correctly, the teacher says, “Yes, you've got it.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Fantastic!",
+      "ru": "Замечательно!",
+      "example": "Reacting to a creative presentation, the teacher says, “Fantastic!”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "That's nice.",
+      "ru": "Хорошо! / Замечательно!",
+      "example": "After reading a pupil's short story, the teacher remarks, “That's nice.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "It depends.",
+      "ru": "Это зависит от обстоятельств / от ситуации.",
+      "example": "When asked whether an expression is formal, the teacher replies, “It depends on the situation.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "You've improved a lot.",
+      "ru": "Вы заметно улучшили свои результаты.",
+      "example": "After noticing better pronunciation, the teacher says, “You've improved a lot.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "You're on the right lines.",
+      "ru": "Вы мыслите в правильном направлении.",
+      "example": "Encouraging a nearly correct solution, the teacher says, “You're on the right lines.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "There's no hurry.",
+      "ru": "Не торопитесь.",
+      "example": "To reassure a pupil who is thinking, the teacher says, “There's no hurry. Take your time.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Unfortunately not.",
+      "ru": "К сожалению, нет.",
+      "example": "After checking an incorrect answer, the teacher says, “Unfortunately not. Let's look at it again.”"
+    },
+    {
+      "category": "Error Correction",
+      "en": "Good try, but not quite right.",
+      "ru": "Хорошая попытка, но ответ не совсем верный.",
+      "example": "The teacher gives supportive feedback: “Good try, but not quite right.”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Happy birthday!",
+      "ru": "С днём рождения!",
+      "example": "On a pupil's special day, the teacher says, “Happy birthday!”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Merry Christmas!",
+      "ru": "С Рождеством!",
+      "example": "Before the winter holiday, the teacher wishes the class, “Merry Christmas!”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Did you oversleep?",
+      "ru": "Вы проспали?",
+      "example": "When a pupil arrives late, the teacher asks, “Did you oversleep?”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Did you miss your bus?",
+      "ru": "Вы опоздали на автобус?",
+      "example": "Noticing a pupil's late arrival, the teacher asks, “Did you miss your bus?”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Where have you been?",
+      "ru": "Где вы были?",
+      "example": "After a pupil enters late, the teacher asks, “Where have you been?”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Don't let it happen again.",
+      "ru": "Постарайтесь, чтобы это больше не повторилось.",
+      "example": "After discussing repeated lateness, the teacher says, “Don't let it happen again.”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Best of luck!",
+      "ru": "Желаю удачи!",
+      "example": "Before a competition, the teacher wishes the pupils, “Best of luck!”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Congratulations!",
+      "ru": "Поздравляю!",
+      "example": "When pupils win a school contest, the teacher says, “Congratulations!”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Better luck next time.",
+      "ru": "В следующий раз обязательно повезёт больше.",
+      "example": "After a disappointing result, the teacher encourages the group: “Better luck next time.”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "I hope you all have a good Christmas.",
+      "ru": "Надеюсь, вы все хорошо проведёте рождественские праздники.",
+      "example": "Before the holidays, the teacher says, “I hope you all have a good Christmas.”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Do you feel better today?",
+      "ru": "Вы сегодня лучше себя чувствуете?",
+      "example": "Seeing a pupil return after an illness, the teacher asks, “Do you feel better today?”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Are you better now?",
+      "ru": "Вам уже лучше?",
+      "example": "After a pupil rests in the nurse's office, the teacher asks, “Are you better now?”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "I'll be back in a moment.",
+      "ru": "Я сейчас вернусь.",
+      "example": "Before stepping into the corridor, the teacher tells the class, “I'll be back in a moment.”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "I've got to go next door for a moment.",
+      "ru": "Мне нужно ненадолго выйти в соседний кабинет.",
+      "example": "The teacher tells a colleague, “I've got to go next door for a moment.”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "I have a sore throat.",
+      "ru": "У меня болит горло.",
+      "example": "Explaining why speaking is difficult, the teacher says, “I have a sore throat.”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "I have a headache.",
+      "ru": "У меня болит голова.",
+      "example": "After feeling unwell, the teacher says, “I have a headache.”"
+    },
+    {
+      "category": "Special Situations",
+      "en": "Do you mind if I sit down?",
+      "ru": "Вы не возражаете, если я присяду?",
+      "example": "Feeling tired during a long activity, the teacher asks, “Do you mind if I sit down?”"
+    }
+  ],
+  "practice": [],
+  "cases": []
+}
