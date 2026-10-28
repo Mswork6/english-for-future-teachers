@@ -1,0 +1,491 @@
+{
+  "id": "helping-a-pupil-learn",
+  "title": "Helping a Pupil Learn",
+  "difficulty": "Medium",
+  "scenario": "You are teaching an English lesson in a primary school. The pupils are completing an exercise in which they choose the correct words to finish sentences. One pupil, Anna, is having difficulty with the task. Your goal is to help her understand the instructions, encourage her to participate and give constructive feedback.",
+  "steps": [
+    {
+      "title": "Noticing a Difficulty",
+      "opening": [
+        "The pupils are working on a grammar exercise. They need to choose the correct verb forms to complete several sentences.",
+        "Most pupils have already started, but Anna is still looking at the example on the board.",
+        "You notice that she has not written anything yet. You want to check whether she understands what she needs to do."
+      ],
+      "question": "What would you say to Anna?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Are you ready?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Not yet. I'm not sure what to do."
+            },
+            {
+              "speaker": "narrator",
+              "text": "She looks back at the example."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You realise that she needs another explanation."
+            }
+          ],
+          "feedback": "Readiness is not the same as understanding the task."
+        },
+        {
+          "id": "B",
+          "text": "Do you get it?",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Not really. I don't understand the example."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna points to the sentence on the board."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You see that she needs help with the instructions."
+            }
+          ],
+          "feedback": "The question directly checks Anna’s comprehension."
+        },
+        {
+          "id": "C",
+          "text": "Open your books at page 75.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "My book is already open."
+            },
+            {
+              "speaker": "narrator",
+              "text": "She looks down at the exercise but does not begin working."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You notice that the problem is not her textbook but her understanding of the task."
+            }
+          ],
+          "feedback": "Her textbook is already open; the problem is understanding."
+        }
+      ],
+      "transition": [
+        "You explain the exercise again, using a simpler example on the board.",
+        "Anna watches carefully. A few other pupils also look up from their books.",
+        "You decide to check the example with the class before everyone continues."
+      ]
+    },
+    {
+      "title": "Working Through an Example",
+      "opening": [
+        "You write a short sentence on the board:",
+        "She ___ to school every day.",
+        "go / goes",
+        "The pupils need to choose the correct verb form.",
+        "You want a volunteer to give the answer so that everyone can check their understanding of the example."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Any questions?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Most pupils remain quiet."
+            },
+            {
+              "speaker": "maria",
+              "text": "No questions."
+            },
+            {
+              "speaker": "narrator",
+              "text": "However, the correct answer has not been discussed yet."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to the two verb forms and invite a pupil to answer."
+            }
+          ],
+          "feedback": "Asking about questions does not elicit an answer to the example."
+        },
+        {
+          "id": "B",
+          "text": "All together now.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Several pupils begin speaking at once."
+            },
+            {
+              "speaker": "some_pupils",
+              "text": "Go!"
+            },
+            {
+              "speaker": "other_pupils",
+              "text": "Goes!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The answers overlap, and it is difficult to tell who understands the rule."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You indicate that one pupil should answer at a time."
+            }
+          ],
+          "feedback": "A chorus makes it harder to identify whether an individual understands."
+        },
+        {
+          "id": "C",
+          "text": "Who knows the answer?",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Maria raises her hand."
+            },
+            {
+              "speaker": "maria",
+              "text": "Goes!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You nod and point to the completed sentence."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna looks at the example again."
+            }
+          ],
+          "feedback": "This invites a pupil to volunteer an answer to the example."
+        }
+      ],
+      "transition": [
+        "You confirm that the correct answer is “goes” and briefly explain the rule.",
+        "Anna looks more confident. She begins working on the first sentence in her exercise.",
+        "A moment later, she raises her hand."
+      ]
+    },
+    {
+      "title": "Encouraging Participation",
+      "opening": [
+        "Anna has chosen a word for the first sentence, but she seems uncertain about her answer.",
+        "Anna: “I think I know, but I'm not sure. Can I try?”",
+        "You want to encourage Anna to attempt the answer without being afraid of making a mistake."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Have a go!",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Okay, I'll try."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna looks at the sentence and gives her answer."
+            }
+          ],
+          "feedback": "This directly encourages Anna to attempt her answer."
+        },
+        {
+          "id": "B",
+          "text": "There's no hurry.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Thank you."
+            },
+            {
+              "speaker": "narrator",
+              "text": "She takes another moment to think."
+            },
+            {
+              "speaker": "narrator",
+              "text": "After a short pause, she gives her answer."
+            }
+          ],
+          "feedback": "Reassurance helps, but does not explicitly encourage an attempt."
+        },
+        {
+          "id": "C",
+          "text": "Unfortunately not.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Anna looks confused."
+            },
+            {
+              "speaker": "anna",
+              "text": "But I haven't answered yet."
+            },
+            {
+              "speaker": "narrator",
+              "text": "She hesitates, then looks at the sentence again."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You give her an opportunity to answer, and she makes an attempt."
+            }
+          ],
+          "feedback": "Rejecting an answer before it is given discourages participation."
+        }
+      ],
+      "transition": [
+        "Anna gives her answer. She has chosen an incorrect verb form, although the rest of the sentence is correct.",
+        "You want to help her recognise that she is close to the correct answer and encourage her to try again."
+      ]
+    },
+    {
+      "title": "Correcting a Mistake",
+      "opening": [
+        "Anna has completed the sentence, but one word is incorrect.",
+        "She looks towards you, waiting for feedback.",
+        "You want to show that her answer is close to being correct and explicitly encourage another attempt."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Good try, but not quite right.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Which part is wrong?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "She looks at the sentence again."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to the verb, and she begins reconsidering her answer."
+            }
+          ],
+          "feedback": "This indicates an error, but does not explicitly invite another attempt."
+        },
+        {
+          "id": "B",
+          "text": "Yes, that's right.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Anna smiles at first, but then compares her sentence with the example on the board."
+            },
+            {
+              "speaker": "anna",
+              "text": "Wait, I think I made a mistake."
+            },
+            {
+              "speaker": "narrator",
+              "text": "She checks the verb again and begins looking for the correct form."
+            }
+          ],
+          "feedback": "Confirming an incorrect answer gives misleading feedback."
+        },
+        {
+          "id": "C",
+          "text": "Almost. Try again.",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Oh, I think I know!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "She looks at the verb and tries a different form."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Her new answer is correct."
+            }
+          ],
+          "feedback": "This acknowledges that the answer is close and prompts a retry."
+        }
+      ],
+      "transition": [
+        "Anna checks her answer once more and corrects the verb.",
+        "You look at the completed sentence. This time, everything is correct.",
+        "Anna turns towards you, waiting to hear whether she has succeeded."
+      ]
+    },
+    {
+      "title": "Recognising Success",
+      "opening": [
+        "Anna has corrected her mistake successfully.",
+        "She looks pleased but still wants confirmation that her answer is correct.",
+        "You want to clearly acknowledge her successful result."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Well done.",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Thank you!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna smiles and looks back at her exercise."
+            },
+            {
+              "speaker": "narrator",
+              "text": "She seems more confident about continuing."
+            }
+          ],
+          "feedback": "This clearly confirms and praises the correct result."
+        },
+        {
+          "id": "B",
+          "text": "You're on the right lines.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Is it completely correct now?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "She looks at her sentence once more."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You nod to confirm that she has finished it correctly."
+            }
+          ],
+          "feedback": "This sounds as though the answer is only partly correct."
+        },
+        {
+          "id": "C",
+          "text": "Unfortunately not.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Anna looks disappointed."
+            },
+            {
+              "speaker": "anna",
+              "text": "Oh. What should I change?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "She checks her sentence again."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You look at her answer and confirm that it is actually correct."
+            }
+          ],
+          "feedback": "This falsely rejects Anna’s correct answer."
+        }
+      ],
+      "transition": [
+        "Anna understands that her corrected answer is right.",
+        "The other pupils are continuing the exercise. There are several more sentences to complete.",
+        "Anna has finished the first sentence and is ready to move on."
+      ]
+    },
+    {
+      "title": "Continuing Independently",
+      "opening": [
+        "Anna looks at the next sentence in her book.",
+        "Anna: “I think I can do the next one myself.”",
+        "You want to support her independence and encourage her to continue with the exercise."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Have another try!",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Okay!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna moves on to the next sentence and begins working independently."
+            },
+            {
+              "speaker": "narrator",
+              "text": "She looks more confident than before."
+            }
+          ],
+          "feedback": "This encourages another independent attempt at the next sentence."
+        },
+        {
+          "id": "B",
+          "text": "There's no hurry.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Thank you, teacher."
+            },
+            {
+              "speaker": "narrator",
+              "text": "She takes a moment to read the next sentence carefully."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Then she begins working on it by herself."
+            }
+          ],
+          "feedback": "This is supportive but does not explicitly invite her to continue."
+        },
+        {
+          "id": "C",
+          "text": "Leave that alone now.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Anna stops looking at the exercise."
+            },
+            {
+              "speaker": "anna",
+              "text": "Should I stop working?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "She looks towards you, waiting for clarification."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You indicate that she should continue with the next sentence."
+            }
+          ],
+          "feedback": "This unnecessarily stops the exercise rather than supporting independence."
+        }
+      ],
+      "transition": []
+    }
+  ],
+  "final": [
+    "Anna continues completing the exercise independently.",
+    "The other pupils are also working. You walk around the classroom, checking their progress and offering help where necessary.",
+    "The lesson continues in a calm, supportive atmosphere.",
+    "Case completed."
+  ]
+}

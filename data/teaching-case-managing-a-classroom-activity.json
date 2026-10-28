@@ -1,0 +1,459 @@
+{
+  "id": "managing-a-classroom-activity",
+  "title": "Managing a Classroom Activity",
+  "difficulty": "Easy–Medium",
+  "scenario": "You are teaching an English lesson to a primary school class. The pupils are going to practise reading short sentences from their textbooks. Your task is to organise the activity, give clear instructions, manage turn-taking and keep everyone involved.",
+  "steps": [
+    {
+      "title": "Getting Started with the Textbook",
+      "opening": [
+        "The lesson has already begun. The pupils are sitting at their desks with their English textbooks in front of them.",
+        "You are going to use an exercise on page 75. Some pupils have their books open, while others are still waiting for instructions."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Open your books at page 75.",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils open their textbooks and find page 75."
+            },
+            {
+              "speaker": "maria",
+              "text": "I've found it!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Most pupils are looking at the correct page."
+            }
+          ],
+          "feedback": "The instruction directs everyone to the required textbook page."
+        },
+        {
+          "id": "B",
+          "text": "Are you ready?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "class",
+              "text": "Yes!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Several pupils look towards you, but their textbooks are still closed."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to page 75 on the board. The pupils find the page."
+            }
+          ],
+          "feedback": "Checking readiness does not tell pupils which page to open."
+        },
+        {
+          "id": "C",
+          "text": "Stand by your desks.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils stand up beside their desks."
+            },
+            {
+              "speaker": "alex",
+              "text": "Are we going to do something standing up?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You indicate that they can sit down and show them page 75 on the board."
+            }
+          ],
+          "feedback": "Standing up is unrelated to opening the textbook."
+        }
+      ],
+      "transition": [
+        "Everyone is now sitting with their textbooks open at page 75.",
+        "The exercise contains several short sentences. The first part requires the whole class to read together."
+      ]
+    },
+    {
+      "title": "Reading Together",
+      "opening": [
+        "The pupils look at the first sentence. Some are already preparing to read it, while others are waiting for your instruction.",
+        "You want everyone to read the sentence at the same time."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Who knows the answer?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Maria raises her hand."
+            },
+            {
+              "speaker": "maria",
+              "text": "I know!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Other pupils also begin raising their hands. They expect an individual question."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to the sentence and gesture for everyone to read together."
+            }
+          ],
+          "feedback": "Asking for an answer invites individual participation, not shared reading."
+        },
+        {
+          "id": "B",
+          "text": "All together now.",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "class",
+              "text": "We like English!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils read the first sentence together."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Most of them follow the same rhythm."
+            }
+          ],
+          "feedback": "The phrase clearly asks the whole class to read simultaneously."
+        },
+        {
+          "id": "C",
+          "text": "Come to the front of the class.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Alex looks around and stands up."
+            },
+            {
+              "speaker": "alex",
+              "text": "Me, teacher?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You indicate that he can stay seated and point to the sentence for everyone to read."
+            }
+          ],
+          "feedback": "Coming to the front does not ask everyone to read together."
+        }
+      ],
+      "transition": [
+        "The class completes the first sentence together.",
+        "You move to the second sentence. The pupils begin reading, but several of them are speaking very softly."
+      ]
+    },
+    {
+      "title": "Speaking Clearly",
+      "opening": [
+        "The pupils are reading the second sentence together. Their pronunciation is understandable, but the voices of the pupils at the back are very quiet.",
+        "You want everyone to repeat the sentence more loudly."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "A full sentence, please.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils repeat the complete sentence, but their voices are still rather quiet."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You gesture for them to speak louder, and they repeat it once more."
+            }
+          ],
+          "feedback": "A complete sentence is useful, but the issue is speaking too quietly."
+        },
+        {
+          "id": "B",
+          "text": "Stop talking.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils stop reading immediately."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Several look towards you, waiting to understand why the activity has stopped."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to the sentence and gesture for them to continue more loudly."
+            }
+          ],
+          "feedback": "Stopping the reading prevents the activity instead of improving volume."
+        },
+        {
+          "id": "C",
+          "text": "Louder, please!",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils repeat the sentence in louder voices."
+            },
+            {
+              "speaker": "class",
+              "text": "We like our school!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You can now hear the class clearly."
+            }
+          ],
+          "feedback": "The instruction directly requests louder reading."
+        }
+      ],
+      "transition": [
+        "The pupils finish the group-reading part of the exercise.",
+        "The next part requires pupils to read individually. The class has already practised taking turns in previous lessons."
+      ]
+    },
+    {
+      "title": "Taking Turns",
+      "opening": [
+        "The pupils look at the next short paragraph.",
+        "They know that each pupil will read a few sentences before the next person takes a turn.",
+        "You want to find out whose turn it is to read."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Whose turn is it to read?",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "maria",
+              "text": "It's Anna's turn!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna looks at her book and prepares to read the paragraph."
+            }
+          ],
+          "feedback": "This asks precisely whose turn it is in the reading order."
+        },
+        {
+          "id": "B",
+          "text": "Who knows the answer?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Alex raises his hand."
+            },
+            {
+              "speaker": "alex",
+              "text": "I know the answer!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Several pupils look at the text, expecting a question."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Maria reminds the class that Anna is next in the reading order."
+            }
+          ],
+          "feedback": "This seeks a correct answer instead of identifying the next reader."
+        },
+        {
+          "id": "C",
+          "text": "The whole class, please.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Several pupils begin reading the paragraph together."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna pauses because she was expecting to read individually."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You signal for the class to stop and indicate that Anna should read first."
+            }
+          ],
+          "feedback": "Whole-class reading conflicts with taking individual turns."
+        }
+      ],
+      "transition": [
+        "Anna begins reading the paragraph. She reads steadily, and most pupils follow the text.",
+        "After a few sentences, Alex starts whispering to Maria. Anna continues reading but seems slightly distracted."
+      ]
+    },
+    {
+      "title": "Keeping the Class Focused",
+      "opening": [
+        "Anna is reading aloud at the front of the classroom. Alex is talking quietly to Maria instead of listening.",
+        "You want Alex to pay attention to Anna without unnecessarily interrupting her reading."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Stop talking.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Alex stops speaking."
+            },
+            {
+              "speaker": "alex",
+              "text": "Sorry."
+            },
+            {
+              "speaker": "narrator",
+              "text": "He looks towards you briefly, then returns his attention to the text."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna continues reading."
+            }
+          ],
+          "feedback": "This stops the conversation, but does not direct attention to Anna."
+        },
+        {
+          "id": "B",
+          "text": "Listen to what Anna is saying.",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Alex stops whispering and looks towards Anna."
+            },
+            {
+              "speaker": "alex",
+              "text": "Okay, teacher."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna continues reading without further interruption."
+            }
+          ],
+          "feedback": "The instruction redirects Alex to listen to the pupil who is reading."
+        },
+        {
+          "id": "C",
+          "text": "All together now.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Several pupils join Anna and begin reading aloud."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anna stops for a moment, unsure whether she should continue alone."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You indicate that the other pupils should listen while Anna finishes the paragraph."
+            }
+          ],
+          "feedback": "The command makes everyone read and interrupts Anna’s individual turn."
+        }
+      ],
+      "transition": [
+        "Anna finishes reading the paragraph. You acknowledge her work, and the class turns to the next part of the exercise.",
+        "The pupils have completed the reading task and are ready for a new activity on the same page."
+      ]
+    },
+    {
+      "title": "Moving to the Next Activity",
+      "opening": [
+        "The reading activity is complete. The next exercise contains short questions about the text.",
+        "You want to move the class to the next activity without repeating the previous instructions."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Next one, please.",
+          "points": 1.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils look at the next exercise."
+            },
+            {
+              "speaker": "maria",
+              "text": "Exercise two?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You nod. The pupils begin reading the questions."
+            }
+          ],
+          "feedback": "This moves pupils to the next exercise."
+        },
+        {
+          "id": "B",
+          "text": "Are you ready?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "class",
+              "text": "Yes!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils wait for a more specific instruction."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to the next exercise, and they begin working."
+            }
+          ],
+          "feedback": "Readiness alone does not tell pupils which activity comes next."
+        },
+        {
+          "id": "C",
+          "text": "Stop talking and be quiet.",
+          "points": 0.0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The classroom is already quiet."
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils remain seated and wait for instructions."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to the next exercise to show what they should do."
+            }
+          ],
+          "feedback": "The pupils are already quiet, so this delays the next task."
+        }
+      ],
+      "transition": []
+    }
+  ],
+  "final": [
+    "The pupils move on to the comprehension questions. Most are following the activity independently, and you begin checking their answers.",
+    "The lesson continues.",
+    "Case completed."
+  ]
+}

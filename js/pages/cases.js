@@ -6,14 +6,18 @@ const CASES = {
     'the-beginning-of-the-lesson': [
         {id:'starting-the-school-day',title:'Starting the School Day',description:'Greet the pupils, check attendance and begin the lesson.',difficulty:'Easy',steps:4,available:true},
         {id:'a-late-pupil',title:'A Late Pupil',description:'Calmly manage class conversations and a late arrival.',difficulty:'Medium',steps:4,available:true}
+    ],
+    'during-the-lesson': [
+        {id:'managing-a-classroom-activity',title:'Managing a Classroom Activity',description:'Organise reading, turns and classroom participation.',difficulty:'Easy–Medium',steps:6,available:true},
+        {id:'helping-a-pupil-learn',title:'Helping a Pupil Learn',description:'Support Anna with instructions, mistakes and feedback.',difficulty:'Medium',steps:6,available:true}
     ]
 };
 
 export function cases(mod, caseId, subpage) {
-    if (['starting-the-school-day','a-late-pupil'].includes(caseId) && subpage === 'results') {
+    if (['starting-the-school-day','a-late-pupil','managing-a-classroom-activity','helping-a-pupil-learn'].includes(caseId) && subpage === 'results') {
         return renderSchoolDayResults(mod, caseId);
     }
-    if (['starting-the-school-day','a-late-pupil'].includes(caseId) && !subpage) {
+    if (['starting-the-school-day','a-late-pupil','managing-a-classroom-activity','helping-a-pupil-learn'].includes(caseId) && !subpage) {
         return renderSchoolDay(mod, caseId);
     }
 
