@@ -1,0 +1,56 @@
+{
+  "id": "starting-the-school-day",
+  "title": "Starting the School Day",
+  "difficulty": "Easy",
+  "summary": "You are teaching English to a primary school class. It is a normal school morning. Your task is to greet the pupils, check attendance and organise the beginning of the lesson.",
+  "steps": [
+    {
+      "title": "Greeting the Class",
+      "context": "It is 9:00 a.m. You enter the classroom. The pupils are sitting at their desks and waiting for you. You want to greet the whole class before starting the lesson.",
+      "question": "What would you say?",
+      "incoming": [{"speaker": "narrator", "text": "9:00 a.m. · The pupils are waiting quietly at their desks."}],
+      "after": [{"speaker": "class", "text": "Good morning, teacher!"}],
+      "choices": [
+        {"id": "A", "text": "Good morning, everybody!", "points": 1, "feedback": "A greeting appropriate to the time of day and addressed to the whole class."},
+        {"id": "B", "text": "How are things with you?", "points": 0.5, "feedback": "A suitable way to establish contact, but it usually follows rather than replaces a greeting."},
+        {"id": "C", "text": "I think we can start now.", "points": 0, "feedback": "The teacher skips the greeting and immediately suggests starting work."}
+      ]
+    },
+    {
+      "title": "Checking Attendance",
+      "context": "The pupils greet you in return. You open the attendance register. One pupil's desk is empty, but you do not know who is missing. You need to find out which pupil is absent.",
+      "question": "What would you ask?",
+      "incoming": [{"speaker": "narrator", "text": "You open the attendance register. One desk is empty."}],
+      "after": [{"speaker": "sophie", "text": "Anna is absent today."}],
+      "choices": [
+        {"id": "A", "text": "Who is absent today?", "points": 1, "feedback": "The teacher finds out who is absent today."},
+        {"id": "B", "text": "What's the matter with Anna today?", "points": 0.5, "feedback": "The question concerns an absent pupil, but it assumes without evidence that Anna is the one missing."},
+        {"id": "C", "text": "Why were you absent last Friday, Tom?", "points": 0, "feedback": "This concerns an absence last Friday and does not check today's attendance."}
+      ]
+    },
+    {
+      "title": "Getting Ready",
+      "context": "A pupil tells you that Anna is absent today. You mark her absence in the register. Everyone is sitting quietly. Before beginning the lesson, you want to check whether the pupils are ready.",
+      "question": "What would you say?",
+      "incoming": [{"speaker": "narrator", "text": "You mark Anna absent. The classroom is quiet."}],
+      "after": [{"speaker": "class", "text": "Yes, we're ready!"}],
+      "choices": [
+        {"id": "A", "text": "Let's begin today's lesson.", "points": 0.5, "feedback": "The teacher can begin the lesson, but does not check whether the pupils are ready."},
+        {"id": "B", "text": "Is everybody ready to start?", "points": 1, "feedback": "This expression matches the task of checking readiness precisely."},
+        {"id": "C", "text": "I'm waiting for you to be quiet.", "points": 0, "feedback": "The pupils are already quiet; this remark is unnecessary."}
+      ]
+    },
+    {
+      "title": "Beginning the Lesson",
+      "context": "The pupils confirm that they are ready. The attendance register is complete, and everyone is paying attention. You want to officially begin today's English lesson.",
+      "question": "What would you say?",
+      "incoming": [{"speaker": "narrator", "text": "Attendance is checked. Everyone is ready for English."}],
+      "after": [{"speaker": "class", "text": "We're ready for the lesson!"}],
+      "choices": [
+        {"id": "A", "text": "Settle down now so we can start.", "points": 0, "feedback": "Asking pupils to settle down does not fit their current behaviour."},
+        {"id": "B", "text": "Let's begin today's lesson.", "points": 1, "feedback": "This phrase directly signals the start of the lesson."},
+        {"id": "C", "text": "Is everybody ready to start?", "points": 0.5, "feedback": "Appropriate at the start of a lesson, but readiness has already been checked."}
+      ]
+    }
+  ]
+}
