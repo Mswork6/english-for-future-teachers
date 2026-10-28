@@ -22,7 +22,6 @@ export async function route() {
     app.replaceChildren();
 
     try {
-        // Read the URL before the first await so navigation stays consistent.
         const parts = decodeURIComponent(hash.replace(/^#\/?/, '')).split('/').filter(Boolean);
         const modules = await load('data/modules.json');
         if (!isCurrent()) return;
@@ -59,7 +58,7 @@ export async function route() {
         if (parts[2] === 'practice' && parts[3] === 'results' && parts.length === 4) return practiceResults(mod);
         if (parts[2] === 'practice' && parts[3] === 'review' && parts.length === 4) return practiceReview(mod);
         if (parts[2] === 'practice' && parts.length === 3) return practice(mod);
-        if (parts[2] === 'cases') return cases(mod);
+        if (parts[2] === 'cases') return cases(mod, parts[3], parts[4]);
         throw new Error('Unknown section');
     } catch (error) {
         if (!isCurrent()) return;
