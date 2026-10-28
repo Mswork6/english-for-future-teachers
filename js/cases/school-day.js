@@ -3,28 +3,32 @@ import {load} from '../data-service.js';
 import {crumbs, el, append, link} from '../utils/dom.js';
 
 const BASE = 'assets/teaching-cases/';
-const RESULTS_KEY = 'efft:case:starting-the-school-day:latest';
-const resultsRoute = mod => `#/module/${mod.id}/cases/starting-the-school-day/results`;
+const caseFile = id => `data/teaching-case-${id}.json`;
+const resultsKey = id => `efft:case:${id}:latest`;
+const resultsRoute = (mod,id) => `#/module/${mod.id}/cases/${id}/results`;
 const ACTORS = {
     teacher: {name:'You · Teacher', avatar:'teacher.webp'},
-    sophie: {name:'Sophie', avatar:'sophie.webp'},
+    maria: {name:'Maria', avatar:'sophie.webp'},
+    anton: {name:'Anton', avatar:'daniel.webp'},
+    alex: {name:'Alex', avatar:'max.webp'},
     class: {name:'Class', avatar:'max.webp'}
 };
 
 function icon(name) { const i=el('i'); i.dataset.lucide=name; return i; }
 function node(tag, className, text) {return el(tag,text,className);}
 
-export async function renderSchoolDay(mod, {onBack} = {}) {
+export async function renderSchoolDay(mod, caseId, {onBack} = {}) {
     const root=node('section','tc-shell');
-    root.innerHTML = `<div class="tc-intro"><div><span class="tc-kicker">TEACHING CASE 1 · EASY</span><h1>Starting the School Day</h1><p>4 steps · Maximum score: 4 points</p></div><button type="button" class="tc-back" id="tc-back-cases">← All cases</button></div><div class="tc-stage"><div class="tc-top"><div class="tc-top-line"><div><strong id="tc-step-title">Greeting the Class</strong><span id="tc-step-counter">Step 1 of 4</span></div><div class="tc-bars" id="tc-bars"></div></div><div class="tc-context"><span class="tc-context-icon">ⓘ</span><div><strong>Current situation</strong><p id="tc-context-text"></p></div></div></div><div class="tc-main"><section class="tc-chat" aria-label="Classroom conversation"><div class="tc-chat-head"><span class="tc-online"></span><strong>Classroom conversation</strong><span class="tc-chat-sub">9:00 AM</span></div><div class="tc-messages" id="tc-messages" aria-live="polite"></div><div class="tc-compose">Choose a response to send a message as the teacher</div></section><aside class="tc-decisions"><div class="tc-turn-label">YOUR TURN</div><h2 id="tc-question"></h2><div class="tc-options" id="tc-options" role="group" aria-label="Possible responses"></div><button type="button" class="tc-send" id="tc-send" disabled>Send response →</button><p class="tc-subnote">Scores and explanations appear after all four steps.</p></aside></div></div>`;
+    root.innerHTML = `<div class="tc-intro"><div><span class="tc-kicker">TEACHING CASE · <span id="tc-difficulty"></span></span><h1 id="tc-case-title"></h1><p>4 steps · Maximum score: 4 points</p></div><button type="button" class="tc-back" id="tc-back-cases">← All cases</button></div><div class="tc-stage"><div class="tc-top"><div class="tc-top-line"><div><strong id="tc-step-title">Greeting the Class</strong><span id="tc-step-counter">Step 1 of 4</span></div><div class="tc-bars" id="tc-bars"></div></div><div class="tc-context"><span class="tc-context-icon">ⓘ</span><div><strong>Current situation</strong><div id="tc-context-text"></div></div></div></div><div class="tc-main"><section class="tc-chat" aria-label="Classroom conversation"><div class="tc-chat-head"><span class="tc-online"></span><strong>Classroom conversation</strong><span class="tc-chat-sub">9:00 AM</span></div><div class="tc-messages" id="tc-messages" aria-live="polite"></div><div class="tc-compose">Choose a response to send a message as the teacher</div></section><aside class="tc-decisions"><div class="tc-turn-label">YOUR TURN</div><h2 id="tc-question"></h2><div class="tc-options" id="tc-options" role="group" aria-label="Possible responses"></div><button type="button" class="tc-send" id="tc-send" disabled>Send response →</button><p class="tc-subnote">Scores and explanations appear after all four steps.</p></aside></div></div>`;
     app.append(root);
     root.querySelector('#tc-back-cases').addEventListener('click',()=>{root.remove();if(onBack)onBack();else location.hash=`#/module/${mod.id}/cases`;});
     let caseData;
-    try { caseData = await load('data/teaching-case-01.json'); }
+    try { caseData = await load(caseFile(caseId)); }
     catch (err) { root.replaceChildren(node('p','tc-error',`Could not load teaching case: ${err.message}`)); return; }
     if (!root.isConnected) return;
     const $ = id => root.querySelector('#'+id);
-    let step=0, choice=null, responses=[];
+    $('tc-case-title').textContent=caseData.title; $('tc-difficulty').textContent=caseData.difficulty.toUpperCase();
+    let step=0, choice=null, responses=[], mode='question';
     const messages=$('tc-messages');
     function addMessage(speaker,text) {
         const row=node('div',`tc-message ${speaker==='teacher'?'tc-mine':''} ${speaker==='narrator'?'tc-system':''}`);
@@ -40,10 +44,11 @@ export async function renderSchoolDay(mod, {onBack} = {}) {
         messages.append(row); messages.scrollTop=messages.scrollHeight;
     }
     function showStep() {
-        const data=caseData.steps[step]; choice=null;
+        mode='question'; const data=caseData.steps[step]; choice=null;
         $('tc-step-title').textContent=data.title;
         $('tc-step-counter').textContent=`Step ${step+1} of ${caseData.steps.length}`;
-        $('tc-context-text').textContent=data.context;
+        $('tc-context-text').replaceChildren(...data.opening.map(text=>node('p',null,text)));
+        root.querySelector('.tc-context strong').textContent='Current situation';
         $('tc-question').textContent=data.question;
         $('tc-bars').replaceChildren();
         caseData.steps.forEach((_,i)=>$('tc-bars').append(node('span',i<step?'tc-done':i===step?'tc-current':'')));
@@ -59,44 +64,74 @@ export async function renderSchoolDay(mod, {onBack} = {}) {
             $('tc-options').append(button);
         });
         $('tc-send').disabled=true;
-        $('tc-send').textContent=step===caseData.steps.length-1?'Finish case →':'Send response →';
-        data.incoming.forEach(message=>addMessage(message.speaker,message.text));
+        $('tc-send').textContent='Send response →';
+        // Opening scene is displayed in the contextual panel above the chat.
         window.lucide?.createIcons();
+    }
+    function setStoryContext(lines, label='Story continues') {
+        const box=$('tc-context-text'); box.replaceChildren(...lines.map(text=>node('p',null,text)));
+        root.querySelector('.tc-context strong').textContent=label;
     }
     function finish() {
         if (responses.length !== caseData.steps.length) return;
-        // Preserve only selected answer IDs, not any authored score or text.
-        const attempt = responses.map(answer => answer.id);
-        try { sessionStorage.setItem(RESULTS_KEY, JSON.stringify(attempt)); }
-        catch { /* Results work while storage is available; navigation still proceeds. */ }
-        location.hash = resultsRoute(mod);
+        try { sessionStorage.setItem(resultsKey(caseId), JSON.stringify(responses.map(a=>a.id))); }
+        catch { /* Session storage may be unavailable. */ }
+        location.hash=resultsRoute(mod,caseId);
     }
     $('tc-send').addEventListener('click',()=>{
-        if (choice===null || $('tc-send').disabled) return;
-        $('tc-send').disabled=true;
-        const data=caseData.steps[step]; const answer=data.choices[choice];
+        const send=$('tc-send');
+        if (send.disabled) return;
+        if (mode==='reaction') {
+            send.disabled=true;
+            const current=caseData.steps[step];
+            if(current.transition.length) {
+                current.transition.forEach(text=>addMessage('narrator',text));
+                setStoryContext(current.transition, 'Transition');
+            } else if(step===caseData.steps.length-1) {
+                caseData.final.forEach(text=>addMessage('narrator',text));
+                setStoryContext(caseData.final,'Final scene');
+            }
+            mode='transition';
+            send.textContent=step===caseData.steps.length-1?'View results →':'Next step →';
+            send.disabled=false;
+            return;
+        }
+        if (mode==='transition') {
+            send.disabled=true;
+            if(step===caseData.steps.length-1) finish();
+            else {step++;showStep();}
+            return;
+        }
+        if (mode!=='question' || choice===null) return;
+        const data=caseData.steps[step], answer=data.choices[choice];
         responses.push(answer);addMessage('teacher',answer.text);
-        data.after.forEach(message=>addMessage(message.speaker,message.text));
-        if(step===caseData.steps.length-1)finish();else {step++;showStep();}
+        answer.reaction.forEach(event=>addMessage(event.speaker,event.text));
+        // Freeze the choice panel until the reaction and shared transition have been read.
+        $('tc-options').replaceChildren();
+        $('tc-question').textContent='How the class responds';
+        setStoryContext(answer.reaction.filter(e=>e.speaker==='narrator').map(e=>e.text).length
+            ? answer.reaction.filter(e=>e.speaker==='narrator').map(e=>e.text)
+            : ['Read the response in the classroom conversation.'], 'Reaction');
+        mode='reaction';send.textContent='Continue story →';send.disabled=false;
     });
     showStep();
 }
 
 /** Dedicated results route. No chat or active choice controls are mounted here. */
-export async function renderSchoolDayResults(mod, {onBack} = {}) {
+export async function renderSchoolDayResults(mod, caseId, {onBack} = {}) {
     const root = node('section', 'tc-shell tc-results-page');
     app.append(root);
     let caseData;
-    try { caseData = await load('data/teaching-case-01.json'); }
+    try { caseData = await load(caseFile(caseId)); }
     catch (err) { root.append(node('p', 'tc-error', `Could not load results: ${err.message}`)); return; }
     if (!root.isConnected) return;
     let answerIds;
-    try { answerIds = JSON.parse(sessionStorage.getItem(RESULTS_KEY) || 'null'); }
+    try { answerIds = JSON.parse(sessionStorage.getItem(resultsKey(caseId)) || 'null'); }
     catch { answerIds = null; }
     const valid = Array.isArray(answerIds) && answerIds.length === caseData.steps.length &&
         answerIds.every((id,i) => caseData.steps[i].choices.some(c=>c.id===id));
     const heading = node('div','tc-result-heading');
-    append(heading,node('span','tc-kicker','TEACHING CASE 1'),node('h1',null,'Starting the School Day'));
+    append(heading,node('span','tc-kicker','TEACHING CASE'),node('h1',null,caseData.title));
     const backButton = node('button','tc-back','← All teaching cases');
     backButton.type='button';
     backButton.addEventListener('click',()=>{location.hash=`#/module/${mod.id}/cases`;});
@@ -122,7 +157,7 @@ export async function renderSchoolDayResults(mod, {onBack} = {}) {
     const buttons=node('div','tc-result-actions');
     const restart=node('button','tc-restart','Restart case');
     restart.type='button';
-    restart.addEventListener('click',()=>{location.hash=`#/module/${mod.id}/cases/starting-the-school-day`;});
+    restart.addEventListener('click',()=>{location.hash=`#/module/${mod.id}/cases/${caseId}`;});
     append(buttons,restart,backButton);
     append(root,heading,score,reviews,buttons);
     root.scrollIntoView({block:'start'});

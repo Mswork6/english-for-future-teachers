@@ -1,0 +1,271 @@
+{
+  "id": "a-late-pupil",
+  "title": "A Late Pupil",
+  "difficulty": "Medium",
+  "summary": "You are beginning an English lesson in a primary school. Some pupils are still talking, and later a student arrives late. You need to manage the classroom calmly and keep the lesson moving.",
+  "steps": [
+    {
+      "title": "Getting Attention",
+      "opening": [
+        "It is 9:00 a.m. You have greeted the class.",
+        "Most pupils are looking towards you, but a few are still talking. Alex and Maria are having a quiet conversation at the back of the classroom.",
+        "You want to politely ask the pupils to stop talking so the lesson can begin."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "We won't start until everyone is quiet.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Several pupils stop talking immediately."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Alex and Maria lower their voices, but continue their conversation for a moment."
+            }
+          ],
+          "feedback": "Establishes a boundary but is less polite as an initial request."
+        },
+        {
+          "id": "B",
+          "text": "It's time to begin, please stop talking.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Most pupils stop talking and look towards you."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Alex and Maria begin putting their things away, but exchange a few more words."
+            }
+          ],
+          "feedback": "Polite and clear request to stop talking."
+        },
+        {
+          "id": "C",
+          "text": "I think we can start now.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Some pupils turn towards the board."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Alex and Maria continue their conversation, apparently not realising that you want to begin."
+            }
+          ],
+          "feedback": "Does not explicitly ask the remaining pupils to stop talking."
+        }
+      ],
+      "transition": [
+        "Most of the class is now quiet. However, Alex and Maria are still whispering to each other.",
+        "You decide to address the remaining conversation before beginning the lesson."
+      ]
+    },
+    {
+      "title": "Managing the Class",
+      "opening": [
+        "The other pupils are waiting quietly. Alex and Maria are still talking at the back.",
+        "You have already signalled that the lesson is about to begin. Now you want to make it clear that everyone needs to stop talking before you start."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "I'm waiting for you to be quiet.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Alex notices that you are looking towards the back of the classroom."
+            },
+            {
+              "speaker": "alex",
+              "text": "Sorry, teacher."
+            },
+            {
+              "speaker": "narrator",
+              "text": "He and Maria stop talking and face the front."
+            }
+          ],
+          "feedback": "Gets attention, though the instruction could be more explicit."
+        },
+        {
+          "id": "B",
+          "text": "Let's begin our lesson now.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Most pupils look towards the board."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Alex and Maria continue whispering for a few seconds. Then they notice that everyone else is waiting and stop talking."
+            }
+          ],
+          "feedback": "Proposes starting without directly dealing with the remaining conversation."
+        },
+        {
+          "id": "C",
+          "text": "We won't start until everyone is quiet.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Alex and Maria stop talking."
+            },
+            {
+              "speaker": "maria",
+              "text": "Sorry, teacher."
+            },
+            {
+              "speaker": "narrator",
+              "text": "They turn towards the front. The classroom becomes quiet."
+            }
+          ],
+          "feedback": "States a clear expectation after the first signal has not worked."
+        }
+      ],
+      "transition": [
+        "Everyone is now paying attention. You begin the lesson.",
+        "The first ten minutes pass normally. The pupils are following the activity when the classroom door opens."
+      ]
+    },
+    {
+      "title": "A Late Arrival",
+      "opening": [
+        "Anton enters the classroom about ten minutes late. He looks a little embarrassed and stops near the door.",
+        "The class notices him, but most pupils remain focused on the lesson.",
+        "You want to find out why he is late without making him unnecessarily uncomfortable."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Did you oversleep?",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "anton",
+              "text": "No, teacher. I missed my bus."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anton looks down for a moment, waiting for your response."
+            }
+          ],
+          "feedback": "Presumes a cause and can embarrass the pupil."
+        },
+        {
+          "id": "B",
+          "text": "Where have you been?",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "anton",
+              "text": "Sorry I'm late. I missed my bus."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anton explains the situation and waits quietly."
+            }
+          ],
+          "feedback": "Asks for an explanation without presuming the reason; tone still matters."
+        },
+        {
+          "id": "C",
+          "text": "We started ten minutes ago. What have you been doing?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "anton",
+              "text": "Sorry, teacher. I missed my bus."
+            },
+            {
+              "speaker": "narrator",
+              "text": "He seems a little uncomfortable being questioned in front of the class."
+            }
+          ],
+          "feedback": "Requests an explanation, but the phrasing is more confrontational."
+        }
+      ],
+      "transition": [
+        "You acknowledge Anton's explanation and let him take his seat.",
+        "Anton sits down quietly and takes out his notebook. The other pupils are waiting for the lesson to continue."
+      ]
+    },
+    {
+      "title": "Returning to Work",
+      "opening": [
+        "Anton has taken his seat. The interruption is over, and everyone is paying attention.",
+        "You want to return to the learning activity without spending more time discussing the late arrival."
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Don't let it happen again.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "anton",
+              "text": "Okay, teacher."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anton looks back at his notebook. The other pupils wait for you to continue."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You turn towards the board."
+            }
+          ],
+          "feedback": "Continues focusing on the late arrival instead of returning to work."
+        },
+        {
+          "id": "B",
+          "text": "Now we can get down to work.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils turn their attention back to the activity."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Anton opens his notebook and joins the rest of the class."
+            }
+          ],
+          "feedback": "Directs attention back to the activity."
+        },
+        {
+          "id": "C",
+          "text": "I think we can start now.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils look towards you."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Although the lesson has already started, they understand that it is time to continue working."
+            }
+          ],
+          "feedback": "Communicates a transition but inaccurately suggests the lesson has not yet started."
+        }
+      ],
+      "transition": []
+    }
+  ],
+  "final": [
+    "You continue the English lesson. Anton follows the activity with the other pupils.",
+    "The classroom returns to its normal routine."
+  ]
+}

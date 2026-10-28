@@ -12,3 +12,6 @@
 .tc-result-actions .tc-restart{margin:0}
 .tc-ideal-answer{color:#315cad!important;background:#eef4ff;padding:10px 12px;border-radius:10px}
 .tc-no-attempt{padding:24px;background:#f2f6fe;border-radius:12px}
+
+/* v6: sequential context paragraphs and story pacing */
+.tc-context #tc-context-text p{margin:6px 0;line-height:1.55}.tc-context #tc-context-text p+p{margin-top:10px}.tc-option:disabled{opacity:.65}.tc-system-text{display:block;line-height:1.5;white-space:normal;border-radius:12px}.tc-messages{scroll-padding-bottom:15px}

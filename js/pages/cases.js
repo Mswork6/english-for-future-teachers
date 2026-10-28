@@ -5,17 +5,17 @@ import {renderSchoolDay, renderSchoolDayResults} from '../cases/school-day.js';
 const CASES = {
     'the-beginning-of-the-lesson': [
         {id:'starting-the-school-day',title:'Starting the School Day',description:'Greet the pupils, check attendance and begin the lesson.',difficulty:'Easy',steps:4,available:true},
-        {id:'case-02',title:'Teaching Case 2',description:'Another classroom situation. Content coming soon.',available:false},
+        {id:'a-late-pupil',title:'A Late Pupil',description:'Calmly manage class conversations and a late arrival.',difficulty:'Medium',steps:4,available:true},
         {id:'case-03',title:'Teaching Case 3',description:'Another classroom situation. Content coming soon.',available:false}
     ]
 };
 
 export function cases(mod, caseId, subpage) {
-    if (caseId === 'starting-the-school-day' && subpage === 'results') {
-        return renderSchoolDayResults(mod);
+    if (['starting-the-school-day','a-late-pupil'].includes(caseId) && subpage === 'results') {
+        return renderSchoolDayResults(mod, caseId);
     }
-    if (caseId === 'starting-the-school-day' && !subpage) {
-        return renderSchoolDay(mod);
+    if (['starting-the-school-day','a-late-pupil'].includes(caseId) && !subpage) {
+        return renderSchoolDay(mod, caseId);
     }
 
     crumbs(app,mod,'Teaching Cases');
