@@ -111,6 +111,13 @@
     color: var(--color-text);
 }
 
+.home-card-translation {
+    margin: -9px 0 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--color-text-muted);
+}
+
 .home-card p {
     margin: 0;
     font-size: 15px;

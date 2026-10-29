@@ -32,6 +32,7 @@ export function home(modules) {
                 </div>
 
                 <h2>Explanatory Note</h2>
+                <span class="home-card-translation">Пояснительная записка</span>
 
                 <p>Learn about the purpose, objectives and structure of the resource.</p>
 
@@ -44,6 +45,7 @@ export function home(modules) {
                 </div>
 
                 <h2>Teaching Guidelines</h2>
+                <span class="home-card-translation">Методические рекомендации</span>
 
                 <p>Read recommendations for effective use of this learning resource.</p>
 
