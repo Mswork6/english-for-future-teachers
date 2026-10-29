@@ -34,8 +34,111 @@ export function practiceReview(mod) {
     const incorrect = reviewed.length - correct - partial;
     const count = el('p', `${correct} correct · ${partial} partially correct · ${incorrect} incorrect or unanswered. ${reviewed.length} tasks in total.`, 'practice-review-count');
     app.append(count);
+
+    // Review navigation is read-only: all submitted answers remain in the document.
+    // Selecting a number scrolls to that answer; desktop drawer stays open.
+    const mobileReview = window.matchMedia('(max-width: 740px)');
+    const reviewShell = el('div', null, 'review-nav-shell');
+    const reviewContent = el('div', null, 'review-nav-content');
+    const reviewToolbar = el('div', null, 'review-nav-toolbar');
+    const openReviewNav = el('button', 'All questions', 'btn secondary review-nav-toggle');
+    openReviewNav.type = 'button';
+    openReviewNav.setAttribute('aria-expanded', 'false');
+    openReviewNav.setAttribute('aria-controls', 'review-question-navigator');
+    const reviewNavigator = el('aside', null, 'practice-drawer review-question-drawer');
+    reviewNavigator.id = 'review-question-navigator';
+    reviewNavigator.setAttribute('aria-label', 'Review question navigator');
+    const reviewNavHeading = el('div', null, 'practice-drawer-heading');
+    const closeReviewNav = el('button', '×', 'practice-close');
+    closeReviewNav.type = 'button';
+    closeReviewNav.setAttribute('aria-label', 'Close navigator');
+    append(reviewNavHeading, el('h2', 'Question Navigator'), closeReviewNav);
+    const reviewGroups = el('div', null, 'practice-groups');
+    append(reviewNavigator, reviewNavHeading, reviewGroups,
+        el('p', `${reviewed.length} questions reviewed`, 'practice-summary'));
+    const reviewOverlay = el('div', null, 'practice-drawer-overlay review-nav-overlay');
+    reviewOverlay.setAttribute('aria-hidden', 'true');
+    reviewToolbar.append(openReviewNav);
     const list = el('div', null, 'practice-review-list');
-    app.append(list);
+    append(reviewContent, reviewToolbar, list);
+    append(reviewShell, reviewContent, reviewNavigator);
+    app.append(reviewShell);
+    document.body.append(reviewOverlay);
+    let reviewNavigatorOpen = false;
+    let activeReview = 0;
+    const reviewButtons = [];
+    const setReviewNav = (open, focusToggle = true) => {
+        const wasOpen = reviewNavigatorOpen;
+        reviewNavigatorOpen = open;
+        if (open && mobileReview.matches && reviewNavigator.parentElement !== document.body) {
+            document.body.append(reviewNavigator);
+        } else if ((!open || !mobileReview.matches) && reviewNavigator.parentElement !== reviewShell) {
+            reviewShell.append(reviewNavigator);
+        }
+        reviewShell.classList.toggle('navigator-open', open && !mobileReview.matches);
+        reviewNavigator.classList.toggle('is-open', open);
+        reviewOverlay.classList.toggle('is-open', open && mobileReview.matches);
+        document.body.classList.toggle('review-drawer-open', open && mobileReview.matches);
+        openReviewNav.setAttribute('aria-expanded', String(open));
+        reviewNavigator.setAttribute('role', mobileReview.matches ? 'dialog' : 'region');
+        if (mobileReview.matches) reviewNavigator.setAttribute('aria-modal', String(open));
+        else reviewNavigator.removeAttribute('aria-modal');
+        if (open) closeReviewNav.focus();
+        else if (wasOpen && focusToggle) openReviewNav.focus();
+    };
+    const goToReview = index => {
+        activeReview = index;
+        reviewButtons.forEach((b, i) => {
+            b.classList.toggle('is-current', i === index);
+            if (i === index) b.setAttribute('aria-current', 'true');
+            else b.removeAttribute('aria-current');
+        });
+        if (mobileReview.matches) setReviewNav(false, false);
+        const target = document.getElementById(`review-question-${index + 1}`);
+        target?.scrollIntoView({behavior: 'smooth', block: 'start'});
+    };
+    openReviewNav.addEventListener('click', () => setReviewNav(true));
+    closeReviewNav.addEventListener('click', () => setReviewNav(false));
+    reviewOverlay.addEventListener('click', () => setReviewNav(false));
+    const reviewController = new AbortController();
+    document.addEventListener('keydown', e => {
+        if (!reviewNavigatorOpen) return;
+        if (e.key === 'Escape') { e.preventDefault(); setReviewNav(false); }
+        if (e.key === 'Tab' && mobileReview.matches) {
+            const items = [...reviewNavigator.querySelectorAll('button:not(:disabled)')];
+            if (e.shiftKey && document.activeElement === items[0]) { e.preventDefault(); items.at(-1).focus(); }
+            else if (!e.shiftKey && document.activeElement === items.at(-1)) { e.preventDefault(); items[0].focus(); }
+        }
+    }, {signal: reviewController.signal});
+    mobileReview.addEventListener('change', () => {
+        if (reviewNavigatorOpen) setReviewNav(false);
+    }, {signal: reviewController.signal});
+    window.addEventListener('hashchange', () => {
+        reviewController.abort();
+        reviewOverlay.remove();
+        reviewNavigator.remove();
+        document.body.classList.remove('review-drawer-open');
+    }, {once: true});
+    let groupType = null, reviewGrid = null;
+    reviewed.forEach(({q, index, points}) => {
+        if (q.type !== groupType) {
+            groupType = q.type;
+            const section = el('section', null, 'practice-nav-section');
+            section.append(el('h3', TYPES[q.type] || q.type));
+            reviewGrid = el('div', null, 'practice-number-grid');
+            section.append(reviewGrid);
+            reviewGroups.append(section);
+        }
+        const b = el('button', String(index + 1), 'practice-number');
+        b.type = 'button';
+        b.setAttribute('aria-label', `Go to question ${index + 1}`);
+        b.title = `Question ${index + 1}: ${points >= 1-1e-9 ? 'correct' : points > 1e-9 ? 'partially correct' : 'incorrect or unanswered'}`;
+        b.classList.add(points >= 1-1e-9 ? 'review-correct' : points > 1e-9 ? 'review-partial' : 'review-incorrect');
+        if (index === activeReview) { b.classList.add('is-current'); b.setAttribute('aria-current', 'true'); }
+        b.addEventListener('click', () => goToReview(index));
+        reviewButtons.push(b);
+        reviewGrid.append(b);
+    });
     const normalize = v => String(v ?? '').trim().toLowerCase();
     const field = (parent, label, value, kind = '') => {
         const item = el('div', null, `practice-review-field ${kind}`);
@@ -44,6 +147,7 @@ export function practiceReview(mod) {
     };
     for (const {q, index, points, answer} of reviewed) {
         const card = el('article', null, 'panel practice-review-card');
+        card.id = `review-question-${index + 1}`;
         append(card, el('div', `Question ${index + 1} · ${TYPES[q.type] || q.type} · ${Number(points.toFixed(2))} / 1 point`, 'label'), el('p', q.prompt, 'practice-review-prompt'));
         const answerBody = card; // Existing answer comparison remains visible.
         if (q.type === 'matching') {

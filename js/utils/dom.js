@@ -46,6 +46,6 @@ export function notReady(parent, title) {
     header(parent, 'Learning module', title, 'This module is prepared for content entry.');
     append(parent,
         el('p', 'The content JSON for this module has not yet been created.', 'note'),
-        link('Back to modules', '/modules', 'btn')
+        link('Back to Modules', '/modules', 'btn')
     );
 }

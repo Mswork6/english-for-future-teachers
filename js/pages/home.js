@@ -1,3 +1,4 @@
+
 import {app} from '../state.js';
 
 export function home(modules) {
@@ -6,17 +7,21 @@ export function home(modules) {
 
     section.innerHTML = `
         <div class="home-heading">
-            <span class="home-badge">ENGLISH LANGUAGE LEARNING</span>
+            <h1>Welcome to TeachLab: English for Future Teachers!</h1>
 
-            <h1>Welcome to English for Future Teachers!</h1>
+            <div class="home-quote">
+                <p>"I never teach my pupils. I only attempt to provide the conditions in which they can learn."</p>
 
-            <p>Develop your English skills and prepare for real classroom situations.</p>
+                <div class="home-quote-author">
+                    <span>Albert Einstein</span>
+                </div>
+            </div>
         </div>
 
         <div class="home-cards">
             <a class="home-card" href="#/modules">
                 <div class="home-icon blue">
-                    <i data-lucide="book-open"></i>
+                    <i data-lucide="library-big"></i>
                 </div>
 
                 <h2>Learning Modules</h2>

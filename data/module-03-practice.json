@@ -743,7 +743,7 @@
   {
     "id": "m03-error-01",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "It's time to finishing now.",
     "errorIndex": 3,
     "correctWord": "finish",
@@ -752,7 +752,7 @@
   {
     "id": "m03-error-02",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "We've run out of times.",
     "errorIndex": 4,
     "correctWord": "time",
@@ -761,7 +761,7 @@
   {
     "id": "m03-error-03",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "Have you finish?",
     "errorIndex": 2,
     "correctWord": "finished",
@@ -770,7 +770,7 @@
   {
     "id": "m03-error-04",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "Pack on your books.",
     "errorIndex": 1,
     "correctWord": "up",
@@ -779,7 +779,7 @@
   {
     "id": "m03-error-05",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "Collect your works, please.",
     "errorIndex": 2,
     "correctWord": "work",
@@ -788,7 +788,7 @@
   {
     "id": "m03-error-06",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "Are your desk tidy?",
     "errorIndex": 2,
     "correctWord": "desks",
@@ -797,7 +797,7 @@
   {
     "id": "m03-error-07",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "The bell hasn't went yet.",
     "errorIndex": 3,
     "correctWord": "gone",
@@ -806,7 +806,7 @@
   {
     "id": "m03-error-08",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "The lesson doesn't finishes till ten past.",
     "errorIndex": 3,
     "correctWord": "finish",
@@ -815,7 +815,7 @@
   {
     "id": "m03-error-09",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "We seem to has finished early.",
     "errorIndex": 3,
     "correctWord": "have",
@@ -824,7 +824,7 @@
   {
     "id": "m03-error-10",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "There is still three minutes to go.",
     "errorIndex": 1,
     "correctWord": "are",
@@ -833,7 +833,7 @@
   {
     "id": "m03-error-11",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "We still has a couple of minutes left.",
     "errorIndex": 2,
     "correctWord": "have",
@@ -842,7 +842,7 @@
   {
     "id": "m03-error-12",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "Remember you homework.",
     "errorIndex": 1,
     "correctWord": "your",
@@ -851,7 +851,7 @@
   {
     "id": "m03-error-13",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "Take a worksheet as you leaves.",
     "errorIndex": 5,
     "correctWord": "leave",
@@ -860,7 +860,7 @@
   {
     "id": "m03-error-14",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "What does you have to do before the next lesson?",
     "errorIndex": 1,
     "correctWord": "do",
@@ -869,7 +869,7 @@
   {
     "id": "m03-error-15",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "Prepare those next chapter for Tuesday.",
     "errorIndex": 1,
     "correctWord": "the",
@@ -878,7 +878,7 @@
   {
     "id": "m03-error-16",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "There are no homework tonight.",
     "errorIndex": 1,
     "correctWord": "is",
@@ -887,7 +887,7 @@
   {
     "id": "m03-error-17",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "We'll continue this chapter next Mondays.",
     "errorIndex": 5,
     "correctWord": "Monday",
@@ -896,7 +896,7 @@
   {
     "id": "m03-error-18",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "We'll finish this exercise next lessons.",
     "errorIndex": 5,
     "correctWord": "lesson",
@@ -905,7 +905,7 @@
   {
     "id": "m03-error-19",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "The next class start at 7 o'clock.",
     "errorIndex": 3,
     "correctWord": "starts",
@@ -914,7 +914,7 @@
   {
     "id": "m03-error-20",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "See you tomorrow afternoons.",
     "errorIndex": 3,
     "correctWord": "afternoon",
@@ -923,7 +923,7 @@
   {
     "id": "m03-error-21",
     "type": "error",
-    "prompt": "Find and correct the incorrect word.",
+    "prompt": "Find and correct one mistake in the teacher’s sentence.",
     "sentence": "Other classes is still working.",
     "errorIndex": 2,
     "correctWord": "are",

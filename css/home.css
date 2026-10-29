@@ -22,28 +22,46 @@
     margin-bottom: 45px;
 }
 
-.home-badge {
-    display: inline-block;
-    padding: 6px 14px;
-    background: #e9edf5;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #34415a;
-}
-
 .home-heading h1 {
-    margin: 20px 0 14px;
+    margin: 0 0 20px;
     font-size: clamp(28px, 3vw, 42px);
     line-height: 1.2;
     font-weight: 700;
     color: #1d2a44;
 }
 
-.home-heading p {
+/* ===== Quote ===== */
+
+.home-quote {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-quote p {
     margin: 0;
-    font-size: clamp(15px, 1.4vw, 19px);
-    color: var(--color-text-muted);
+    color: #405a91;
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+.home-quote-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    color: #304e8c;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.home-quote-author svg {
+    width: 17px;
+    height: 17px;
+    stroke-width: 2.2;
 }
 
 /* ===== Cards ===== */
@@ -164,5 +182,19 @@
 
     .home-heading h1 {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-heading h1 {
+        margin-bottom: 16px;
+    }
+
+    .home-quote p {
+        font-size: 16px;
+    }
+
+    .home-quote-author {
+        font-size: 13px;
     }
 }

@@ -1,0 +1,49 @@
+/* Separate review navigator; reuse existing Practice drawer design. */
+.review-nav-shell{position:relative;max-width:1400px;margin:0 auto;min-width:0;transition:padding-right .3s ease}
+.review-nav-shell.navigator-open{padding-right:352px}
+.review-nav-content{min-width:0;max-width:960px;margin-inline:auto}
+.review-nav-toolbar{display:flex;justify-content:flex-end;margin:0 0 16px}
+.review-nav-shell .practice-review-list{max-width:none}
+.review-question-drawer{z-index:21}
+.review-nav-shell .practice-review-card{scroll-margin-top:24px}
+.review-question-drawer .practice-number.review-correct{background:#e6f6ee;border-color:#b5dfc6;color:#216b45}
+.review-question-drawer .practice-number.review-partial{background:#fff5dc;border-color:#e9d39a;color:#896b1d}
+.review-question-drawer .practice-number.review-incorrect{background:#fff0ef;border-color:#e9c6c3;color:#9b4743}
+.review-question-drawer .practice-number.is-current{outline:2px solid var(--color-primary);outline-offset:1px}
+@media(max-width:1050px){.review-nav-shell.navigator-open{padding-right:294px}}
+@media(max-width:740px){
+ .review-nav-shell,.review-nav-shell.navigator-open{padding-right:0;transition:none}
+ .review-nav-overlay{display:block;position:fixed;inset:0;z-index:39;background:rgb(15 29 55 / 58%);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility 0s linear .22s}
+ .review-nav-overlay.is-open{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .22s ease}
+ body.review-drawer-open{overflow:hidden}
+ .review-question-drawer{display:flex;position:fixed;inset:auto 12px max(12px,env(safe-area-inset-bottom)) 12px;z-index:40;width:auto;max-height:min(78dvh,640px);margin:0;box-sizing:border-box;padding:18px;border-radius:18px;transform:translateY(28px);overflow:hidden}
+ .review-question-drawer.is-open{display:flex;transform:translateY(0)}
+ .review-question-drawer .practice-groups{min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain}
+ .review-question-drawer .practice-number-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+ .review-question-drawer .practice-number{min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){.review-nav-shell,.review-nav-overlay{transition:none}}
+
+/* Match the All questions button on the Practice Test screen. */
+.review-nav-toolbar .review-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 10px;
+    background: #e8eef9;
+    color: #214e9c;
+    font: inherit;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.review-nav-toolbar .review-nav-toggle:hover {
+    background: #dce7f9;
+}
+.review-nav-toolbar .review-nav-toggle:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}

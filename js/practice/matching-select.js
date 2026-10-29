@@ -5,6 +5,12 @@ import {button} from './shared.js';
 // Event listeners are cleaned up by the owning Practice page.
 export function renderMatching(q, area, {saved, update, selectListeners, matchingOrders}) {
     const options = matchingOrders[q.id];
+
+    const isDefinition = q.prompt?.toLowerCase().includes('definitions');
+    const placeholder = isDefinition ? 'Select definition' : 'Select translation';
+    const itemLabel = isDefinition ? 'definition' : 'translation';
+    const listLabel = isDefinition ? 'Definitions' : 'Translations';
+
     q.pairs.forEach(([source], n) => {
         const wrap = el('div', null, 'practice-match-row');
         wrap.append(el('span', source));
@@ -12,14 +18,14 @@ export function renderMatching(q, area, {saved, update, selectListeners, matchin
         const trigger = button('', 'practice-select-trigger', () => toggle());
         trigger.setAttribute('aria-haspopup', 'listbox');
         trigger.setAttribute('aria-expanded', 'false');
-        trigger.setAttribute('aria-label', `Select translation for ${source}`);
-        const label = el('span', saved[q.id]?.[n] || 'Select translation');
+        trigger.setAttribute('aria-label', `Select ${itemLabel} for ${source}`);
+        const label = el('span', saved[q.id]?.[n] || placeholder);
         const arrow = el('span', null, 'practice-select-chevron');
         arrow.setAttribute('aria-hidden', 'true');
         trigger.append(label, arrow);
         const list = el('div', null, 'practice-select-menu');
         list.setAttribute('role', 'listbox');
-        list.setAttribute('aria-label', `Translations for ${source}`);
+        list.setAttribute('aria-label', `${listLabel} for ${source}`);
         const entries = [];
         // Place the options outside the document flow to avoid extending
         // the page/footer. The menu is returned to its picker on close.
@@ -89,14 +95,14 @@ export function renderMatching(q, area, {saved, update, selectListeners, matchin
         window.addEventListener('scroll', positionMenu, {signal: selectListeners.signal, capture: true});
         const choose = value => {
             saved[q.id][n] = value;
-            label.textContent = value || 'Select translation';
+            label.textContent = value || placeholder;
             update();
             close();
             trigger.focus();
         };
         const allOptions = ['', ...options];
         allOptions.forEach((value, i) => {
-            const opt = button(value || 'Select translation', 'practice-select-option', () => choose(value));
+            const opt = button(value || placeholder, 'practice-select-option', () => choose(value));
             opt.setAttribute('role', 'option');
             opt.setAttribute('aria-selected', String((saved[q.id]?.[n] || '') === value));
             opt.dataset.optionIndex = String(i);

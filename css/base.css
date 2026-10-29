@@ -1,5 +1,7 @@
 
 :root {
+    color-scheme: only light;
+
     /* Colors */
     --color-primary: #5066f5;
     --color-background: #f7f9fe;

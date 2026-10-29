@@ -1,0 +1,139 @@
+/* Review Answers: sticky side navigation and a floating, always-reachable trigger.
+   Loaded AFTER practice-review-navigator.css and practice.css. */
+
+.review-nav-toolbar {
+    position: sticky;
+    top: 16px;
+    height: 52px;
+    min-height: 52px;
+    margin: 0 0 -52px;
+    z-index: 24;
+    overflow: visible;
+    pointer-events: none;
+}
+.review-nav-toolbar .review-nav-toggle {
+    pointer-events: auto;
+    box-shadow: 0 5px 18px rgb(18 35 67 / 13%);
+    transition: opacity .24s ease, box-shadow .24s ease, transform .24s ease;
+}
+.review-nav-toolbar .review-nav-toggle:hover {
+    box-shadow: 0 8px 24px rgb(18 35 67 / 19%);
+}
+
+@media (min-width: 741px) {
+    /* Reserve the sidebar even while closed: the questions no longer jump
+       sideways when opening and closing the panel. */
+    .review-nav-shell,
+    .review-nav-shell.navigator-open {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 310px;
+        column-gap: 24px;
+        align-items: start;
+        padding-right: 0;
+        transition: none;
+    }
+    .review-nav-shell .review-nav-content {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        min-width: 0;
+    }
+    .review-nav-shell .review-question-drawer,
+    .review-nav-shell.navigator-open .review-question-drawer {
+        position: sticky;
+        top: 16px;
+        right: auto;
+        grid-column: 2;
+        grid-row: 1;
+        width: 310px;
+        max-height: calc(100vh - 32px);
+        max-height: calc(100dvh - 32px);
+        align-self: start;
+        transform: translateX(18px);
+        transition: opacity .25s ease,
+                    transform .35s cubic-bezier(.22,1,.36,1),
+                    visibility 0s linear .35s;
+    }
+    .review-nav-shell .review-question-drawer.is-open {
+        transform: translateX(0);
+        transition: opacity .25s ease,
+                    transform .35s cubic-bezier(.22,1,.36,1),
+                    visibility 0s;
+    }
+    /* The trigger sits in the reserved right column, not above a question. */
+    .review-nav-toolbar {
+        justify-content: flex-start;
+    }
+    .review-nav-toolbar .review-nav-toggle {
+        position: relative;
+        left: calc(100% + 24px);
+    }
+    /* Close button in the open drawer replaces the trigger. */
+    .review-nav-shell.navigator-open .review-nav-toggle {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 741px) and (max-width: 1050px) {
+    .review-nav-shell,
+    .review-nav-shell.navigator-open {
+        grid-template-columns: minmax(0,1fr) 265px;
+        column-gap: 14px;
+    }
+    .review-nav-shell .review-question-drawer,
+    .review-nav-shell.navigator-open .review-question-drawer {
+        width: 265px;
+    }
+    .review-nav-toolbar .review-nav-toggle {
+        left: calc(100% + 14px);
+    }
+}
+
+@media (max-width: 740px) {
+    .review-nav-toolbar {
+        top: 8px;
+        height: auto;
+        margin: 0 0 16px;
+        z-index: 25;
+        justify-content: flex-end;
+    }
+    .review-nav-toolbar .review-nav-toggle {
+        position: static;
+    }
+    /* Retain the existing overlay and bottom-sheet interaction on phones. */
+    .review-question-drawer {
+        transition: opacity .25s ease,
+                    transform .35s cubic-bezier(.22,1,.36,1),
+                    visibility 0s linear .35s;
+    }
+    .review-question-drawer.is-open {
+        transition: opacity .25s ease,
+                    transform .35s cubic-bezier(.22,1,.36,1),
+                    visibility 0s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .review-nav-toolbar .review-nav-toggle,
+    .review-question-drawer { transition: none !important; }
+}
+
+/* Ensure the full Practice Test-sized button is visible, not compressed
+   inside the sticky toolbar. */
+.review-nav-toolbar .review-nav-toggle {
+    display: inline-flex;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 145px;
+    height: 52px;
+    min-height: 52px;
+    padding: 10px 18px;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    line-height: 1.25;
+    border-radius: 10px;
+}

@@ -1,19 +1,19 @@
 import {app} from '../state.js';
-import {crumbs, el, append, link} from '../utils/dom.js';
+import {el, append, link} from '../utils/dom.js';
 import {renderSchoolDay, renderSchoolDayResults} from '../cases/school-day.js';
 
 const CASES = {
     'the-beginning-of-the-lesson': [
-        {id: 'starting-the-school-day', title: 'Starting the School Day', description: 'Greet the pupils, check attendance and begin the lesson.', difficulty: 'Easy', steps: 4, available: true},
-        {id: 'a-late-pupil', title: 'A Late Pupil', description: 'Calmly manage class conversations and a late arrival.', difficulty: 'Medium', steps: 4, available: true}
+        {id: 'starting-the-school-day', title: 'Starting the School Day', description: 'Greet the pupils, check attendance and begin the lesson.', steps: 4, available: true},
+        {id: 'a-late-pupil', title: 'A Late Pupil', description: 'Calmly manage class conversations and a late arrival.', steps: 4, available: true}
     ],
     'during-the-lesson': [
-        {id: 'managing-a-classroom-activity', title: 'Managing a Classroom Activity', description: 'Organise reading, turns and classroom participation.', difficulty: 'Easy–Medium', steps: 6, available: true},
-        {id: 'helping-a-pupil-learn', title: 'Helping a Pupil Learn', description: 'Support Anna with instructions, mistakes and feedback.', difficulty: 'Medium', steps: 6, available: true}
+        {id: 'managing-a-classroom-activity', title: 'Managing a Classroom Activity', description: 'Organise reading, turns and classroom participation.', steps: 6, available: true},
+        {id: 'helping-a-pupil-learn', title: 'Helping a Pupil Learn', description: 'Support Anna with instructions, mistakes and feedback.', steps: 6, available: true}
     ],
     'the-end-of-the-lesson': [
-        {id: 'finishing-the-lesson-on-time', title: 'Finishing the Lesson on Time', description: 'Collect work, explain homework and dismiss pupils quietly.', difficulty: 'Easy–Medium', steps: 6, available: true},
-        {id: 'running-out-of-time', title: 'Running Out of Time', description: 'Manage unfinished work, set homework and end the lesson calmly.', difficulty: 'Medium', steps: 6, available: true}
+        {id: 'finishing-the-lesson-on-time', title: 'Finishing the Lesson on Time', description: 'Collect work, explain homework and dismiss pupils quietly.', steps: 6, available: true},
+        {id: 'running-out-of-time', title: 'Running Out of Time', description: 'Manage unfinished work, set homework and end the lesson calmly.', steps: 6, available: true}
     ]
 };
 
@@ -22,12 +22,11 @@ export function cases(mod, caseId, subpage) {
     if (availableCase && subpage === 'results') return renderSchoolDayResults(mod, caseId);
     if (availableCase && !subpage) return renderSchoolDay(mod, caseId);
 
-    crumbs(app, mod, 'Teaching Cases');
     const page = el('section', null, 'tc-catalog');
     const heading = el('div', null, 'tc-catalog-heading');
-    append(heading, el('span', 'INTERACTIVE CLASSROOM SCENARIOS', 'tc-kicker'), el('h1', 'Teaching Cases'),
+    append(heading, el('h1', 'Teaching Cases'),
         el('p', 'Choose a classroom situation. Make decisions as the teacher and review your pedagogical feedback at the end.'));
-    append(page, link('← Back to module', `/module/${mod.id}`, 'tc-back'), heading);
+    append(page, link('← Back to Module', `/module/${mod.id}`, 'page-back'), heading);
     const grid = el('div', null, 'tc-case-grid');
     const entries = CASES[mod.id] ?? Array.from({length: 3}, (_, i) => ({
         id: `case-0${i + 1}`, title: `Teaching Case ${i + 1}`,
@@ -35,7 +34,7 @@ export function cases(mod, caseId, subpage) {
     }));
     entries.forEach((item, index) => {
         const card = el('article', null, `tc-case-card ${item.available ? '' : 'tc-case-disabled'}`);
-        append(card, el('span', `CASE ${index + 1} · ${item.available ? item.difficulty : 'COMING SOON'}`, 'tc-kicker'),
+        append(card, el('span', `CASE ${index + 1}${item.available ? '' : ' · COMING SOON'}`, 'tc-kicker'),
             el('h2', item.title), el('p', item.description));
         if (item.available) {
             append(card, el('span', `${item.steps} steps · ${item.steps} points`, 'tc-case-meta'));

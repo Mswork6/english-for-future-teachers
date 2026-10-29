@@ -4,10 +4,10 @@ import {speakEnglish} from '../utils/speech.js';
 
 export function theory(mod) {
     const page = el('section', null, 'theory-page');
-    const back = link('← Back to module', `/module/${mod.id}`, 'theory-back');
+    const back = link('← Back to Module', `/module/${mod.id}`, 'theory-back');
     const top = el('div', null, 'theory-intro');
     append(top,
-        el('div', `THEORY · ${mod.title.toUpperCase()}`, 'eyebrow'),
+        el('div', `VOCABULARY · ${mod.title.toUpperCase()}`, 'eyebrow'),
         el('h1', mod.theoryTitle || 'Useful classroom expressions'),
         el('p', 'Learn useful classroom expressions. Listen to each phrase and expand a card to see it in context.', 'lead'),
         el('div', `${mod.theory.length} expressions · ${new Set(mod.theory.map(p => p.category)).size} categories`, 'theory-count')
