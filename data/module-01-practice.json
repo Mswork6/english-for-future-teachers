@@ -70,8 +70,8 @@
     "prompt": "Match the English expressions with their Russian translations.",
     "pairs": [
       [
-        "My name is Mr/Mrs/Ms Smith. I'll be teaching you English this year.",
-        "Меня зовут мистер/миссис/мисс Смит. В этом году я буду преподавать вам английский язык."
+        "My name is Marina Alexandrovna. I'll be teaching you English this year.",
+        "Меня зовут Марина Александровна. В этом году я буду преподавать вам английский язык."
       ],
       [
         "I'm your new English teacher.",
@@ -162,8 +162,8 @@
         "Кого сегодня нет?"
       ],
       [
-        "Why were you absent last Friday, Tom?",
-        "Почему тебя не было в прошлую пятницу, Том?"
+        "Why were you absent last Friday, Den?",
+        "Почему тебя не было в прошлую пятницу, Ден?"
       ],
       [
         "What's the matter with Anna today?",
@@ -453,8 +453,8 @@
     "id": "m01-error-06",
     "type": "error",
     "title": "Checking Attendance",
-    "prompt": "The teacher asks Tom why he missed the previous Friday's lesson. Find and correct one mistake in the teacher’s sentence.",
-    "sentence": "Why were you present last Friday, Tom?",
+    "prompt": "The teacher asks Den why he missed the previous Friday's lesson. Find and correct one mistake in the teacher’s sentence.",
+    "sentence": "Why were you present last Friday, Den?",
     "errorIndex": 3,
     "errorLength": 1,
     "correctWord": "absent"
@@ -681,12 +681,12 @@
     "id": "m01-choice-12",
     "type": "choice",
     "title": "Register",
-    "prompt": "Tom was not at school last Friday. You want to ask him the reason for his absence. What should you say?",
+    "prompt": "Den was not at school last Friday. You want to ask him the reason for his absence. What should you say?",
     "options": [
-      "Why were you absent last Friday, Tom?",
+      "Why were you absent last Friday, Den?",
       "Who is absent today?",
-      "Were you late today, Tom?",
-      "Did you miss your bus today, Tom?"
+      "Were you late today, Den?",
+      "Did you miss your bus today, Den?"
     ],
     "answer": 0,
     "explanation": "Only this question asks about the specified absence last Friday."
@@ -849,7 +849,7 @@
     "type": "error",
     "title": "Register",
     "prompt": "You ask a student about the reason for being absent last Friday. Find and correct one mistake in the teacher’s sentence.",
-    "sentence": "Why you were absent last Friday, Tom?",
+    "sentence": "Why you were absent last Friday, Den?",
     "errorIndex": 1,
     "errorLength": 2,
     "correctWord": "were you"
