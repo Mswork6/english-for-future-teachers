@@ -8,10 +8,15 @@ const resultsKey = id => `efft:case:${id}:latest`;
 const resultsRoute = (mod,id) => `#/module/${mod.id}/cases/${id}/results`;
 const ACTORS = {
     teacher: {name:'You · Teacher', avatar:'teacher.webp'},
-    maria: {name:'Maria', avatar:'sophie.webp'},
-    anton: {name:'Anton', avatar:'daniel.webp'},
-    alex: {name:'Alex', avatar:'max.webp'},
-    class: {name:'Class', avatar:'max.webp'}
+    maria: {name:'Maria', avatar:'maria.webp'},
+    anton: {name:'Anton', avatar:'anton.webp'},
+    alex: {name:'Alex', avatar:'alex.webp'},
+    class: {name:'Class', avatar:'class.webp'},
+    anna: {name:'Anna', avatar:'anna.webp'},
+    sophie: {name:'Sofia', avatar:'sofia.webp'},
+    sofia: {name:'Sofia', avatar:'sofia.webp'},
+    some_pupils: {name:'Some pupils', avatar:'class.webp'},
+    other_pupils: {name:'Other pupils', avatar:'class.webp'}
 };
 
 function icon(name) { const i=el('i'); i.dataset.lucide=name; return i; }
@@ -19,7 +24,7 @@ function node(tag, className, text) {return el(tag,text,className);}
 
 export async function renderSchoolDay(mod, caseId, {onBack} = {}) {
     const root=node('section','tc-shell');
-    root.innerHTML = `<div class="tc-intro"><div><span class="tc-kicker">TEACHING CASE · <span id="tc-difficulty"></span></span><h1 id="tc-case-title"></h1><p>4 steps · Maximum score: 4 points</p></div><button type="button" class="tc-back" id="tc-back-cases">← All cases</button></div><div class="tc-stage"><div class="tc-top"><div class="tc-top-line"><div><strong id="tc-step-title">Greeting the Class</strong><span id="tc-step-counter">Step 1 of 4</span></div><div class="tc-bars" id="tc-bars"></div></div><div class="tc-context"><span class="tc-context-icon">ⓘ</span><div><strong>Current situation</strong><div id="tc-context-text"></div></div></div></div><div class="tc-main"><section class="tc-chat" aria-label="Classroom conversation"><div class="tc-chat-head"><span class="tc-online"></span><strong>Classroom conversation</strong><span class="tc-chat-sub">9:00 AM</span></div><div class="tc-messages" id="tc-messages" aria-live="polite"></div><div class="tc-compose">Choose a response to send a message as the teacher</div></section><aside class="tc-decisions"><div class="tc-turn-label">YOUR TURN</div><h2 id="tc-question"></h2><div class="tc-options" id="tc-options" role="group" aria-label="Possible responses"></div><button type="button" class="tc-send" id="tc-send" disabled>Send response →</button><p class="tc-subnote">Scores and explanations appear after all four steps.</p></aside></div></div>`;
+    root.innerHTML = `<div class="tc-intro"><div><span class="tc-kicker">TEACHING CASE · <span id="tc-difficulty"></span></span><h1 id="tc-case-title"></h1><p><span id="tc-case-meta"></span></p></div><button type="button" class="tc-back" id="tc-back-cases">← All cases</button></div><div class="tc-stage"><div class="tc-top"><div class="tc-top-line"><div><strong id="tc-step-title">Greeting the Class</strong><span id="tc-step-counter">Step 1 of 4</span></div><div class="tc-bars" id="tc-bars"></div></div><div class="tc-context"><span class="tc-context-icon">ⓘ</span><div><strong>Current situation</strong><div id="tc-context-text"></div></div></div></div><div class="tc-main"><section class="tc-chat" aria-label="Classroom conversation"><div class="tc-chat-head"><span class="tc-online"></span><strong>Classroom conversation</strong><span class="tc-chat-sub">9:00 AM</span></div><div class="tc-messages" id="tc-messages" aria-live="polite"></div><div class="tc-compose">Choose a response to send a message as the teacher</div></section><aside class="tc-decisions"><div class="tc-turn-label">YOUR TURN</div><h2 id="tc-question"></h2><div class="tc-options" id="tc-options" role="group" aria-label="Possible responses"></div><button type="button" class="tc-send" id="tc-send" disabled>Send response →</button><p class="tc-subnote">Scores and explanations appear after completing the case.</p></aside></div></div>`;
     app.append(root);
     root.querySelector('#tc-back-cases').addEventListener('click',()=>{root.remove();if(onBack)onBack();else location.hash=`#/module/${mod.id}/cases`;});
     let caseData;
@@ -27,7 +32,7 @@ export async function renderSchoolDay(mod, caseId, {onBack} = {}) {
     catch (err) { root.replaceChildren(node('p','tc-error',`Could not load teaching case: ${err.message}`)); return; }
     if (!root.isConnected) return;
     const $ = id => root.querySelector('#'+id);
-    $('tc-case-title').textContent=caseData.title; $('tc-difficulty').textContent=caseData.difficulty.toUpperCase();
+    $('tc-case-title').textContent=caseData.title; root.querySelector('.tc-intro > div > p').title=caseData.scenario || ''; $('tc-case-meta').textContent=`${caseData.steps.length} steps · Maximum score: ${caseData.steps.length} points`; $('tc-difficulty').textContent=caseData.difficulty.toUpperCase();
     let step=0, choice=null, responses=[], mode='question';
     const messages=$('tc-messages');
     function addMessage(speaker,text) {
@@ -65,7 +70,11 @@ export async function renderSchoolDay(mod, caseId, {onBack} = {}) {
         });
         $('tc-send').disabled=true;
         $('tc-send').textContent='Send response →';
-        // Opening scene is displayed in the contextual panel above the chat.
+        // Display spoken opening lines as chat messages, not as narration.
+        // Each step is entered once, so opening messages are not duplicated.
+        for (const event of data.openingMessages || []) {
+            addMessage(event.speaker, event.text);
+        }
         window.lucide?.createIcons();
     }
     function setStoryContext(lines, label='Story continues') {

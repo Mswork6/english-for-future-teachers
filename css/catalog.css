@@ -1,8 +1,20 @@
 /* Module and section selection: keep the existing wide rectangular cards. */
-.catalog-page { width: 100%; margin: 0 auto; }
-.catalog-heading { margin: 25px 0 28px; }
-.catalog-heading h1 { margin: 10px 0 16px; }
-.catalog-heading .lead { margin: 0; }
+.catalog-page {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.catalog-heading {
+    margin: 25px 0 28px;
+}
+
+.catalog-heading h1 {
+    margin: 10px 0 16px;
+}
+
+.catalog-heading .lead {
+    margin: 0;
+}
 
 .catalog-grid {
     display: grid;
@@ -27,12 +39,41 @@
     box-shadow: 0 4px 20px #162c4910;
     transition: transform .2s ease, box-shadow .2s ease;
 }
-.catalog-card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(35,57,98,.09); }
-.catalog-card .home-icon { width: 58px; height: 58px; margin-bottom: 18px; }
-.catalog-card .home-icon svg { width: 28px; height: 28px; }
-.catalog-card h2 { margin: 0 0 10px; font-size: 19px; font-weight: 650; line-height: 1.3; }
-.catalog-card p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--color-text-muted); }
-.catalog-card .home-link { padding-top: 20px; margin-top: auto; }
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(35, 57, 98, .09);
+}
+
+.catalog-card .home-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 18px;
+}
+
+.catalog-card .home-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.catalog-card h2 {
+    margin: 0 0 10px;
+    font-size: 19px;
+    font-weight: 650;
+    line-height: 1.3;
+}
+
+.catalog-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+}
+
+.catalog-card .home-link {
+    padding-top: 20px;
+    margin-top: auto;
+}
 
 .page-back {
     display: inline-flex;
@@ -46,19 +87,55 @@
     font-weight: 650;
     transition: background-color .2s ease, transform .2s ease;
 }
-.page-back:hover { background: #eaf0ff; transform: translateX(-3px); }
-.page-back:focus-visible, .catalog-card:focus-visible { outline: 3px solid #506dff; outline-offset: 3px; }
 
-/* Animate incoming content while the header and footer stay still. */
-#app > * { animation: page-enter .28s ease-out both; }
-@keyframes page-enter {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
+.page-back:hover {
+    background: #eaf0ff;
+    transform: translateX(-3px);
 }
 
-@media (max-width: 900px) { .catalog-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-@media (max-width: 600px) { .catalog-grid { grid-template-columns: 1fr; } .catalog-card { min-height: 225px; } }
+.page-back:focus-visible, .catalog-card:focus-visible {
+    outline: 3px solid #506dff;
+    outline-offset: 3px;
+}
+
+/* Animate incoming content while the header and footer stay still. */
+#app > * {
+    animation: page-enter .28s ease-out both;
+}
+
+@keyframes page-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-card {
+        min-height: 225px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    #app > * { animation: none; }
-    .page-back, .catalog-card { transition: none; }
+    #app > * {
+        animation: none;
+    }
+
+    .page-back, .catalog-card {
+        transition: none;
+    }
 }
