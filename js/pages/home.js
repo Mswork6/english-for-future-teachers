@@ -16,7 +16,7 @@ export function home(modules) {
         <div class="home-cards">
             <a class="home-card" href="#/modules">
                 <div class="home-icon blue">
-                    <i data-lucide="book-open"></i>
+                    <i data-lucide="library-big"></i>
                 </div>
 
                 <h2>Learning Modules</h2>
