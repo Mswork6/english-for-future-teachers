@@ -20,6 +20,7 @@ export function home(modules) {
                 </div>
 
                 <h2>Learning Modules</h2>
+                <span class="home-card-translation">Учебные модули</span>
 
                 <p>Explore interactive lessons, exercises and teaching cases.</p>
 

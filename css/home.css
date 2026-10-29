@@ -114,8 +114,9 @@
 .home-card-translation {
     margin: -9px 0 15px;
     font-size: 14px;
+    font-weight: 700;
     line-height: 1.4;
-    color: var(--color-text-muted);
+    color: var(--color-text);
 }
 
 .home-card p {
