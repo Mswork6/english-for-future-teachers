@@ -4,6 +4,7 @@ import {loadModule} from './module-loader.js';
 import {el, append, link, header, notReady} from './utils/dom.js';
 import {home} from './pages/home.js';
 import {explanatoryNote} from './pages/note.js';
+import {teachingGuidelines} from './pages/guidelines.js';
 import {modulesPage} from './pages/modules.js';
 import {modulePage} from './pages/module.js';
 import {theory} from './pages/theory.js';
@@ -32,9 +33,7 @@ export async function route() {
         if (!parts.length) return home(modules);
         if (parts[0] === 'modules') return modulesPage(modules);
         if (parts[0] === 'note') return explanatoryNote();
-        if (parts[0] === 'guidelines') {
-            return header(app, 'For educators', 'Teaching Guidelines', 'Use Theory for familiarization, Practice for self-assessment, and Teaching Cases to discuss teacher–student communication.');
-        }
+        if (parts[0] === 'guidelines') return teachingGuidelines();
         if (parts[0] !== 'module') throw new Error('Page not found');
 
         const info = modules.find(module => module.id === parts[1]);
