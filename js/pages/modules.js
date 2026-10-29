@@ -5,20 +5,13 @@ import {el, append, link} from '../utils/dom.js';
 const ICONS = ['sunrise', 'presentation', 'flag-triangle-right'];
 
 export function modulesPage(modules) {
-    const page = el('section', null, 'catalog-page modules-catalog-page');
+    const page = el('section', null, 'catalog-page');
 
-    const breadcrumbs = el('nav', null, 'modules-breadcrumbs');
-    breadcrumbs.setAttribute('aria-label', 'Breadcrumb');
-    append(breadcrumbs,
-        link('Home', '/', 'modules-breadcrumb-link'),
-        el('span', '/', 'modules-breadcrumb-separator'),
-        el('span', 'Learning Modules', 'modules-breadcrumb-current')
-    );
-    page.append(breadcrumbs);
+    page.append(link('← Back to main screen', '/', 'page-back'));
 
-    const heading = el('div', null, 'catalog-heading modules-catalog-heading');
+    const heading = el('div', null, 'catalog-heading');
     append(heading,
-        el('span', 'STEP 2 · SELECT A MODULE', 'modules-stage-label'),
+        el('span', 'LEARNING MODULES', 'eyebrow'),
         el('h1', 'Learning Modules'),
         el('p', 'Choose a module to start learning.', 'lead')
     );

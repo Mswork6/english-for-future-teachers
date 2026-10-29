@@ -1,18 +1,4 @@
-/* Modules catalog: distinct navigation depth and equal visual hierarchy. */
-.modules-catalog-page{max-width:1380px;margin-inline:auto}
-.modules-breadcrumbs{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-    margin:0 0 26px;color:#687b9c;font-size:14px}
-.modules-breadcrumb-link{font-weight:650;color:#285fc0}
-.modules-breadcrumb-link:hover{text-decoration:underline}
-.modules-breadcrumb-separator{color:#a1aec2}
-.modules-breadcrumb-current{font-weight:700;color:#263d68}
-.modules-catalog-heading{margin:0 0 28px;padding:24px 28px 26px;
-    border:1px solid #dce6f5;border-left:5px solid #456be3;border-radius:17px;
-    background:linear-gradient(115deg,#eef3ff 0%,#f9fbff 85%)}
-.modules-stage-label{display:inline-block;margin-bottom:10px;color:#3456b4;
-    font-size:12px;font-weight:800;letter-spacing:.1em}
-.modules-catalog-heading h1{font-size:clamp(28px,3vw,40px);margin:0 0 8px}
-.modules-catalog-heading .lead{margin:0}
+/* Only module cards are restyled; page heading and navigation use catalog.css. */
 .modules-catalog-grid{gap:18px}
 .modules-catalog-card{align-items:stretch;text-align:left;min-height:275px;
     padding:24px 25px;border-color:#dce6f5;position:relative;
