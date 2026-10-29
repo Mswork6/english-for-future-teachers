@@ -3,6 +3,7 @@ import {load, DataLoadError} from './data-service.js';
 import {loadModule} from './module-loader.js';
 import {el, append, link, header, notReady} from './utils/dom.js';
 import {home} from './pages/home.js';
+import {explanatoryNote} from './pages/note.js';
 import {modulesPage} from './pages/modules.js';
 import {modulePage} from './pages/module.js';
 import {theory} from './pages/theory.js';
@@ -30,9 +31,7 @@ export async function route() {
 
         if (!parts.length) return home(modules);
         if (parts[0] === 'modules') return modulesPage(modules);
-        if (parts[0] === 'note') {
-            return header(app, 'About the resource', 'Explanatory Note', 'A learning resource for students of teacher training colleges studying English in professional contexts.');
-        }
+        if (parts[0] === 'note') return explanatoryNote();
         if (parts[0] === 'guidelines') {
             return header(app, 'For educators', 'Teaching Guidelines', 'Use Theory for familiarization, Practice for self-assessment, and Teaching Cases to discuss teacher–student communication.');
         }
