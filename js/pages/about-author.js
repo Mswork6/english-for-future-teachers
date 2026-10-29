@@ -4,16 +4,23 @@ import {el, link} from '../utils/dom.js';
 export function aboutAuthor() {
     const page = el('section', null, 'author-page');
     page.append(link('← Back to home page', '/', 'page-back'));
-
-    const title = el('h1', 'Об авторе', 'author-page-title');
-    page.append(title);
+    page.append(el('h1', 'Об авторе', 'author-page-title'));
 
     const profile = el('div', null, 'author-profile');
     const text = el('div', null, 'author-profile-text');
+
+    const subjects = el('div', null, 'author-subjects');
+    subjects.append(
+        el('p', 'Преподаваемые дисциплины:', 'author-subjects-heading'),
+        el('p', 'иностранный язык в профессиональной деятельности (английский язык)', 'author-position'),
+        el('p', 'ПМ 04 Преподавание иностранных языков', 'author-position')
+    );
+
     text.append(
         el('h2', 'Чашина Альмира Финарисовна'),
-        el('p', 'Преподаватель английского языка', 'author-position'),
         el('p', 'Заведующий кафедрой иностранных языков', 'author-position'),
+        el('p', 'Преподаватель высшей квалификационной категории', 'author-position'),
+        subjects,
         el('p', 'ГБПОУ "Челябинский педагогический колледж №1"', 'author-organization')
     );
 
