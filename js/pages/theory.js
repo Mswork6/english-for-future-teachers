@@ -9,7 +9,7 @@ export function theory(mod) {
     append(top,
         el('div', `THEORY · ${mod.title.toUpperCase()}`, 'eyebrow'),
         el('h1', mod.theoryTitle || 'Useful classroom expressions'),
-        el('p', 'Learn expressions for greeting students, introducing yourself and starting a lesson. Listen to each phrase and expand a card to see it in context.', 'lead'),
+        el('p', 'Learn useful classroom expressions. Listen to each phrase and expand a card to see it in context.', 'lead'),
         el('div', `${mod.theory.length} expressions · ${new Set(mod.theory.map(p => p.category)).size} categories`, 'theory-count')
     );
     append(page, back, top);

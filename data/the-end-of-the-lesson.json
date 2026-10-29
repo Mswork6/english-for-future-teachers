@@ -1,0 +1,289 @@
+{
+  "id": "the-end-of-the-lesson",
+  "title": "The End of the Lesson",
+  "theoryTitle": "The End of the Lesson",
+  "theory": [
+    {
+      "category": "Time to Stop",
+      "en": "Let's stop now.",
+      "ru": "Давайте на этом остановимся.",
+      "example": "At the end of a group activity, the teacher says, “Let's stop now and check our answers.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "It's time to finish now.",
+      "ru": "Пора заканчивать работу.",
+      "example": "Noticing that only a minute remains, the teacher says, “It's time to finish now. Put your pens down.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "It's almost time to stop.",
+      "ru": "Скоро пора заканчивать.",
+      "example": "The teacher looks at the clock and says, “It's almost time to stop, so write your final sentence.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "We've run out of time.",
+      "ru": "У нас закончилось время.",
+      "example": "The class is still discussing the text when the teacher says, “We've run out of time. We'll continue tomorrow.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "There's the bell.",
+      "ru": "Вот и звонок.",
+      "example": "Hearing the sound from the corridor, the teacher says, “There's the bell. Please put your things away.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "Have you finished?",
+      "ru": "Вы закончили?",
+      "example": "Before collecting the worksheets, the teacher asks, “Have you finished?”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "Stop now.",
+      "ru": "Заканчивайте работу.",
+      "example": "When the timer rings, the teacher says, “Stop now and listen to the answers.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "Pack up your books.",
+      "ru": "Уберите учебники в портфели.",
+      "example": "As the lesson ends, the teacher says, “Pack up your books and get ready to leave.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "Collect your work, please.",
+      "ru": "Сдайте, пожалуйста, свои работы.",
+      "example": "After a short written test, the teacher says, “Collect your work, please. I'll take the papers now.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "We'll have to stop here.",
+      "ru": "Нам придётся на этом остановиться.",
+      "example": "The discussion takes longer than expected, so the teacher says, “We'll have to stop here.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "One minute to finish that activity.",
+      "ru": "У вас осталась одна минута, чтобы завершить это задание.",
+      "example": "Looking at the clock, the teacher announces, “One minute to finish that activity.”"
+    },
+    {
+      "category": "Time to Stop",
+      "en": "Are your desks tidy?",
+      "ru": "У вас порядок на партах?",
+      "example": "Before dismissing the class, the teacher asks, “Are your desks tidy?”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "The bell hasn't gone yet.",
+      "ru": "Звонок ещё не прозвенел.",
+      "example": "When a pupil starts packing early, the teacher reminds them, “The bell hasn't gone yet.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "The lesson doesn't finish till ten past.",
+      "ru": "Урок заканчивается только в десять минут следующего часа.",
+      "example": "A pupil asks whether they can leave, and the teacher replies, “The lesson doesn't finish till ten past.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "We seem to have finished early.",
+      "ru": "Похоже, мы закончили раньше времени.",
+      "example": "After completing the planned exercises, the teacher says, “We seem to have finished early. Let's revise the vocabulary.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "Just a moment, please.",
+      "ru": "Одну минуту, пожалуйста.",
+      "example": "Before the pupils leave, the teacher says, “Just a moment, please. I need to explain your homework.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "Just hold on a moment.",
+      "ru": "Подождите немного.",
+      "example": "As the pupils begin to stand up, the teacher says, “Just hold on a moment. I have an announcement.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "Just a sec.",
+      "ru": "Секундочку.",
+      "example": "When a pupil asks a question while the teacher is writing, the teacher says, “Just a sec. I'll be right with you.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "Just a second.",
+      "ru": "Одну секунду.",
+      "example": "The teacher looks for the next worksheet and says, “Just a second. I have it here.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "Wait for it!",
+      "ru": "Подождите, пока не наступит нужный момент!",
+      "example": "During a listening exercise, the pupils reach for their pencils too early; the teacher says, “Wait for it! Start when you hear the signal.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "There are still three minutes to go.",
+      "ru": "До конца урока ещё три минуты.",
+      "example": "As some pupils begin packing, the teacher says, “There are still three minutes to go. Let's check question five.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "One more thing before you go.",
+      "ru": "И ещё кое-что, прежде чем вы уйдёте.",
+      "example": "Before dismissing the class, the teacher says, “One more thing before you go. Bring your reading books tomorrow.”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "We still have a couple of minutes left.",
+      "ru": "У нас ещё осталось пару минут.",
+      "example": "Looking at the clock, the teacher says, “We still have a couple of minutes left. Any questions?”"
+    },
+    {
+      "category": "Not Time to Stop",
+      "en": "Hang on a moment.",
+      "ru": "Подождите минутку.",
+      "example": "When the class moves towards the door, the teacher says, “Hang on a moment. Please leave your worksheets on the desk.”"
+    },
+    {
+      "category": "Homework",
+      "en": "Remember your homework.",
+      "ru": "Не забудьте о домашнем задании.",
+      "example": "At the end of the lesson, the teacher reminds the class, “Remember your homework. Exercise four is due tomorrow.”"
+    },
+    {
+      "category": "Homework",
+      "en": "Take a worksheet as you leave.",
+      "ru": "Возьмите лист с заданиями, когда будете выходить.",
+      "example": "Before the pupils leave, the teacher says, “Take a worksheet as you leave. You'll need it for homework.”"
+    },
+    {
+      "category": "Homework",
+      "en": "What do you have to do before the next lesson?",
+      "ru": "Что вам нужно сделать к следующему уроку?",
+      "example": "To check that the class understands the assignment, the teacher asks, “What do you have to do before the next lesson?”"
+    },
+    {
+      "category": "Homework",
+      "en": "Prepare the next chapter for Tuesday.",
+      "ru": "Подготовьте следующую главу к вторнику.",
+      "example": "At the end of Monday's lesson, the teacher says, “Prepare the next chapter for Tuesday.”"
+    },
+    {
+      "category": "Homework",
+      "en": "This is your homework for tonight.",
+      "ru": "Это ваше домашнее задание на сегодня.",
+      "example": "Pointing to an exercise on the board, the teacher says, “This is your homework for tonight.”"
+    },
+    {
+      "category": "Homework",
+      "en": "Finish this exercise.",
+      "ru": "Закончите это упражнение.",
+      "example": "When the bell rings before the class completes a task, the teacher says, “Finish this exercise at home.”"
+    },
+    {
+      "category": "Homework",
+      "en": "There is no homework tonight.",
+      "ru": "Сегодня домашнего задания нет.",
+      "example": "After a busy week, the teacher tells the class, “There is no homework tonight. Enjoy your evening!”"
+    },
+    {
+      "category": "Next Time",
+      "en": "We'll do the rest of this chapter next time.",
+      "ru": "Оставшуюся часть этой главы мы разберём на следующем уроке.",
+      "example": "After introducing a new topic, the teacher says, “We'll do the rest of this chapter next time.”"
+    },
+    {
+      "category": "Next Time",
+      "en": "We've run out of time, so we'll continue next lesson.",
+      "ru": "У нас закончилось время, поэтому продолжим на следующем уроке.",
+      "example": "As the bell rings during a discussion, the teacher says, “We've run out of time, so we'll continue next lesson.”"
+    },
+    {
+      "category": "Next Time",
+      "en": "We'll continue this chapter next Monday.",
+      "ru": "Мы продолжим изучать эту главу в следующий понедельник.",
+      "example": "At the end of the Friday lesson, the teacher says, “We'll continue this chapter next Monday.”"
+    },
+    {
+      "category": "Next Time",
+      "en": "We'll finish this exercise next lesson.",
+      "ru": "Мы закончим это упражнение на следующем уроке.",
+      "example": "After checking the first few answers, the teacher says, “We'll finish this exercise next lesson.”"
+    },
+    {
+      "category": "Next Time",
+      "en": "The next class starts at 7 o'clock.",
+      "ru": "Следующее занятие начинается в семь часов.",
+      "example": "Before the pupils leave, the teacher reminds them, “The next class starts at 7 o'clock.”"
+    },
+    {
+      "category": "Next Time",
+      "en": "We'll do some more practice of this in the next class.",
+      "ru": "На следующем занятии мы ещё потренируемся выполнять такие задания.",
+      "example": "After the first pronunciation exercise, the teacher says, “We'll do some more practice of this in the next class.”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "Goodbye, everyone.",
+      "ru": "До свидания, ребята.",
+      "example": "As the class leaves, the teacher smiles and says, “Goodbye, everyone. See you tomorrow!”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "See you again next Thursday.",
+      "ru": "Увидимся в следующий четверг.",
+      "example": "At the end of Thursday's class, the teacher says, “See you again next Thursday.”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "Have a good holiday.",
+      "ru": "Хороших вам каникул!",
+      "example": "Before the school break, the teacher says, “Have a good holiday. See you next term!”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "Enjoy your vacation.",
+      "ru": "Хорошего вам отдыха!",
+      "example": "Before the vacation begins, the teacher tells the pupils, “Enjoy your vacation. You've worked hard.”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "See you tomorrow afternoon.",
+      "ru": "Увидимся завтра после обеда.",
+      "example": "At the end of the morning lesson, the teacher says, “See you tomorrow afternoon.”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "Form a queue and wait for the bell.",
+      "ru": "Встаньте в очередь и дождитесь звонка.",
+      "example": "Before taking the class into the corridor, the teacher instructs, “Form a queue and wait for the bell.”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "Get into a queue.",
+      "ru": "Встаньте в очередь.",
+      "example": "As the pupils prepare to leave for lunch, the teacher says, “Get into a queue, please.”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "It's tidy up time.",
+      "ru": "Пора навести порядок.",
+      "example": "Before the bell, the teacher reminds the pupils, “It's tidy up time. Put the materials back on the shelves.”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "Try not to make any noise as you leave.",
+      "ru": "Постарайтесь не шуметь, когда будете выходить.",
+      "example": "As the pupils approach the door, the teacher says, “Try not to make any noise as you leave.”"
+    },
+    {
+      "category": "Goodbye & Leaving the Room",
+      "en": "Be quiet as you leave. Other classes are still working.",
+      "ru": "Выходите тихо. В других классах ещё идут занятия.",
+      "example": "The teacher reminds the pupils, “Be quiet as you leave. Other classes are still working.”"
+    }
+  ]
+}
