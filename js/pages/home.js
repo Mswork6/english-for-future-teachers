@@ -1,3 +1,4 @@
+
 import {app} from '../state.js';
 
 export function home(modules) {
@@ -6,11 +7,15 @@ export function home(modules) {
 
     section.innerHTML = `
         <div class="home-heading">
-            <span class="home-badge">ENGLISH LANGUAGE LEARNING</span>
+            <h1>Welcome to TeachLab: English for Future Teachers!</h1>
 
-            <h1>Welcome to English for Future Teachers!</h1>
+            <div class="home-quote">
+                <p>"I never teach my pupils. I only attempt to provide the conditions in which they can learn."</p>
 
-            <p>Develop your English skills and prepare for real classroom situations.</p>
+                <div class="home-quote-author">
+                    <span>Albert Einstein</span>
+                </div>
+            </div>
         </div>
 
         <div class="home-cards">
@@ -53,6 +58,13 @@ export function home(modules) {
                 <span class="home-link purple-text">Read More →</span>
             </a>
         </div>
+
+        <section class="home-author" aria-label="Сведения об авторе">
+            <p class="home-author-name">Чашина Альмира Финарисовна</p>
+            <p class="home-author-role">Преподаватель английского языка</p>
+            <p class="home-author-role">Заведующий кафедрой иностранных языков</p>
+            <p class="home-author-college">ГБПОУ "Челябинский педагогический колледж №1"</p>
+        </section>
     `;
 
     app.append(section);
