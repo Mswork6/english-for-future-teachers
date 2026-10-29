@@ -4,7 +4,7 @@ export const TYPES = {
     matching: 'Matching Pairs',
     choice: 'Multiple Choice',
     fill: 'Fill in the Blanks',
-    error: 'Find and Correct the Error',
+    error: 'Find and Correct the Mistake',
     sentence: 'Sentence Building'
 };
 export const storageKey = mod => `eft:practice:${mod.id}:attempt:v4`;
