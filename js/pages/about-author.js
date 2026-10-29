@@ -29,7 +29,7 @@ export function aboutAuthor() {
     const img = document.createElement('img');
     img.src = 'assets/author/portrait.webp';
     img.alt = 'Чашина Альмира Финарисовна';
-    img.loading = 'lazy';
+    img.loading = 'eager';
     img.addEventListener('load', () => {
         placeholder.hidden = true;
         img.hidden = false;
