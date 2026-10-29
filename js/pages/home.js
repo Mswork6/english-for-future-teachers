@@ -58,13 +58,6 @@ export function home(modules) {
                 <span class="home-link purple-text">Read More →</span>
             </a>
         </div>
-
-        <section class="home-author" aria-label="Сведения об авторе">
-            <p class="home-author-name">Чашина Альмира Финарисовна</p>
-            <p class="home-author-role">Преподаватель английского языка</p>
-            <p class="home-author-role">Заведующий кафедрой иностранных языков</p>
-            <p class="home-author-college">ГБПОУ "Челябинский педагогический колледж №1"</p>
-        </section>
     `;
 
     app.append(section);

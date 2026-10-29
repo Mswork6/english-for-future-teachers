@@ -21,6 +21,7 @@
       <span>Interactive English Learning</span>
     </div>
   </a>
+  <button id="about-author-trigger" class="about-author-trigger" type="button" aria-haspopup="dialog" aria-controls="about-author-dialog">Об авторе</button>
 </header>
 
 <main id="app" class="container" tabindex="-1"></main>
@@ -36,5 +37,13 @@
         }
     });
 </script>
+<dialog id="about-author-dialog" class="about-author-dialog" aria-labelledby="about-author-title">
+  <button type="button" id="about-author-close" class="about-author-close" aria-label="Закрыть">×</button>
+  <h2 id="about-author-title">Об авторе</h2>
+  <p class="about-author-name">Чашина Альмира Финарисовна</p>
+  <p class="about-author-role">Преподаватель английского языка</p>
+  <p class="about-author-role">Заведующий кафедрой иностранных языков</p>
+  <p class="about-author-college">ГБПОУ "Челябинский педагогический колледж №1"</p>
+</dialog>
 </body>
 </html>
