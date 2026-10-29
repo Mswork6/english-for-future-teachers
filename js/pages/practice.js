@@ -147,12 +147,16 @@ export function practice(mod) {
 
     function go(n) {
         if (n < 0 || n >= questions.length) return;
-        setDrawer(false, false);
+
+        // Close the navigator only on mobile devices.
+        if (mobileQuery.matches) {
+            setDrawer(false, false);
+        }
+
         index = n;
         save();
         render();
-        // Once a mobile question is selected, reveal the question instead of
-        // leaving the viewport at the old navigator position.
+
         if (mobileQuery.matches) {
             window.scrollTo(0, 0);
             requestAnimationFrame(() => window.scrollTo(0, 0));
@@ -224,8 +228,13 @@ export function practice(mod) {
         if (drawerOpen && mobileQuery.matches && e.key === 'Tab') {
             const focusable = [...drawer.querySelectorAll('button:not(:disabled)')];
             const first = focusable[0], last = focusable[focusable.length - 1];
-            if (e.shiftKey && document.activeElement === first) {e.preventDefault(); last.focus();}
-            else if (!e.shiftKey && document.activeElement === last) {e.preventDefault(); first.focus();}
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
         }
     };
     window.__practiceKeyController?.abort();
