@@ -81,6 +81,7 @@ export function practice(mod) {
     document.body.append(drawerOverlay, modalOverlay, dialog);
     const cleanupModal = () => {
         drawerOverlay.remove();
+        drawer.remove();
         modalOverlay.remove();
         dialog.remove();
         document.body.classList.remove('practice-drawer-open');
@@ -94,6 +95,13 @@ export function practice(mod) {
     function setDrawer(open, restoreFocus = true) {
         const wasOpen = drawerOpen;
         drawerOpen = open;
+        // On phones, portal the navigator to <body> so its overlay cannot
+        // cover it through an ancestor stacking context.
+        if (open && mobileQuery.matches && drawer.parentElement !== document.body) {
+            document.body.append(drawer);
+        } else if ((!open || !mobileQuery.matches) && drawer.parentElement !== frame) {
+            frame.append(drawer);
+        }
         drawer.classList.toggle('is-open', open);
         frame.classList.toggle('navigator-open', open);
         drawerOverlay.classList.toggle('is-open', open);
