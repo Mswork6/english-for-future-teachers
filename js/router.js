@@ -65,7 +65,7 @@ export async function route() {
             app,
             el('h1', 'Something went wrong'),
             el('p', error.message),
-            link('Back to modules', '/modules', 'btn')
+            link('Back to Modules', '/modules', 'btn')
         );
         console.error('Navigation failed:', error);
     }

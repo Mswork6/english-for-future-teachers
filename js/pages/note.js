@@ -99,7 +99,7 @@ export function explanatoryNote() {
             }
         </style>
 
-        <a class="note-back" href="#/">← Back to main screen</a>
+        <a class="note-back" href="#/">← Back to home page</a>
 
         <header class="note-heading">
             <p class="note-eyebrow">Explanatory Note · Пояснительная записка</p>

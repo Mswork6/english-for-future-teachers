@@ -7,7 +7,7 @@ const ICONS = ['sunrise', 'presentation', 'flag-triangle-right'];
 export function modulesPage(modules) {
     const page = el('section', null, 'catalog-page');
 
-    page.append(link('← Back to main screen', '/', 'page-back'));
+    page.append(link('← Back to home page', '/', 'page-back'));
 
     const heading = el('div', null, 'catalog-heading');
     append(heading,

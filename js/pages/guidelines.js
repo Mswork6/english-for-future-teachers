@@ -28,7 +28,7 @@ export function teachingGuidelines() {
             .teaching-guidelines-page .guidelines-content td:first-child { font-weight: 600; width: 39%; }
             @media (max-width: 640px) { .teaching-guidelines-page { width: min(100% - 28px, 960px); margin: 24px auto 48px; } .teaching-guidelines-page .guidelines-content p, .teaching-guidelines-page .guidelines-content li { font-size: 15px; } .teaching-guidelines-page .guidelines-content h2 { font-size: 21px; } .teaching-guidelines-page .guidelines-content th, .teaching-guidelines-page .guidelines-content td { font-size: 14px; padding: 10px; } }
         </style>
-        <a class="guidelines-back" href="#/">← Back to main screen</a>
+        <a class="guidelines-back" href="#/">← Back to home page</a>
         <header class="guidelines-heading">
             <p class="guidelines-eyebrow">Teaching Guidelines · Методические рекомендации</p>
             <h1>Инструкция по использованию TeachLab: English for Future Teachers</h1>
@@ -53,7 +53,7 @@ export function teachingGuidelines() {
             <h3>2. Прослушайте и изучите фразу</h3>
             <p>Нажмите значок 🔊 рядом с выражением – браузер произнесёт его вслух. Нажмите Example («Пример»), чтобы раскрыть пример использования в обстановке урока; повторное нажатие скрывает его.</p>
             <h3>3. Вернитесь к модулю</h3>
-            <p>Используйте Back to module («Назад к модулю»). Перейдите в Practice, когда познакомитесь с нужными фразами.</p>
+            <p>Используйте Back to Module («Назад к модулю»). Перейдите в Practice, когда познакомитесь с нужными фразами.</p>
             <p>Пример: Good morning, everybody! – «Доброе утро всем!». Студент видит перевод, слушает произношение и узнаёт, когда преподаватель может использовать эту реплику.</p>
             <h2>3. Practice – выполнить упражнения</h2>
             <h3>1. Нажмите Practice («Практика»)</h3>
@@ -66,7 +66,7 @@ export function teachingGuidelines() {
             <h3>4. Изучите результаты</h3>
             <p>На отдельном экране появятся набранные баллы (максимум 35), процент выполнения и баллы по пяти типам упражнений. Нажмите Review Answers («Посмотреть ответы»), чтобы увидеть собственные и правильные ответы. В этом разделе также есть меню All questions для быстрого перехода к конкретному разбору.</p>
             <h3>5. Повторите при необходимости</h3>
-            <p>Try Again («Пройти снова») запускает новую попытку. Return to Module / Back to module («Вернуться к модулю») позволяет перейти к другим разделам.</p>
+            <p>Try Again («Пройти снова») запускает новую попытку. Return to Module / Back to Module («Вернуться к модулю») позволяет перейти к другим разделам.</p>
             <p>Преимущество повторного прохождения. В тренажёре предусмотрен банк заданий, который больше одного теста. При нажатии Try Again система формирует новый набор из 35 заданий. Благодаря этому студент может встретить упражнения, которых не было в первой попытке, закрепить материал на новых примерах и повторно проверить знания. Полное обновление всех вопросов при каждом прохождении не гарантируется: часть заданий может повториться.</p>
             <p>Как оценивается Practice: каждое задание даёт максимум 1 балл. В заданиях на соответствия и пропуски возможна часть балла за правильно выполненные элементы. В поиске ошибки 0,5 балла даётся за нахождение ошибки и ещё 0,5 – за исправление. При составлении предложения важен точный порядок слов. Результаты показываются после отправки всего теста, а не после каждого ответа.</p>
             <h2>4. Teaching Cases – попробовать себя в роли учителя</h2>

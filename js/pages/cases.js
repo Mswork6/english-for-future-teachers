@@ -26,7 +26,7 @@ export function cases(mod, caseId, subpage) {
     const heading = el('div', null, 'tc-catalog-heading');
     append(heading, el('h1', 'Teaching Cases'),
         el('p', 'Choose a classroom situation. Make decisions as the teacher and review your pedagogical feedback at the end.'));
-    append(page, link('← Back to module', `/module/${mod.id}`, 'page-back'), heading);
+    append(page, link('← Back to Module', `/module/${mod.id}`, 'page-back'), heading);
     const grid = el('div', null, 'tc-case-grid');
     const entries = CASES[mod.id] ?? Array.from({length: 3}, (_, i) => ({
         id: `case-0${i + 1}`, title: `Teaching Case ${i + 1}`,

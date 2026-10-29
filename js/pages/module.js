@@ -4,7 +4,7 @@ import {el, append, link} from '../utils/dom.js';
 
 const SECTIONS = [
     {
-        title: 'Theory',
+        title: 'Vocabulary',
         description: 'Learn useful English expressions for classroom communication.',
         route: 'theory',
         icon: 'book-open',
@@ -31,7 +31,7 @@ const SECTIONS = [
 
 export function modulePage(mod) {
     const page = el('section', null, 'catalog-page');
-    page.append(link('← Back to modules', '/modules', 'page-back'));
+    page.append(link('← Back to Modules', '/modules', 'page-back'));
 
     const heading = el('div', null, 'catalog-heading');
     append(heading,
