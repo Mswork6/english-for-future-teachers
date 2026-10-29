@@ -1,0 +1,473 @@
+{
+  "id": "finishing-the-lesson-on-time",
+  "title": "Finishing the Lesson on Time",
+  "difficulty": "Easy–Medium",
+  "scenario": "You are teaching English to a primary school class. The pupils have been working on exercises about daily routines. The lesson is almost over. Your task is to finish the activity, collect the pupils' work, explain the homework and organise the end of the lesson.",
+  "steps": [
+    {
+      "title": "Giving the Class More Time",
+      "opening": [
+        "It is 10:35 a.m. The lesson finishes at 10:40 a.m.",
+        "The pupils are completing the final exercise on their worksheets. Most have nearly finished, but a few are still writing.",
+        "You want to give everyone one more minute to finish their work."
+      ],
+      "openingMessages": [
+        {
+          "speaker": "maria",
+          "text": "Teacher, I need a little more time."
+        }
+      ],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "One minute to finish that activity.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "maria",
+              "text": "Okay, thank you!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils continue writing. Those who have finished check their answers quietly."
+            }
+          ],
+          "feedback": "The instruction gives a clear and specific time limit while allowing pupils to complete their work."
+        },
+        {
+          "id": "B",
+          "text": "It's almost time to stop.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "alex",
+              "text": "Can we finish this sentence?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Several pupils look at the clock. You nod and allow them to continue for another minute."
+            }
+          ],
+          "feedback": "The phrase appropriately signals that the activity is ending, but does not clearly tell pupils how much time remains."
+        },
+        {
+          "id": "C",
+          "text": "Stop now.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils stop writing."
+            },
+            {
+              "speaker": "maria",
+              "text": "But I haven't finished the last sentence."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You notice that several pupils are close to finishing. You allow them one more minute to complete their work."
+            }
+          ],
+          "feedback": "This instruction contradicts the immediate goal of giving pupils additional time."
+        }
+      ],
+      "transition": [
+        "One minute passes. The pupils put down their pens. Most worksheets appear complete.",
+        "You want to check whether everyone has finished before collecting their work."
+      ]
+    },
+    {
+      "title": "Checking Completion",
+      "opening": [
+        "It is 10:36 a.m. The pupils are looking through their answers.",
+        "You need to find out whether everyone has finished the exercise."
+      ],
+      "openingMessages": [],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Have you finished?",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "class",
+              "text": "Yes!"
+            },
+            {
+              "speaker": "anna",
+              "text": "I've finished too!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You look around the classroom and see that everyone has completed the exercise."
+            }
+          ],
+          "feedback": "Directly checks whether the pupils have completed the assigned work."
+        },
+        {
+          "id": "B",
+          "text": "Are you ready?",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "maria",
+              "text": "Ready for the next activity?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You gesture towards the completed worksheets. The pupils show you that they have finished."
+            }
+          ],
+          "feedback": "A reasonable classroom question, but it is less precise when the teacher specifically needs to check task completion."
+        },
+        {
+          "id": "C",
+          "text": "One more thing before you go.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils look towards you, expecting another announcement."
+            },
+            {
+              "speaker": "alex",
+              "text": "What is it, teacher?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You realise that you still need to check whether everyone has finished the exercise. You look at the worksheets and confirm that the pupils have completed their work."
+            }
+          ],
+          "feedback": "The phrase introduces another announcement instead of checking whether the pupils have completed their exercise."
+        }
+      ],
+      "transition": [
+        "You confirm that everyone has finished. The completed worksheets are on the pupils' desks.",
+        "There is still enough time to collect them before the lesson ends."
+      ]
+    },
+    {
+      "title": "Collecting the Work",
+      "opening": [
+        "The pupils have completed their exercises on separate worksheets.",
+        "You want them to gather the worksheets and hand them in."
+      ],
+      "openingMessages": [],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Collect your work, please.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils gather their worksheets."
+            },
+            {
+              "speaker": "maria",
+              "text": "Here are our worksheets, teacher."
+            },
+            {
+              "speaker": "narrator",
+              "text": "Maria brings the collected worksheets to your desk."
+            }
+          ],
+          "feedback": "The instruction fits the collection activity, although a more explicit phrase such as ‘Hand in your worksheets, please’ would be clearer in everyday classroom English. That alternative is outside the supplied vocabulary."
+        },
+        {
+          "id": "B",
+          "text": "Let's stop now.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "The pupils put down their pens and look towards you."
+            },
+            {
+              "speaker": "alex",
+              "text": "Should we hand in our worksheets?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You nod and gesture towards your desk. The pupils collect their work and hand it in."
+            }
+          ],
+          "feedback": "The phrase appropriately ends the activity but does not specifically tell pupils to submit their work."
+        },
+        {
+          "id": "C",
+          "text": "Pack up your books.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "Several pupils start putting their textbooks into their bags."
+            },
+            {
+              "speaker": "anna",
+              "text": "Do we need to hand in our worksheets?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point towards the worksheets. The pupils gather them and bring them to your desk."
+            }
+          ],
+          "feedback": "Packing books does not achieve the immediate goal of collecting completed worksheets."
+        }
+      ],
+      "transition": [
+        "All completed worksheets are now on your desk.",
+        "You turn towards the board. The homework assignment is written there: Exercise 4 in the workbook.",
+        "The pupils need to record the assignment before leaving."
+      ]
+    },
+    {
+      "title": "Explaining Homework",
+      "opening": [
+        "The worksheets have been collected. The next English lesson is on Monday.",
+        "The pupils need to complete exercise 4 in their workbooks at home. You want to clearly introduce this assignment."
+      ],
+      "openingMessages": [],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "This is your homework for tonight.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "narrator",
+              "text": "You point to exercise 4 on the board."
+            },
+            {
+              "speaker": "maria",
+              "text": "Exercise four?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You nod. The pupils write the assignment in their homework diaries."
+            }
+          ],
+          "feedback": "Clearly identifies the assignment as homework and directs pupils' attention to the information on the board."
+        },
+        {
+          "id": "B",
+          "text": "Remember your homework.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "alex",
+              "text": "Which exercise?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to exercise 4 on the board."
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils write down the correct assignment."
+            }
+          ],
+          "feedback": "Reminds pupils about homework but does not clearly introduce a new assignment."
+        },
+        {
+          "id": "C",
+          "text": "There is no homework tonight.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Really? No homework?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "Maria looks towards the board."
+            },
+            {
+              "speaker": "maria",
+              "text": "But exercise four is written there."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You notice the contradiction and clarify that exercise 4 is the homework assignment."
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils record the correct homework."
+            }
+          ],
+          "feedback": "The announcement directly contradicts the planned homework. The misunderstanding must be corrected before proceeding."
+        }
+      ],
+      "transition": [
+        "All pupils now have the correct homework assignment written in their diaries.",
+        "The class has completed the current chapter, but you plan to practise the same grammar topic again on Monday.",
+        "You want to explain what the pupils will do during the next lesson."
+      ]
+    },
+    {
+      "title": "Looking Ahead",
+      "opening": [
+        "There are about two minutes left before the bell.",
+        "The pupils have completed the chapter, but they need additional practice with its grammar rules.",
+        "You want to explain that the next lesson will include more practice with the same topic."
+      ],
+      "openingMessages": [],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "We'll do some more practice of this in the next class.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "maria",
+              "text": "More grammar practice?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You nod."
+            },
+            {
+              "speaker": "maria",
+              "text": "Okay!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils understand what they will study next time."
+            }
+          ],
+          "feedback": "Accurately describes the plan to practise the same topic again, without implying that the chapter or exercise is unfinished."
+        },
+        {
+          "id": "B",
+          "text": "We'll continue this chapter next Monday.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "alex",
+              "text": "But we finished the chapter, didn't we?"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You point to the grammar examples and explain that the class will practise the same material again."
+            },
+            {
+              "speaker": "alex",
+              "text": "Oh, more practice!"
+            }
+          ],
+          "feedback": "Suggests that the class will continue working on the chapter, which is broadly understandable but less precise because the chapter is already complete."
+        },
+        {
+          "id": "C",
+          "text": "We'll finish this exercise next lesson.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "anna",
+              "text": "Which exercise? We finished our worksheets."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You look towards the completed work on your desk."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You clarify that no unfinished exercise remains. The next lesson will include additional grammar practice."
+            }
+          ],
+          "feedback": "Incorrectly implies that an exercise remains unfinished, contradicting what the class has completed."
+        }
+      ],
+      "transition": [
+        "The pupils understand that Monday's lesson will include more grammar practice.",
+        "You finish the final announcements. The bell rings at 10:40 a.m.",
+        "The pupils pack their bags and prepare to leave. Other classes are still working in nearby classrooms."
+      ]
+    },
+    {
+      "title": "Leaving the Classroom",
+      "opening": [
+        "The pupils are standing near their desks with their schoolbags.",
+        "You want them to leave quietly so they do not disturb other classes."
+      ],
+      "openingMessages": [],
+      "question": "What would you say?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Be quiet as you leave. Other classes are still working.",
+          "points": 1,
+          "reaction": [
+            {
+              "speaker": "alex",
+              "text": "Okay, teacher!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils lower their voices and walk towards the door."
+            },
+            {
+              "speaker": "class",
+              "text": "Goodbye!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "You say goodbye as they leave."
+            }
+          ],
+          "feedback": "Directly addresses the need for a quiet and orderly departure."
+        },
+        {
+          "id": "B",
+          "text": "Goodbye, everyone.",
+          "points": 0.5,
+          "reaction": [
+            {
+              "speaker": "class",
+              "text": "Goodbye, teacher!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils begin leaving. A few start talking excitedly in the corridor."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You gesture for them to lower their voices."
+            }
+          ],
+          "feedback": "An appropriate farewell, but it does not communicate the specific expectation to leave quietly."
+        },
+        {
+          "id": "C",
+          "text": "The bell hasn't gone yet.",
+          "points": 0,
+          "reaction": [
+            {
+              "speaker": "maria",
+              "text": "But the bell just rang!"
+            },
+            {
+              "speaker": "narrator",
+              "text": "The pupils look towards the clock."
+            },
+            {
+              "speaker": "narrator",
+              "text": "You check the time and indicate that they may leave."
+            }
+          ],
+          "feedback": "Contradicts the actual situation. The bell has already rung, and the pupils are ready to leave."
+        }
+      ],
+      "transition": []
+    }
+  ],
+  "final": [
+    "The pupils leave the classroom. You check that the worksheets have been collected and the room is tidy.",
+    "The lesson has ended on time. The homework has been explained, and the class knows what to expect on Monday."
+  ]
+}

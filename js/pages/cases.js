@@ -4,50 +4,23 @@ import {renderSchoolDay, renderSchoolDayResults} from '../cases/school-day.js';
 
 const CASES = {
     'the-beginning-of-the-lesson': [
-        {
-            id: 'starting-the-school-day',
-            title: 'Starting the School Day',
-            description: 'Greet the pupils, check attendance and begin the lesson.',
-            difficulty: 'Easy',
-            steps: 4,
-            available: true
-        },
-        {
-            id: 'a-late-pupil',
-            title: 'A Late Pupil',
-            description: 'Calmly manage class conversations and a late arrival.',
-            difficulty: 'Medium',
-            steps: 4,
-            available: true
-        }
+        {id: 'starting-the-school-day', title: 'Starting the School Day', description: 'Greet the pupils, check attendance and begin the lesson.', difficulty: 'Easy', steps: 4, available: true},
+        {id: 'a-late-pupil', title: 'A Late Pupil', description: 'Calmly manage class conversations and a late arrival.', difficulty: 'Medium', steps: 4, available: true}
     ],
     'during-the-lesson': [
-        {
-            id: 'managing-a-classroom-activity',
-            title: 'Managing a Classroom Activity',
-            description: 'Organise reading, turns and classroom participation.',
-            difficulty: 'Easy–Medium',
-            steps: 6,
-            available: true
-        },
-        {
-            id: 'helping-a-pupil-learn',
-            title: 'Helping a Pupil Learn',
-            description: 'Support Anna with instructions, mistakes and feedback.',
-            difficulty: 'Medium',
-            steps: 6,
-            available: true
-        }
+        {id: 'managing-a-classroom-activity', title: 'Managing a Classroom Activity', description: 'Organise reading, turns and classroom participation.', difficulty: 'Easy–Medium', steps: 6, available: true},
+        {id: 'helping-a-pupil-learn', title: 'Helping a Pupil Learn', description: 'Support Anna with instructions, mistakes and feedback.', difficulty: 'Medium', steps: 6, available: true}
+    ],
+    'the-end-of-the-lesson': [
+        {id: 'finishing-the-lesson-on-time', title: 'Finishing the Lesson on Time', description: 'Collect work, explain homework and dismiss pupils quietly.', difficulty: 'Easy–Medium', steps: 6, available: true},
+        {id: 'running-out-of-time', title: 'Running Out of Time', description: 'Manage unfinished work, set homework and end the lesson calmly.', difficulty: 'Medium', steps: 6, available: true}
     ]
 };
 
 export function cases(mod, caseId, subpage) {
-    if (['starting-the-school-day', 'a-late-pupil', 'managing-a-classroom-activity', 'helping-a-pupil-learn'].includes(caseId) && subpage === 'results') {
-        return renderSchoolDayResults(mod, caseId);
-    }
-    if (['starting-the-school-day', 'a-late-pupil', 'managing-a-classroom-activity', 'helping-a-pupil-learn'].includes(caseId) && !subpage) {
-        return renderSchoolDay(mod, caseId);
-    }
+    const availableCase = CASES[mod.id]?.some(item => item.available && item.id === caseId);
+    if (availableCase && subpage === 'results') return renderSchoolDayResults(mod, caseId);
+    if (availableCase && !subpage) return renderSchoolDay(mod, caseId);
 
     crumbs(app, mod, 'Teaching Cases');
     const page = el('section', null, 'tc-catalog');
@@ -57,10 +30,8 @@ export function cases(mod, caseId, subpage) {
     append(page, link('← Back to module', `/module/${mod.id}`, 'tc-back'), heading);
     const grid = el('div', null, 'tc-case-grid');
     const entries = CASES[mod.id] ?? Array.from({length: 3}, (_, i) => ({
-        id: `case-0${i + 1}`,
-        title: `Teaching Case ${i + 1}`,
-        description: 'This scenario will be available soon.',
-        available: false
+        id: `case-0${i + 1}`, title: `Teaching Case ${i + 1}`,
+        description: 'This scenario will be available soon.', available: false
     }));
     entries.forEach((item, index) => {
         const card = el('article', null, `tc-case-card ${item.available ? '' : 'tc-case-disabled'}`);
@@ -70,9 +41,7 @@ export function cases(mod, caseId, subpage) {
             append(card, el('span', `${item.steps} steps · ${item.steps} points`, 'tc-case-meta'));
             const launch = el('button', 'Start case →', 'tc-send');
             launch.type = 'button';
-            launch.addEventListener('click', () => {
-                location.hash = `#/module/${mod.id}/cases/${item.id}`;
-            });
+            launch.addEventListener('click', () => { location.hash = `#/module/${mod.id}/cases/${item.id}`; });
             card.append(launch);
         } else append(card, el('span', 'Not available yet', 'tc-case-meta'));
         grid.append(card);
