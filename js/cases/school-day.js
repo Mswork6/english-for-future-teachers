@@ -33,6 +33,16 @@ export async function renderSchoolDay(mod, caseId, {onBack} = {}) {
     if (!root.isConnected) return;
     const $ = id => root.querySelector('#'+id);
     $('tc-case-title').textContent=caseData.title; root.querySelector('.tc-intro > div > p').title=caseData.scenario || ''; $('tc-case-meta').textContent=`${caseData.steps.length} steps · Maximum score: ${caseData.steps.length} points`; $('tc-difficulty').textContent=caseData.difficulty.toUpperCase();
+    // Shuffle original choice indexes once for each step in this attempt.
+    // Keep the original answer objects and IDs for reactions and grading.
+    const choiceOrders = caseData.steps.map(data => {
+        const order = data.choices.map((_, i) => i);
+        for (let i = order.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [order[i], order[j]] = [order[j], order[i]];
+        }
+        return order;
+    });
     let step=0, choice=null, responses=[], mode='question';
     const messages=$('tc-messages');
     function addMessage(speaker,text) {
@@ -58,12 +68,14 @@ export async function renderSchoolDay(mod, caseId, {onBack} = {}) {
         $('tc-bars').replaceChildren();
         caseData.steps.forEach((_,i)=>$('tc-bars').append(node('span',i<step?'tc-done':i===step?'tc-current':'')));
         $('tc-options').replaceChildren();
-        data.choices.forEach((option,i)=>{
+        choiceOrders[step].forEach((originalIndex, displayIndex)=>{
+            const option = data.choices[originalIndex];
+            const displayLetter = String.fromCharCode(65 + displayIndex);
             const button=el('button',null,'tc-option');button.type='button'; button.setAttribute('aria-pressed','false');
-            append(button,node('span','tc-letter',option.id),node('span','tc-option-text',option.text));
+            append(button,node('span','tc-letter',displayLetter),node('span','tc-option-text',option.text));
             button.addEventListener('click',()=>{
-                choice=i;
-                Array.from($('tc-options').children).forEach((item,j)=>{ item.classList.toggle('tc-selected',i===j);item.setAttribute('aria-pressed',String(i===j)); });
+                choice=originalIndex;
+                Array.from($('tc-options').children).forEach((item,j)=>{ item.classList.toggle('tc-selected',displayIndex===j);item.setAttribute('aria-pressed',String(displayIndex===j)); });
                 $('tc-send').disabled=false;
             });
             $('tc-options').append(button);
