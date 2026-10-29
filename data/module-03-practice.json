@@ -1,0 +1,1355 @@
+[
+  {
+    "id": "m03-matching-01",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Let's stop now.",
+        "An instruction to stop the current classroom activity now."
+      ],
+      [
+        "We've run out of time.",
+        "An explanation that no time remains."
+      ],
+      [
+        "Stop now.",
+        "A direct command to stop immediately."
+      ],
+      [
+        "We'll have to stop here.",
+        "A statement that the class must pause at the present point."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-02",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "The bell hasn't gone yet.",
+        "A reminder that the end-of-lesson bell has not sounded."
+      ],
+      [
+        "Just a moment, please.",
+        "A polite, neutral request to wait briefly."
+      ],
+      [
+        "Just a second.",
+        "A casual request to wait for one second."
+      ],
+      [
+        "One more thing before you go.",
+        "An introduction to a final announcement before pupils leave."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-03",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Remember your homework.",
+        "A reminder not to forget assigned homework."
+      ],
+      [
+        "Prepare the next chapter for Tuesday.",
+        "An instruction to prepare a chapter by Tuesday."
+      ],
+      [
+        "There is no homework tonight.",
+        "An announcement that no homework has been assigned for tonight."
+      ],
+      [
+        "We'll continue this chapter next Monday.",
+        "A plan to resume a chapter on Monday of the following week."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-04",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "We'll do some more practice of this in the next class.",
+        "A plan to practise the same material further at the next class."
+      ],
+      [
+        "Have a good holiday.",
+        "A wish for pupils to have a pleasant holiday."
+      ],
+      [
+        "Form a queue and wait for the bell.",
+        "An instruction both to line up and to wait for the bell."
+      ],
+      [
+        "Try not to make any noise as you leave.",
+        "A request to avoid making noise when leaving."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-05",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "It's time to finish now.",
+        "A statement that the lesson should be brought to an end."
+      ],
+      [
+        "There's the bell.",
+        "A remark drawing attention to the bell ringing."
+      ],
+      [
+        "Pack up your books.",
+        "An instruction to put textbooks away."
+      ],
+      [
+        "One minute to finish that activity.",
+        "A reminder that pupils have one minute to complete an activity."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-06",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "The lesson doesn't finish till ten past.",
+        "A statement that the lesson ends at ten minutes past the hour."
+      ],
+      [
+        "Just hold on a moment.",
+        "A request to wait a little longer, with emphasis on holding on."
+      ],
+      [
+        "Wait for it!",
+        "A cue to wait until a signal or anticipated moment."
+      ],
+      [
+        "We still have a couple of minutes left.",
+        "A statement that approximately two minutes remain."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-07",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Take a worksheet as you leave.",
+        "An instruction to take a printed task sheet on the way out."
+      ],
+      [
+        "This is your homework for tonight.",
+        "An announcement of the homework assigned for this evening."
+      ],
+      [
+        "We'll do the rest of this chapter next time.",
+        "A plan to cover the remaining part of a chapter at the next meeting."
+      ],
+      [
+        "We'll finish this exercise next lesson.",
+        "A promise to complete the current exercise during the next lesson."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-08",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "Goodbye, everyone.",
+        "A farewell addressed to everyone in the classroom."
+      ],
+      [
+        "Enjoy your vacation.",
+        "A wish that somebody enjoys their vacation."
+      ],
+      [
+        "Get into a queue.",
+        "A simple instruction to stand in a line."
+      ],
+      [
+        "Be quiet as you leave. Other classes are still working.",
+        "A reminder to leave quietly because neighbouring classes are studying."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-09",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "It's almost time to stop.",
+        "A warning that the working time is nearly over."
+      ],
+      [
+        "Have you finished?",
+        "A question asking whether pupils have completed their tasks."
+      ],
+      [
+        "Collect your work, please.",
+        "A polite request to hand in or gather completed work."
+      ],
+      [
+        "Are your desks tidy?",
+        "A question checking that the desks have been left neat."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-10",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "We seem to have finished early.",
+        "An observation that the planned work was completed earlier than expected."
+      ],
+      [
+        "Just a sec.",
+        "A very brief, informal request for a moment."
+      ],
+      [
+        "There are still three minutes to go.",
+        "A precise statement that three minutes remain."
+      ],
+      [
+        "Hang on a moment.",
+        "An informal request to wait momentarily."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-11",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "What do you have to do before the next lesson?",
+        "A question asking pupils to recall their tasks for the following lesson."
+      ],
+      [
+        "Finish this exercise.",
+        "An instruction to complete the current exercise."
+      ],
+      [
+        "We've run out of time, so we'll continue next lesson.",
+        "An explanation that the next lesson will continue because time is up."
+      ],
+      [
+        "The next class starts at 7 o'clock.",
+        "An announcement that the following class begins at seven."
+      ]
+    ]
+  },
+  {
+    "id": "m03-matching-12",
+    "type": "matching",
+    "category": "End-of-lesson expressions",
+    "title": "End-of-lesson expressions",
+    "prompt": "Match the English expressions with their English definitions.",
+    "pairs": [
+      [
+        "See you again next Thursday.",
+        "A farewell mentioning a meeting on the following Thursday."
+      ],
+      [
+        "See you tomorrow afternoon.",
+        "A farewell indicating a meeting tomorrow afternoon."
+      ],
+      [
+        "It's tidy up time.",
+        "An announcement that it is time to clear and organize the classroom."
+      ],
+      [
+        "It's almost time to stop.",
+        "A warning that the working time is nearly over."
+      ]
+    ]
+  },
+  {
+    "id": "m03-choice-01",
+    "type": "choice",
+    "prompt": "The teacher sees that the lesson-ending bell has just sounded and explicitly points it out to the class.",
+    "options": [
+      "The bell hasn't gone yet.",
+      "There's the bell.",
+      "We've run out of time.",
+      "Have a good holiday."
+    ],
+    "answer": 1,
+    "explanation": "“There’s the bell” draws attention to a bell that has just sounded. “The bell hasn’t gone yet” says the opposite; “We’ve run out of time” mentions time rather than the sound; the holiday wish is unrelated."
+  },
+  {
+    "id": "m03-choice-02",
+    "type": "choice",
+    "prompt": "The teacher wants to warn pupils that the lesson will end soon, but it is not time to stop yet.",
+    "options": [
+      "It's time to finish now.",
+      "Stop now.",
+      "It's almost time to stop.",
+      "We've run out of time."
+    ],
+    "answer": 2,
+    "explanation": "“It’s almost time to stop” signals that the ending is approaching. “It’s time to finish now” and “Stop now” require an immediate ending; “We’ve run out of time” says no time remains."
+  },
+  {
+    "id": "m03-choice-03",
+    "type": "choice",
+    "prompt": "The teacher needs to end the current activity immediately. Choose the short, direct command.",
+    "options": [
+      "Stop now.",
+      "One minute to finish that activity.",
+      "We seem to have finished early.",
+      "Have you finished?"
+    ],
+    "answer": 0,
+    "explanation": "“Stop now” is a direct instruction to end the activity immediately. The one-minute announcement allows more work; finishing early comments on timing; “Have you finished?” asks a question rather than giving a command."
+  },
+  {
+    "id": "m03-choice-04",
+    "type": "choice",
+    "prompt": "Pupils have finished writing. The teacher asks them to put their textbooks inside their bags.",
+    "options": [
+      "Pack up your books.",
+      "Collect your work, please.",
+      "Take a worksheet as you leave.",
+      "Are your desks tidy?"
+    ],
+    "answer": 0,
+    "explanation": "“Pack up your books” asks pupils to put books away. Collecting work involves submitted papers; taking a worksheet means receiving a handout; checking desk tidiness does not instruct pupils to pack books."
+  },
+  {
+    "id": "m03-choice-05",
+    "type": "choice",
+    "prompt": "Before collecting notebooks, the teacher asks whether pupils have completed the assigned work.",
+    "options": [
+      "Collect your work, please.",
+      "Have you finished?",
+      "Are your desks tidy?",
+      "Prepare the next chapter for Tuesday."
+    ],
+    "answer": 1,
+    "explanation": "“Have you finished?” checks task completion. “Collect your work” asks for papers, “Are your desks tidy?” checks cleanliness, and preparing the next chapter assigns future work."
+  },
+  {
+    "id": "m03-choice-06",
+    "type": "choice",
+    "prompt": "The pupils should submit completed papers to the teacher, rather than put away their books.",
+    "options": [
+      "Pack up your books.",
+      "Take a worksheet as you leave.",
+      "Collect your work, please.",
+      "Are your desks tidy?"
+    ],
+    "answer": 2,
+    "explanation": "“Collect your work, please” asks for completed work to be handed in or gathered. Packing books, taking a worksheet, and checking desk tidiness are different classroom actions."
+  },
+  {
+    "id": "m03-choice-07",
+    "type": "choice",
+    "prompt": "Only one minute remains for the task. The teacher announces exactly that amount of time.",
+    "options": [
+      "It's almost time to stop.",
+      "We still have a couple of minutes left.",
+      "One minute to finish that activity.",
+      "There are still three minutes to go."
+    ],
+    "answer": 2,
+    "explanation": "“One minute to finish that activity” gives exactly one minute. “A couple of minutes” suggests approximately two; “three minutes” specifies three; “almost time” gives no exact amount."
+  },
+  {
+    "id": "m03-choice-08",
+    "type": "choice",
+    "prompt": "Some pupils want to leave, but the bell has not sounded yet. The teacher explains why they must stay.",
+    "options": [
+      "We seem to have finished early.",
+      "There's the bell.",
+      "The bell hasn't gone yet.",
+      "There are still three minutes to go."
+    ],
+    "answer": 2,
+    "explanation": "“The bell hasn’t gone yet” explicitly explains that dismissal is premature. “There’s the bell” states the opposite; finishing early describes progress; three minutes remaining gives a duration, not the stated reason."
+  },
+  {
+    "id": "m03-choice-09",
+    "type": "choice",
+    "prompt": "The lesson ends at 10:10, not at 10:00. The teacher names the exact ending time.",
+    "options": [
+      "We'll finish this exercise next lesson.",
+      "There are still three minutes to go.",
+      "We still have a couple of minutes left.",
+      "The lesson doesn't finish till ten past."
+    ],
+    "answer": 3,
+    "explanation": "“The lesson doesn’t finish till ten past” names the ending as ten minutes past the hour. The alternatives refer to a later exercise or vague amounts of time, not that scheduled end."
+  },
+  {
+    "id": "m03-choice-10",
+    "type": "choice",
+    "prompt": "The class completed all planned activities ahead of schedule. The teacher comments on this unexpectedly early finish.",
+    "options": [
+      "We've run out of time, so we'll continue next lesson.",
+      "We seem to have finished early.",
+      "It's time to finish now.",
+      "We've run out of time."
+    ],
+    "answer": 1,
+    "explanation": "“We seem to have finished early” describes unexpectedly completing the planned work ahead of schedule. The other options describe insufficient time or an immediate ending, not early completion."
+  },
+  {
+    "id": "m03-choice-11",
+    "type": "choice",
+    "prompt": "The teacher has a final announcement to make before dismissing pupils, rather than asking them merely to wait.",
+    "options": [
+      "Just a moment, please.",
+      "Hang on a moment.",
+      "Just a sec.",
+      "One more thing before you go."
+    ],
+    "answer": 3,
+    "explanation": "“One more thing before you go” introduces a final announcement. “Just a moment”, “Hang on a moment”, and “Just a sec” merely ask pupils to wait and do not announce extra information."
+  },
+  {
+    "id": "m03-choice-12",
+    "type": "choice",
+    "prompt": "The teacher wants to remind pupils not to forget the homework already assigned.",
+    "options": [
+      "This is your homework for tonight.",
+      "Remember your homework.",
+      "There is no homework tonight.",
+      "What do you have to do before the next lesson?"
+    ],
+    "answer": 1,
+    "explanation": "“Remember your homework” reminds pupils about work already set. “This is your homework” introduces an assignment; “There is no homework” cancels it; the question asks pupils to recall the task themselves."
+  },
+  {
+    "id": "m03-choice-13",
+    "type": "choice",
+    "prompt": "The teacher wants pupils to pick up a printed worksheet on their way out.",
+    "options": [
+      "Prepare the next chapter for Tuesday.",
+      "Collect your work, please.",
+      "Finish this exercise.",
+      "Take a worksheet as you leave."
+    ],
+    "answer": 3,
+    "explanation": "“Take a worksheet as you leave” instructs pupils to pick up a handout on departure. The alternatives concern preparing a chapter, submitting completed work, or finishing an exercise."
+  },
+  {
+    "id": "m03-choice-14",
+    "type": "choice",
+    "prompt": "To check whether pupils remember their assignment for the next lesson, the teacher asks them to say what they must do.",
+    "options": [
+      "Prepare the next chapter for Tuesday.",
+      "Remember your homework.",
+      "This is your homework for tonight.",
+      "What do you have to do before the next lesson?"
+    ],
+    "answer": 3,
+    "explanation": "“What do you have to do before the next lesson?” asks pupils to state their assignment. The alternatives either give an instruction or announce/remind pupils about homework without checking their recall."
+  },
+  {
+    "id": "m03-choice-15",
+    "type": "choice",
+    "prompt": "The teacher assigns a specific reading preparation deadline: the new chapter must be ready by Tuesday.",
+    "options": [
+      "Prepare the next chapter for Tuesday.",
+      "The next class starts at 7 o'clock.",
+      "Finish this exercise.",
+      "This is your homework for tonight."
+    ],
+    "answer": 0,
+    "explanation": "“Prepare the next chapter for Tuesday” sets both the required preparation and its Tuesday deadline. The other options describe class time, a generic exercise, or homework without the specified chapter and deadline."
+  },
+  {
+    "id": "m03-choice-16",
+    "type": "choice",
+    "prompt": "The teacher explicitly tells the class that they have no assignment to complete this evening.",
+    "options": [
+      "This is your homework for tonight.",
+      "Finish this exercise.",
+      "There is no homework tonight.",
+      "Remember your homework."
+    ],
+    "answer": 2,
+    "explanation": "“There is no homework tonight” explicitly says no task is assigned for the evening. The other options assign, mention, or remind pupils of work instead."
+  },
+  {
+    "id": "m03-choice-17",
+    "type": "choice",
+    "prompt": "The teacher plans to finish the same unfinished exercise during the next lesson, not the whole chapter.",
+    "options": [
+      "We'll do some more practice of this in the next class.",
+      "We'll do the rest of this chapter next time.",
+      "We'll continue this chapter next Monday.",
+      "We'll finish this exercise next lesson."
+    ],
+    "answer": 3,
+    "explanation": "“We’ll finish this exercise next lesson” promises to complete the unfinished exercise. The other options refer to practice in general or continuing a chapter rather than finishing this particular exercise."
+  },
+  {
+    "id": "m03-choice-18",
+    "type": "choice",
+    "prompt": "The teacher announces that the following class starts at 7:00.",
+    "options": [
+      "We'll finish this exercise next lesson.",
+      "The next class starts at 7 o'clock.",
+      "See you tomorrow afternoon.",
+      "We'll continue this chapter next Monday."
+    ],
+    "answer": 1,
+    "explanation": "“The next class starts at 7 o’clock” states the exact starting time. The others refer to finishing an exercise, a different time of day, or continuing a chapter."
+  },
+  {
+    "id": "m03-choice-19",
+    "type": "choice",
+    "prompt": "After this lesson, pupils will practise the same material more in the following class.",
+    "options": [
+      "We'll do some more practice of this in the next class.",
+      "We'll do the rest of this chapter next time.",
+      "We've run out of time, so we'll continue next lesson.",
+      "We'll finish this exercise next lesson."
+    ],
+    "answer": 0,
+    "explanation": "“We’ll do some more practice of this in the next class” promises additional practice on the same material. The others concern a chapter, general continuation after running out of time, or completing one exercise."
+  },
+  {
+    "id": "m03-choice-20",
+    "type": "choice",
+    "prompt": "The teacher says goodbye and specifies that they will meet again on Thursday next week.",
+    "options": [
+      "See you tomorrow afternoon.",
+      "See you again next Thursday.",
+      "Goodbye, everyone.",
+      "Have a good holiday."
+    ],
+    "answer": 1,
+    "explanation": "“See you again next Thursday” names the next meeting as Thursday of the following week. “Tomorrow afternoon” gives a different time; “Goodbye, everyone” has no date; the holiday wish has a different function."
+  },
+  {
+    "id": "m03-choice-21",
+    "type": "choice",
+    "prompt": "Pupils must first stand in a line and then wait there until the bell rings.",
+    "options": [
+      "Get into a queue.",
+      "Try not to make any noise as you leave.",
+      "Form a queue and wait for the bell.",
+      "It's tidy up time."
+    ],
+    "answer": 2,
+    "explanation": "“Form a queue and wait for the bell” includes both lining up and waiting until the bell. “Get into a queue” includes only the first action; the other options concern quiet departure or tidying up."
+  },
+  {
+    "id": "m03-fill-01",
+    "type": "fill",
+    "prompt": "Complete the sentence: Let's stop ___.",
+    "answers": [
+      "now"
+    ]
+  },
+  {
+    "id": "m03-fill-02",
+    "type": "fill",
+    "prompt": "Complete the sentence: It's ___ time to stop.",
+    "answers": [
+      "almost"
+    ]
+  },
+  {
+    "id": "m03-fill-03",
+    "type": "fill",
+    "prompt": "Complete the sentence: We've run out of ___.",
+    "answers": [
+      "time"
+    ]
+  },
+  {
+    "id": "m03-fill-04",
+    "type": "fill",
+    "prompt": "Complete the sentence: We'll have to stop ___.",
+    "answers": [
+      "here"
+    ]
+  },
+  {
+    "id": "m03-fill-05",
+    "type": "fill",
+    "prompt": "Complete the sentence: Have you ___?",
+    "answers": [
+      "finished"
+    ]
+  },
+  {
+    "id": "m03-fill-06",
+    "type": "fill",
+    "prompt": "Complete the sentence: We've run out of time, so we'll ___ next lesson.",
+    "answers": [
+      "continue"
+    ]
+  },
+  {
+    "id": "m03-fill-07",
+    "type": "fill",
+    "prompt": "Complete the sentence: Collect your ___ please.",
+    "answers": [
+      "work"
+    ]
+  },
+  {
+    "id": "m03-fill-08",
+    "type": "fill",
+    "prompt": "Complete the sentence: Be quiet as you ___.",
+    "answers": [
+      "leave"
+    ]
+  },
+  {
+    "id": "m03-fill-09",
+    "type": "fill",
+    "prompt": "Complete the sentence: There is ___ homework tonight.",
+    "answers": [
+      "no"
+    ]
+  },
+  {
+    "id": "m03-fill-10",
+    "type": "fill",
+    "prompt": "Complete the sentence: Are your desks ___?",
+    "answers": [
+      "tidy"
+    ]
+  },
+  {
+    "id": "m03-fill-11",
+    "type": "fill",
+    "prompt": "Complete the sentence: The bell hasn't ___ yet.",
+    "answers": [
+      "gone"
+    ]
+  },
+  {
+    "id": "m03-fill-12",
+    "type": "fill",
+    "prompt": "Complete the sentence: We'll do some more ___ of this in the next class.",
+    "answers": [
+      "practice"
+    ]
+  },
+  {
+    "id": "m03-fill-13",
+    "type": "fill",
+    "prompt": "Complete the sentence: We seem to have finished ___.",
+    "answers": [
+      "early"
+    ]
+  },
+  {
+    "id": "m03-fill-14",
+    "type": "fill",
+    "prompt": "Complete the sentence: Just a ___, please.",
+    "answers": [
+      "moment"
+    ]
+  },
+  {
+    "id": "m03-fill-15",
+    "type": "fill",
+    "prompt": "Complete the sentence: See you tomorrow ___.",
+    "answers": [
+      "afternoon"
+    ]
+  },
+  {
+    "id": "m03-fill-16",
+    "type": "fill",
+    "prompt": "Complete the sentence: One more ___ before you go.",
+    "answers": [
+      "thing"
+    ]
+  },
+  {
+    "id": "m03-fill-17",
+    "type": "fill",
+    "prompt": "Complete the sentence: We still have a couple of ___ left.",
+    "answers": [
+      "minutes"
+    ]
+  },
+  {
+    "id": "m03-fill-18",
+    "type": "fill",
+    "prompt": "Complete the sentence: Try not to make any ___ as you leave.",
+    "answers": [
+      "noise"
+    ]
+  },
+  {
+    "id": "m03-fill-19",
+    "type": "fill",
+    "prompt": "Complete the sentence: Take a ___ as you leave.",
+    "answers": [
+      "worksheet"
+    ]
+  },
+  {
+    "id": "m03-fill-20",
+    "type": "fill",
+    "prompt": "Complete the sentence: Prepare the next ___ for Tuesday.",
+    "answers": [
+      "chapter"
+    ]
+  },
+  {
+    "id": "m03-fill-21",
+    "type": "fill",
+    "prompt": "Complete the sentence: This is your ___ for tonight.",
+    "answers": [
+      "homework"
+    ]
+  },
+  {
+    "id": "m03-error-01",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "It's time to finishing now.",
+    "errorIndex": 3,
+    "correctWord": "finish",
+    "explanation": "Replace “finishing” with the base form “finish” after “to”."
+  },
+  {
+    "id": "m03-error-02",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "We've run out of times.",
+    "errorIndex": 4,
+    "correctWord": "time",
+    "explanation": "“Time” is uncountable in this expression."
+  },
+  {
+    "id": "m03-error-03",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "Have you finish?",
+    "errorIndex": 2,
+    "correctWord": "finished",
+    "explanation": "Present perfect needs past participle."
+  },
+  {
+    "id": "m03-error-04",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "Pack on your books.",
+    "errorIndex": 1,
+    "correctWord": "up",
+    "explanation": "The phrasal verb is “pack up”."
+  },
+  {
+    "id": "m03-error-05",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "Collect your works, please.",
+    "errorIndex": 2,
+    "correctWord": "work",
+    "explanation": "“Work” refers to schoolwork as an uncountable noun."
+  },
+  {
+    "id": "m03-error-06",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "Are your desk tidy?",
+    "errorIndex": 2,
+    "correctWord": "desks",
+    "explanation": "Plural possessive context requires “desks”."
+  },
+  {
+    "id": "m03-error-07",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "The bell hasn't went yet.",
+    "errorIndex": 3,
+    "correctWord": "gone",
+    "explanation": "Present perfect requires “gone”."
+  },
+  {
+    "id": "m03-error-08",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "The lesson doesn't finishes till ten past.",
+    "errorIndex": 3,
+    "correctWord": "finish",
+    "explanation": "After “doesn’t”, use the base verb."
+  },
+  {
+    "id": "m03-error-09",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "We seem to has finished early.",
+    "errorIndex": 3,
+    "correctWord": "have",
+    "explanation": "After “to”, use “have”."
+  },
+  {
+    "id": "m03-error-10",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "There is still three minutes to go.",
+    "errorIndex": 1,
+    "correctWord": "are",
+    "explanation": "The plural noun requires “are”."
+  },
+  {
+    "id": "m03-error-11",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "We still has a couple of minutes left.",
+    "errorIndex": 2,
+    "correctWord": "have",
+    "explanation": "The subject “we” requires “have”."
+  },
+  {
+    "id": "m03-error-12",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "Remember you homework.",
+    "errorIndex": 1,
+    "correctWord": "your",
+    "explanation": "Use the possessive determiner."
+  },
+  {
+    "id": "m03-error-13",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "Take a worksheet as you leaves.",
+    "errorIndex": 5,
+    "correctWord": "leave",
+    "explanation": "The subject “you” takes “leave”."
+  },
+  {
+    "id": "m03-error-14",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "What does you have to do before the next lesson?",
+    "errorIndex": 1,
+    "correctWord": "do",
+    "explanation": "Replace “does” with “do” to agree with the subject “you”."
+  },
+  {
+    "id": "m03-error-15",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "Prepare those next chapter for Tuesday.",
+    "errorIndex": 1,
+    "correctWord": "the",
+    "explanation": "Replace “those” with “the” before the singular noun “chapter”."
+  },
+  {
+    "id": "m03-error-16",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "There are no homework tonight.",
+    "errorIndex": 1,
+    "correctWord": "is",
+    "explanation": "“Homework” is uncountable and takes “is”."
+  },
+  {
+    "id": "m03-error-17",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "We'll continue this chapter next Mondays.",
+    "errorIndex": 5,
+    "correctWord": "Monday",
+    "explanation": "Use singular day name after “next”."
+  },
+  {
+    "id": "m03-error-18",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "We'll finish this exercise next lessons.",
+    "errorIndex": 5,
+    "correctWord": "lesson",
+    "explanation": "Use singular “lesson” with “next”."
+  },
+  {
+    "id": "m03-error-19",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "The next class start at 7 o'clock.",
+    "errorIndex": 3,
+    "correctWord": "starts",
+    "explanation": "Third-person singular present needs -s."
+  },
+  {
+    "id": "m03-error-20",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "See you tomorrow afternoons.",
+    "errorIndex": 3,
+    "correctWord": "afternoon",
+    "explanation": "Time expression is singular."
+  },
+  {
+    "id": "m03-error-21",
+    "type": "error",
+    "prompt": "Find and correct the incorrect word.",
+    "sentence": "Other classes is still working.",
+    "errorIndex": 2,
+    "correctWord": "are",
+    "explanation": "Plural subject needs “are”."
+  },
+  {
+    "id": "m03-sentence-01",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "now.",
+      "stop",
+      "Let's"
+    ],
+    "answer": [
+      "Let's",
+      "stop",
+      "now."
+    ]
+  },
+  {
+    "id": "m03-sentence-02",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "to",
+      "It's",
+      "stop.",
+      "almost",
+      "time"
+    ],
+    "answer": [
+      "It's",
+      "almost",
+      "time",
+      "to",
+      "stop."
+    ]
+  },
+  {
+    "id": "m03-sentence-03",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "run",
+      "out",
+      "We've",
+      "time.",
+      "of"
+    ],
+    "answer": [
+      "We've",
+      "run",
+      "out",
+      "of",
+      "time."
+    ]
+  },
+  {
+    "id": "m03-sentence-04",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "Have",
+      "finished?",
+      "you"
+    ],
+    "answer": [
+      "Have",
+      "you",
+      "finished?"
+    ]
+  },
+  {
+    "id": "m03-sentence-05",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "Pack",
+      "your",
+      "books.",
+      "up"
+    ],
+    "answer": [
+      "Pack",
+      "up",
+      "your",
+      "books."
+    ]
+  },
+  {
+    "id": "m03-sentence-06",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "please.",
+      "your",
+      "work,",
+      "Collect"
+    ],
+    "answer": [
+      "Collect",
+      "your",
+      "work,",
+      "please."
+    ]
+  },
+  {
+    "id": "m03-sentence-07",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "to",
+      "activity.",
+      "that",
+      "One",
+      "minute",
+      "finish"
+    ],
+    "answer": [
+      "One",
+      "minute",
+      "to",
+      "finish",
+      "that",
+      "activity."
+    ]
+  },
+  {
+    "id": "m03-sentence-08",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "tidy?",
+      "desks",
+      "your",
+      "Are"
+    ],
+    "answer": [
+      "Are",
+      "your",
+      "desks",
+      "tidy?"
+    ]
+  },
+  {
+    "id": "m03-sentence-09",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "gone",
+      "yet.",
+      "The",
+      "bell",
+      "hasn't"
+    ],
+    "answer": [
+      "The",
+      "bell",
+      "hasn't",
+      "gone",
+      "yet."
+    ]
+  },
+  {
+    "id": "m03-sentence-10",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "seem",
+      "to",
+      "early.",
+      "have",
+      "finished",
+      "We"
+    ],
+    "answer": [
+      "We",
+      "seem",
+      "to",
+      "have",
+      "finished",
+      "early."
+    ]
+  },
+  {
+    "id": "m03-sentence-11",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "three",
+      "to",
+      "are",
+      "go.",
+      "There",
+      "minutes",
+      "still"
+    ],
+    "answer": [
+      "There",
+      "are",
+      "still",
+      "three",
+      "minutes",
+      "to",
+      "go."
+    ]
+  },
+  {
+    "id": "m03-sentence-12",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "more",
+      "thing",
+      "you",
+      "go.",
+      "before",
+      "One"
+    ],
+    "answer": [
+      "One",
+      "more",
+      "thing",
+      "before",
+      "you",
+      "go."
+    ]
+  },
+  {
+    "id": "m03-sentence-13",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "your",
+      "homework.",
+      "Remember"
+    ],
+    "answer": [
+      "Remember",
+      "your",
+      "homework."
+    ]
+  },
+  {
+    "id": "m03-sentence-14",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "Take",
+      "a",
+      "leave.",
+      "worksheet",
+      "you",
+      "as"
+    ],
+    "answer": [
+      "Take",
+      "a",
+      "worksheet",
+      "as",
+      "you",
+      "leave."
+    ]
+  },
+  {
+    "id": "m03-sentence-15",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "next",
+      "you",
+      "lesson?",
+      "do",
+      "have",
+      "do",
+      "before",
+      "to",
+      "the",
+      "What"
+    ],
+    "answer": [
+      "What",
+      "do",
+      "you",
+      "have",
+      "to",
+      "do",
+      "before",
+      "the",
+      "next",
+      "lesson?"
+    ]
+  },
+  {
+    "id": "m03-sentence-16",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "homework",
+      "This",
+      "tonight.",
+      "is",
+      "for",
+      "your"
+    ],
+    "answer": [
+      "This",
+      "is",
+      "your",
+      "homework",
+      "for",
+      "tonight."
+    ]
+  },
+  {
+    "id": "m03-sentence-17",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "There",
+      "tonight.",
+      "no",
+      "is",
+      "homework"
+    ],
+    "answer": [
+      "There",
+      "is",
+      "no",
+      "homework",
+      "tonight."
+    ]
+  },
+  {
+    "id": "m03-sentence-18",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "continue",
+      "We've",
+      "we'll",
+      "of",
+      "out",
+      "next",
+      "time,",
+      "lesson.",
+      "so",
+      "run"
+    ],
+    "answer": [
+      "We've",
+      "run",
+      "out",
+      "of",
+      "time,",
+      "so",
+      "we'll",
+      "continue",
+      "next",
+      "lesson."
+    ]
+  },
+  {
+    "id": "m03-sentence-19",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "lesson.",
+      "next",
+      "this",
+      "We'll",
+      "exercise",
+      "finish"
+    ],
+    "answer": [
+      "We'll",
+      "finish",
+      "this",
+      "exercise",
+      "next",
+      "lesson."
+    ]
+  },
+  {
+    "id": "m03-sentence-20",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "your",
+      "vacation.",
+      "Enjoy"
+    ],
+    "answer": [
+      "Enjoy",
+      "your",
+      "vacation."
+    ]
+  },
+  {
+    "id": "m03-sentence-21",
+    "type": "sentence",
+    "prompt": "Arrange the words to make a correct classroom expression.",
+    "words": [
+      "quiet",
+      "still",
+      "Other",
+      "leave.",
+      "classes",
+      "Be",
+      "working.",
+      "as",
+      "are",
+      "you"
+    ],
+    "answer": [
+      "Be",
+      "quiet",
+      "as",
+      "you",
+      "leave.",
+      "Other",
+      "classes",
+      "are",
+      "still",
+      "working."
+    ]
+  }
+]

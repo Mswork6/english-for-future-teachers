@@ -10,8 +10,6 @@ export function shuffleQuestions(items, random = Math.random) {
     return values;
 }
 
-// Each module may provide its own Matching Pairs quotas via modules.json.
-// Without quotas, matching questions are sampled from the full matching pool.
 function validateQuotas(quotas, perType) {
     if (quotas == null) return null;
     if (typeof quotas !== 'object' || Array.isArray(quotas) || !Object.keys(quotas).length) {
@@ -41,6 +39,30 @@ function sampleWithPriority(pool, count, used, random) {
     return [...fresh, ...repeats].slice(0, count);
 }
 
+// Choose as many unused sets as possible while ensuring no phrase appears twice
+// in the same practice attempt. Works with banks containing overlapping sets.
+function selectNonOverlappingMatching(pool, count, used, random) {
+    const candidates = [
+        ...shuffleQuestions(pool.filter(q => !used.has(q.id)), random),
+        ...shuffleQuestions(pool.filter(q => used.has(q.id)), random)
+    ];
+    function search(selected, occupied, remaining) {
+        if (selected.length === count) return selected;
+        if (selected.length + remaining.length < count) return null;
+        for (let i = 0; i < remaining.length; i++) {
+            const q = remaining[i];
+            const phrases = q.pairs.map(pair => pair[0]);
+            if (phrases.some(p => occupied.has(p))) continue;
+            const next = search([...selected, q], new Set([...occupied, ...phrases]), remaining.slice(i + 1));
+            if (next) return next;
+        }
+        return null;
+    }
+    const result = search([], new Set(), candidates);
+    if (!result) throw new Error(`Cannot select ${count} non-overlapping matching tasks`);
+    return result;
+}
+
 export function selectPracticeQuestions(bank, {perType = 7, previousIds = [], random = Math.random, matchingQuotas = null} = {}) {
     const used = new Set(previousIds);
     const picked = [];
@@ -59,7 +81,7 @@ export function selectPracticeQuestions(bank, {perType = 7, previousIds = [], ra
                 selection = shuffleQuestions(selection, random);
             } else {
                 if (pool.length < perType) throw new Error(`Not enough matching questions: ${pool.length} available, ${perType} required`);
-                selection = sampleWithPriority(pool, perType, used, random);
+                selection = selectNonOverlappingMatching(pool, perType, used, random);
             }
             assertUniqueMatchingExpressions(selection);
             picked.push(...selection);

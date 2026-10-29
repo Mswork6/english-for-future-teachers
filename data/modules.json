@@ -19,8 +19,9 @@
     "practiceFile": "data/module-02-practice.json"
   },
   {
-    "id": "teaching-practice",
-    "title": "Teaching Practice",
-    "description": "Language for teaching activities and feedback."
+    "id": "the-end-of-the-lesson",
+    "title": "The End of the Lesson",
+    "description": "Finishing activities, assigning homework, planning the next lesson and saying goodbye.",
+    "practiceFile": "data/module-03-practice.json"
   }
 ]
