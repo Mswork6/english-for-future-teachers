@@ -1,0 +1,34 @@
+/* Teaching Cases: keep the classroom chat the same size at every step.
+   Messages scroll inside the panel instead of changing the page layout. */
+
+.tc-chat {
+    height: 500px;
+    min-height: 0;
+}
+
+.tc-chat-head,
+.tc-compose {
+    flex: 0 0 auto;
+}
+
+.tc-messages {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+/* Narrow screens retain a stable, slightly shorter conversation area. */
+@media (max-width: 880px) {
+    .tc-chat {
+        height: 420px;
+        min-height: 0;
+    }
+}
+
+@media (max-width: 570px) {
+    .tc-chat {
+        height: 380px;
+    }
+}
