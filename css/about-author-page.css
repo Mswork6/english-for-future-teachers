@@ -1,0 +1,31 @@
+/* About the author: standalone page */
+.author-page {max-width:1250px;margin:0 auto}
+.author-page-title {font-size:clamp(32px,4vw,52px);margin:30px 0 32px;color:#1d2a44}
+.author-profile {
+    display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.75fr);
+    align-items:center;gap:clamp(25px,5vw,80px);
+    padding:clamp(22px,4vw,52px);
+    background:#fff;border:1px solid var(--color-border);border-radius:22px;
+    box-shadow:0 8px 25px #1e345a0a
+}
+.author-profile-text h2 {font-size:clamp(23px,2.4vw,32px);line-height:1.25;margin:0 0 22px;color:#1d2a44}
+.author-position {font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#526789;margin:8px 0}
+.author-organization {margin:30px 0 0;padding-top:24px;border-top:1px solid #dce5f3;color:#30496f;font-weight:650;line-height:1.55}
+.author-photo {width:100%;aspect-ratio:4/5;max-width:350px;justify-self:end;border-radius:18px;overflow:hidden;background:#edf2fb;display:grid;place-items:center;border:1px solid #dce5f3}
+.author-photo img {width:100%;height:100%;object-fit:cover}
+.author-photo-placeholder {color:#8292ad;font-weight:650;text-align:center;padding:20px}
+.author-photo [hidden] {display:none!important}
+.site-about-link {display:none;margin-left:auto;padding:11px 18px;border:1px solid #dce5f3;border-radius:12px;background:#eaf0ff;color:#285fc0;font-size:15px;font-weight:700;text-decoration:none}
+body.home-view .site-about-link {display:inline-flex}
+.site-about-link:hover {background:#dfe9ff}
+.site-about-link:focus-visible {outline:3px solid #506dff;outline-offset:3px}
+@media(max-width:740px) {
+ .author-profile {grid-template-columns:1fr;gap:28px}
+ .author-photo {justify-self:center;max-width:300px}
+ .author-page-title {margin:24px 0}
+}
+@media(max-width:480px) {
+ .site-about-link {font-size:12px;padding:9px 10px}
+ .author-profile {padding:22px 18px}
+ .author-profile-text h2 {margin-bottom:16px}
+}

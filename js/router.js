@@ -3,6 +3,7 @@ import {load, DataLoadError} from './data-service.js';
 import {loadModule} from './module-loader.js';
 import {el, append, link, header, notReady} from './utils/dom.js';
 import {home} from './pages/home.js';
+import {aboutAuthor} from './pages/about-author.js';
 import {explanatoryNote} from './pages/note.js';
 import {teachingGuidelines} from './pages/guidelines.js';
 import {modulesPage} from './pages/modules.js';
@@ -31,6 +32,7 @@ export async function route() {
         document.body.classList.toggle('home-view', parts.length === 0);
 
         if (!parts.length) return home(modules);
+        if (parts[0] === 'about-author') return aboutAuthor();
         if (parts[0] === 'modules') return modulesPage(modules);
         if (parts[0] === 'note') return explanatoryNote();
         if (parts[0] === 'guidelines') return teachingGuidelines();
