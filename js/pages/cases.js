@@ -1,5 +1,5 @@
 import {app} from '../state.js';
-import {crumbs, el, append, link} from '../utils/dom.js';
+import {el, append, link} from '../utils/dom.js';
 import {renderSchoolDay, renderSchoolDayResults} from '../cases/school-day.js';
 
 const CASES = {
@@ -22,12 +22,11 @@ export function cases(mod, caseId, subpage) {
     if (availableCase && subpage === 'results') return renderSchoolDayResults(mod, caseId);
     if (availableCase && !subpage) return renderSchoolDay(mod, caseId);
 
-    crumbs(app, mod, 'Teaching Cases');
     const page = el('section', null, 'tc-catalog');
     const heading = el('div', null, 'tc-catalog-heading');
     append(heading, el('span', 'INTERACTIVE CLASSROOM SCENARIOS', 'tc-kicker'), el('h1', 'Teaching Cases'),
         el('p', 'Choose a classroom situation. Make decisions as the teacher and review your pedagogical feedback at the end.'));
-    append(page, link('← Back to module', `/module/${mod.id}`, 'tc-back'), heading);
+    append(page, link('← Back to module', `/module/${mod.id}`, 'page-back'), heading);
     const grid = el('div', null, 'tc-case-grid');
     const entries = CASES[mod.id] ?? Array.from({length: 3}, (_, i) => ({
         id: `case-0${i + 1}`, title: `Teaching Case ${i + 1}`,
